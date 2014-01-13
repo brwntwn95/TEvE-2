@@ -1,0 +1,22 @@
+To choose a Profession, simply find a Profession Trainer of your preferred Profession and talk to him/her.
+He/she will give you a simple "initiation" quest which you must complete in order to acquire your preferred Profession.
+
+|cffff0000You can only choose ONE Profession. Your Profession and Profession Level are saved in your Hero Code so each Hero is binded to one Profession at any given time.|r
+
+|cffffcc00To unlearn your current Profession, simply type -unlearn.
+Doing so will reset your Profession Level back to 0, even if you re-learn the same Profession you unlearned before. 
+You also have to redo the "initiation" quest again.|r
+
+There are 5 Profession Ranks:
+|cff8B8989Apprentice|r - Levels 1-50
+|Cff00ff00Journeyman|r - Levels 51-100
+|cffffff00Expert|r - Levels 101-150
+|cffff8c00Master|r - Levels 151-200
+|cffff0000Legend|r - Levels 201-250
+
+As you level your profession skills, you will hit a limit to which you can level.
+In order to raise the limit, you must advance in profession rank.
+Low rank advancement do not require you to do quests, but higher rank advancement such as "Master" and "Legend" will require you to do an advancement quest.
+These quests usually take time and skill to do but opens up the max profession level cap along with a variety of benefits
+
+"ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp"

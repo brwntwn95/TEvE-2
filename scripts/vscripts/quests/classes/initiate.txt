@@ -1,0 +1,15 @@
+The Initiate is an apprentice learning the powerful arts of magic. Using magic, he can shape it into a ball of flame, or freeze enemies with a hailstorm.
+The initiate is a classical magician, dealing damage in the form of elemental magics.
+Although the initiate has low attack speed, next to no armor and extremely low hp,
+he can deal amazing amounts of damage with his magics and he has pretty solid attack damage as well due to his high intelligence.
+He is a good support character who, after job upgrades, can become a powerful soloist, not to mention gaining a very useful skill - Mana Shield, to offset his low hit points.
+When he reaches 3rd job, he can choose to be a powerful Wizard, or an extremely adaptable Sage.
+At fourth job, his class is able to cast the strongest spell in the game, though it is limited to only one of the 2 Job paths.
+Players wishing to be an Initiate must be a level 10 Male Novice.
+|cffffcc00Job Upgrades|r:
+1st Job = Initiate
+2nd Job = Mage
+3rd Job = Wizard / Sage
+4th Job = White Wizard / ArchSage
+
+"ReplaceableTextures\\CommandButtons\\BTNBanditMage.blp"

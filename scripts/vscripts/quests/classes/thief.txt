@@ -1,0 +1,16 @@
+The Thief is a pretty popular class, due to widespread rumours of it being able to kill extremely fast with amazing amounts of damage.
+However, although the Thief does attack extremely fast, its attack damage is only moderate at best.
+With low hp and low armor, the Thief, for all his fast hitting power, has to rely on dodging and critical strike skills to stay alive at low levels.
+However, the Thief is a class well suited for melee support, and at later levels advance into a powerful soloist.
+However, when faced with an extremely strong foe, the Thief would definitely require a tank.
+When choosing later job upgrades, the Thief can choose to be an incredibly fast Assassin who specializes in critical strikes,
+or a hidden, backstabbing Stalker who specializes in evasion.
+
+Players wishing to be a Thief must be a level 10 Male Novice.
+|cffffcc00Job Upgrades|r:
+1st Job = Thief
+2nd Job = Rogue
+3rd Job = Assassin / Stalker
+4th Job = Phantom Assassin / Master Stalker
+
+"ReplaceableTextures\\CommandButtons\\BTNBandit.blp"

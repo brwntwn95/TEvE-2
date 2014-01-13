@@ -1,0 +1,10 @@
+In order to change to 2nd Job, first of all you need to be a |cffffcc00Level 40|r 1st Job Class in order to do so.
+If you meet the requirements, then head to the City of New Lights and talk to your Class Trainer.
+(for e.g. if you are an Archer, then talk to the Hunter) If you do not know who your Class Trainer is, then check F9 on your specific class;
+your 1st, 2nd, 3rd and 4th jobs are all listed there. Once you talk to the Class Trainer,
+they will give you an advancement quest that you need to complete. After completing the quest,
+go back to your class trainer and right click on him/her, and you will successfully change your job.
+Bear in mind, however, that you will start at Level 1 again, but this is minor because you will be very strong,
+so leveling back would not pose much of a problem although it does take some time.
+
+"ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp"

@@ -1,0 +1,9 @@
+Now you can finally store items in your very own personal stash!
+Furthermore, your stash can store any item, including items your character class can't use.
+However, as items still bind on pickup, you cannot steal another player's item.
+Your item code will save all items and their respective item charges carried by both your Hero and your stash, so make full use of this advantage.
+Since PvP points are also saved separately as your Item code, it is possible to load2 without using the original -save.
+This makes using the Item code a very good way to test PvP builds.
+The stash also provides a good way to store items as well, so people can't destroy your items and whatnot
+
+"ReplaceableTextures\\CommandButtons\\BTNCage.blp"

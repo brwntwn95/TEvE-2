@@ -1,0 +1,3 @@
+This map is edited by normax on the approval of one of the creators.
+
+"ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"

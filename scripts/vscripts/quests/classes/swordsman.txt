@@ -1,0 +1,12 @@
+What's there to say about the Swordsman? It is a classic character class; high hp, good armor, moderate attack damage, decent attack rate...
+it is a very well-rounded character, adept at staying alive and tanking big bosses. However, for all its good points, it can never deal as much damage as the Templar
+ Nor can it attack as fast as the Thief. The swordsman is a class that is better suited for tanking bosses rather than killing monsters swiftly.
+ However, when the swordsman reaches higher job upgrades, he can opt for the Imperial Knight job upgrade, who focuses more on dishing out damage rather than on staying alive.
+Players wishing to be a Swordsman must be a level 10 Male Novice.
+|cffffcc00Job Upgrades|r:
+1st Job = Swordsman
+2nd Job = Knight
+3rd Job = Crusader / Imperial Knight
+4th Job = Avenger / Champion
+
+"ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp"

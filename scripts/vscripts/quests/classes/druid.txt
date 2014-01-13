@@ -1,0 +1,19 @@
+The Druid is another class that offers much variation. It has below average damage and attack speed at the beginning, being a spellcaster,
+but as the Druid progresses, he can choose to continue wielding the forces of nature, or attempt for the shapeshifting line.
+However, the time when they truly shine is when they enter their 4th Job Upgrade. If they choose to become a Summoner,
+they gain the power to summon various elemental powers to their side, like a powerful Tornado or a destructive Armageddon.
+This dishes out high damage in a short amount of time, much like the Initiate class, only that they do not have a Mana Shield to protect against attacks.
+Instead, they receive a regeneration skill that heals their life and mana over time, enabling them to stay indefinitely in combat, as long as someone tanks for them.
+If they choose to become a powerful Runemaster, they gain even greater powers of the wild, and when they shapeshift into an Animal Form, their speed, armor,
+and damage outputs increases by a large extent! To add on, they have passive damage skills that work whether they are in Animal Form or not,
+thereby maximising their damage output potential regardless. Hence, these skills make the Druid class an outstanding class that can specialize in both offense and defense,
+but still needs solid items to truly shine.
+
+Players wishing to be a Druid must be a level 10 Male Novice.
+|cffffcc00Job Upgrades|r:
+1st Job = Druid
+2nd Job = ArchDruid
+3rd Job = Shaman / Shapeshifter
+4th Job = Summoner / RuneMaster
+
+"ReplaceableTextures\\CommandButtons\\BTNDruidOfTheTalon.blp"

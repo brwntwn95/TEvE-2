@@ -1,0 +1,29 @@
+This map is made by GreeN_DaY_DaNcE and Asayaki_Zac at Lordaeron U.S. West of Clan TEvE
+[Twilight's Eve]. First version was made in December 2008.
+
+Credits to |cffffcc00GreeN_DaY_DaNcE|r:
+> Saving/Loading
+> Music and Sounds
+> Loading Screen and Preview Picture
+> All Units, Items, Abilities, and Triggers
+> Quests
+
+Credits to |cffffcc00Asayaki_Zac|r:
+> Terrain Designing
+> Unit Placement
+> Quests|cffffcc00
+
+The Twilight's Eve Team|r:
+AjastagataRoma@Garena - Icon Designer
+Lord_Zeppelin@Northrend - Code Optimizer|cff87ceeb
+
+Twilight's Eve spell made from scratch using GUI by GreeN_DaY_DaNcE. Inspired entirely by Golden Sun.
+Twilight's Eve ORPG is 95% made in GUI, with the remaining 5% in JASS.|r
+|cffff8c00Based on the comic book "Twilight's Eve", written and drawn by GreeN_DaY_DaNcE.
+
+|rTo other |cffffcc00Indirect Contributors|r:
+Thanks to all the members of Hive Workshop whose resources we used.
+Many thanks to the modellers of Nanoha Defence. Your magic circle models are AWESOME,
+
+
+"ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"

@@ -1,0 +1,18 @@
+You've seen the Swordsman. You've seen the Thief. You've seen the Mage. But have you really seen the Witch Hunter?
+The Witch Hunters are another well-rounded class, with moderate hp, pretty decent attack speed and good attack damage.
+Their skills are pretty adept at killing monsters but being well rounded also means they will not really have an advantage.
+For example, their damage will never soar as high as the Templar, and their attack speed will never match the Thief's, not counting items.
+However, when he changes into a Grand Inquisitor, he gains many auras which are very useful in a party, not to mention the Holy Repel skill,
+which prevents bosses from casting nasty spells. This makes the Grand Inquisitor a favored class in parties.
+If he chooses to change into a Professional Witcher instead, he gains a powerful passive cleave skill, not to mention the 36 Strikes skill which,
+if used with the proper items, can deal more than 300,000 damage! However, the downside is that no matter which path he takes,
+the Witch Hunter depends very heavily on good items in order to truly shine.
+
+Players wishing to be a Witch Hunter must be a level 10 Male Novice.
+|cffffcc00Job Upgrades|r:
+1st Job = Witch Hunter
+2nd Job = Slayer
+3rd Job = Witcher / Inquisitor
+4th Job = Professional Witcher / Grand Inquisitor
+
+"ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp"

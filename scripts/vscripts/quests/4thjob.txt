@@ -1,0 +1,24 @@
+In order to advance to your 4th Job Class, you must first of all be a |cffffcc00Level 150|r 3rd Job Class.
+But leveling is not the hardest part. The hard part is finding the "Master" of your class and completing the task given.
+Once you meet the level requirement, search around the map for hidden NPCs and try to talk to them.
+Once you have successfully spoken with your Class Master, they will give you a quest that is difficult to complete;
+most classes will need to transverse the Rite of Passage to complete it. After completing the task, report back to your Class Master to change your job.
+Below is a list to aid players in finding their respective masters:
+Wizard - Arthur the Seeker
+Sage - Eve
+Priest - The Ancient One
+Matriarch - The Ancient One
+Marksman - Luna
+Tracker - Monster Master Delia
+Champion - Rain
+Avenger - Siegfried the Avenger
+Phantom Assassin - Raven
+Master Stalker - Nazgul the Fallen
+Shaman - Horazon
+Shapeshifter - Fenrir
+High Templar - Freya
+Dark Templar - Dark ArchTemplar Vanessa
+Witcher - Morden Tor
+Inquisitor - Count Crowley the Grand Inquisito
+
+"ReplaceableTextures\\CommandButtons\\BTNScrollOfHealing.blp"

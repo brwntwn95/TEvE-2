@@ -1,0 +1,26 @@
+Twilight's Eve ORPG has a dungeon system that acts like a party system.
+All you have to do is gather your "party members" outside a dungeon area and type |cffffcc00-enter|r, and it will transfer your party inside.
+When you finally kill the final boss, you will be teleported to an Item Generator room where a random item will spawn for you;
+its rarity and strength again depending on the difficulty of the dungeon. 
+Once you've looted the item, type |cffff8c00-done|r to exit the room and be teleported to your last revival point.
+If you die while fighting a dungeon, you will not be able to re-enter the dungeon until your former party members have all died/completed it.
+They can also choose to exit the dungeon via the -out command, though.
+|cffffcc00There are 5 types of Dungeon Difficulties|r:
+|cff87ceebEasy|r
+|Cff00ff00Hard|r
+|cffff8c00Nightmare|r
+|cffff0000Hell|r
+|cffB22222Impossible|r
+
+Twilight's Eve ORPG uses a random item generator interface when spawning items for players who complete a dungeon.
+Although loot depends on the difficulty of the dungeon, it should be known that there are 6 kinds of colours representing the rarity of items.
+|cff8B8989Common|r
+|Cff00ff00Uncommon|r
+|cff009ACDRare|r
+|cffA020F0Epic|r
+|cffff0000Legendary|r
+|cffFFD700Godly|r
+Special Class of Items:
+|cff8B4513Forged|r
+
+"ReplaceableTextures\\CommandButtons\\BTN_CR_wGem.blp"
