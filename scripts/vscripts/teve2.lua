@@ -1,11 +1,8 @@
--- Written like this to allow reloading
 if TEvEGameMode == nil then
-	TEvEGameMode = {}
-	TEvEGameMode.szEntityClassName = "teve2"
-	TEvEGameMode.szNativeClassName = "dota_base_game_mode"
-	TEvEGameMode.__index = TEvEGameMode
-    
+    TEvEGameMode = {}
+    TEvEGameMode.__index = TEvEGameMode
 end
+
 
 function TEvEGameMode:new (o)
 	o = o or {}
@@ -13,28 +10,12 @@ function TEvEGameMode:new (o)
 	return o
 end
 
-
--- Called from C++ to Initialize
 function TEvEGameMode:InitGameMode()
-print("Hello World!")
+	print(" --- TEvE 2 Hello World! --- ")
+	ListenToGameEvent('player_connect_full', Dynamic_Wrap(TEvEGameMode,"onPlayerConnect"), self)
 end
 
--- Called from C++ to handle the entity_killed event
-function TEvEGameMode:OnEntityKilled( keys )
-end
-
--- Called from C++ to handle the npc_spawned event
-function TEvEGameMode:OnNPCSpawned( keys )
-end
-
--- Called from C++ to handle the dota_item_picked_up event
-function TEvEGameMode:OnItemPickedUp( keys )
-end
-
--- Called from C++ to handle the dota_match_done event
-function TEvEGameMode:OnMatchDone( keys )
-end
-
--- Think function called from C++, every second.
-function TEvEGameMode:Think()
+function TEvEGameMode:onPlayerConnect(keys)
+	player = EntIndexToHScript(self.index + 1)
+	player:SetTeam(DOTA_TEAM_GOODGUYS)
 end
