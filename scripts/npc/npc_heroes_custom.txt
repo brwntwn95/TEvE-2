@@ -3,5 +3,56 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
+	"npc_dota_hero_teve_phantom_assassin"
+	{
+		"override_hero"			"npc_dota_hero_phantom_assassin"
+//		"ModelScale"			"1.0"
 
+		"AbilityLayout"			"5"
+		"Ability1"			"teve_phantom_edge"
+		"Ability2"			"teve_killing_technique"
+		"Ability3"			"teve_eviscerate"
+		"Ability4"			"teve_speed"
+		"Ability5"			"teve_assassinate"
+
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"12"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"1"
+	}
+
+
+	"npc_dota_hero_teve_sniper"
+	{
+		"override_hero"			"npc_dota_hero_windrunner"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"5"
+		"Ability1"			"teve_rapid_shot"
+		"Ability2"			"teve_enchanted_arrows"
+		"Ability3"			"teve_marksmanship"
+		"Ability4"			"medusa_split_shot"
+		"Ability5"			"teve_snipe"
+
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"3"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"10"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"2"
+	}
+
+
+	"npc_dota_hero_teve_punching_bag"
+	{
+		"override_hero"			"npc_dota_hero_pudge"
+		"ModelScale"			"0.5"
+
+		"AttributeBaseStrength"		"500"
+		"AttributeStrengthGain"		"20"
+	}
 }

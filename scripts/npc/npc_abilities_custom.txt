@@ -2,5 +2,277 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
+	"teve_phantom_edge"
+	{
+		"BaseClass"		"dragon_knight_dragon_tail"
 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"ID"			"9001"
+
+		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"	"10"
+
+		"AbilityManaCost"	"3000"
+
+		"AbilityCastRange"	"200"
+
+		"AbilityDamage"		"27000 27000 27000 27000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"stun_duration"	"4 4 4 4"
+			}
+		}
+	}
+
+	"teve_killing_technique"
+	{
+		"BaseClass"		"vengefulspirit_command_aura"
+		
+		"ID"			"9002"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_damage_pct"	"180 180 180 180"
+			}
+		}
+
+	}
+
+	"teve_eviscerate"
+	{
+		"BaseClass"		"juggernaut_blade_dance"
+
+		"ID"			"9003"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"blade_dance_crit_mult"		"380 380 380 380"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"blade_dance_crit_chance"	"60 60 60 60"
+			}
+		}
+	}
+
+	"teve_speed"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"AbilityTextureName"	"placeholder"
+
+		"ID"			"9004"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_phantom_assassin_speed"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"5"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"210"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_phantom_assassin_speed"
+		}
+	}
+
+	"teve_assassinate"
+	{
+		"BaseClass"		"Juggernaut_omni_slash"
+
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+		"ID"			"9005"
+
+		"AbilityCooldown"	"5"
+
+		"AbilityManaCost"	"4500"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"omni_slash_damage"	"1000"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"omni_slash_jumps"	"1"
+			}
+		}
+	}
+
+	"teve_rapid_shot"
+	{
+		"BaseClass"		"clinkz_strafe"
+
+		"ID"			"9006"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+
+		"AbilityCooldown"	"20 20 20 20"
+
+		"AbilityCastPoint"	"0.0 0.0 0.0 0.0"
+
+		"AbilityManaCost"	"800"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"					"15 15 15 15"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed_bonus_pct"			"300 300 300 300"
+			}
+		}
+	}
+
+	"teve_enchanted_arrows"
+	{
+		"BaseClass"		"clinkz_searing_arrows"
+
+		"ID"			"9007"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+		"AbilityCastRange"			"600"
+		"AbilityCastPoint"			"0.0 0.0 0.0 0.0"
+
+		"AbilityCooldown"			"0.0 0.0 0.0 0.0"
+
+		"AbilityManaCost"			"120 120 120 120"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"damage_bonus"		"12000 12000 12000 12000"
+			}
+		}
+	}
+
+	"teve_marksmanship"
+	{
+		"BaseClass"		"vengefulspirit_command_aura"
+		
+		"ID"			"9008"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_damage_pct"	"360 360 360 360"
+			}
+		}
+
+	}
+
+	"teve_strafe"
+	{
+		"BaseClass"		"medusa_split_shot"
+
+		"ID"			"9009"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityCastPoint"	"0.0 0.0 0.0 0.0"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"damage_modifier"	"0 0 0 0"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"arrow_count"		"7 7 7 7"
+			}
+		}
+	}
+
+	"teve_snipe"
+	{
+		"BaseClass"		"sniper_assassinate"
+
+		"ID"			"9010"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCastPoint"	"1.0"
+
+		"AbilityCooldown"	"20"
+
+		"AbilityDamage"		"50000"
+
+		"AbilityManaCost"	"4000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"projectile_speed"	"3000"
+			}
+		}
+	}
 }

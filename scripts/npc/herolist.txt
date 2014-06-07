@@ -5,4 +5,7 @@
 
 "CustomHeroList"
 {
+	"npc_dota_hero_phantom_assassin"		"1"		//Phantom Assassin
+	"npc_dota_hero_windrunner"			"1"		//Sniper
+	"npc_dota_hero_pudge"				"1"		//punching bag
 }
