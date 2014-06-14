@@ -220,27 +220,21 @@
 
 	"teve_strafe"
 	{
-		"BaseClass"		"medusa_split_shot"
+		"BaseClass"		"ability_datadriven"
 
 		"ID"			"9009"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-		"AbilityCastPoint"	"0.0 0.0 0.0 0.0"
+		"AbilityTextureName"	"placeholder"
 
 
-		"AbilitySpecial"
+
+		"ApplyModifier"
 		{
-			"01"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"damage_modifier"	"0 0 0 0"
-			}
-			"03"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"arrow_count"		"7 7 7 7"
-			}
+			"Passive" "1"
+			"Target" "CASTER"
+			"ModifierName" "modifier_medusa_split_shot"
 		}
 	}
 
@@ -274,5 +268,320 @@
 				"projectile_speed"	"3000"
 			}
 		}
+	}
+
+	"teve_vanish"
+	{
+		"BaseClass"			"bounty_hunter_wind_walk"
+
+		"ID"				"9011"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"
+
+		"AbilityCooldown"		"15.0 15.0 15.0 15.0"
+		"AbilityCastPoint"		"0.0 0.0 0.0 0.0"
+
+		"AbilityManaCost"		"1500"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"15 15 15 15"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"fade_time"	"0.0 0.0 0.0 0.0"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"24000 24000 24000 24000"
+			}
+		}
+	}
+
+	"teve_master_evasion"
+	{
+		"BaseClass"			"phantom_assassin_blur"
+
+		"ID"				"9012"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_evasion"	"80 80 80 80"
+			}
+		}
+	}
+
+	"teve_backstab"
+	{
+		"ID"				"9013"
+	}
+
+	"teve_stalk"
+	{
+		"ID"				"9014"
+	}
+
+	"teve_dark_psi_strike"
+	{
+		"BaseClass"		"dragon_knight_dragon_tail"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"ID"			"9015"
+
+		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"	"10"
+
+		"AbilityManaCost"	"2420"
+
+		"AbilityCastRange"	"300"
+
+		"AbilityDamage"		"24000 24000 24000 24000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"stun_duration"	"1.5 1.5 1.5 1.5"
+			}
+		}
+	}
+
+	"teve_grand_finisher_arts"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"ID"			"9016"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+                "Modifiers"
+                {
+                        "modifier_grand_finisher_effects"
+                        {
+                                "Passive"                       "1"
+                                "OnAttackStart"
+                                {
+                                        "Random"
+                                        {
+                                                "Chance"        ".40"
+                                                "PseudeoRandom"         "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+                                                "OnSuccess"
+                                                {
+                                                        "ApplyModifier"
+                                                        {
+                                                                "Target"                "CASTER"
+                                                                "ModifierName"  "modifier_grand_finisher_crit_success"
+                                                        }
+                                                }
+                                                "OnFailure"
+                                                {
+                                                        "RemoveModifier"
+                                                        {
+                                                                "Target"                "CASTER"
+                                                                "ModifierName"  "modifier_grand_finisher_crit_success"
+                                                        }
+                                                }
+                                        }
+                                }
+                                "Properties"
+                                {
+                                        "MODIFIER_PROPERTY_EVASION_CONSTANT"    "40"
+                                }
+                        }
+                        "modifier_grand_finisher_crit_success"
+                        {
+                                "Properties"
+                                {
+                                        "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"   "320"
+                                }
+                        }
+                }
+
+		"ApplyModifier"
+		{
+			"Target"	"CASTER"
+			"ModifierName"	"modifier_grand_finisher_effects"
+		}
+	}
+
+	"teve_finisher_expertise"
+	{
+		"BaseClass"		"vengefulspirit_command_aura"
+		
+		"ID"			"9017"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bonus_damage_pct"	"360 360 360 360"
+			}
+		}
+
+	}
+
+	"teve_forbidden_psi_mastery"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"AbilityTextureName"	"placeholder"
+
+		"ID"			"9018"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_dark_arch_templar_speed"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"18"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"90"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_dark_arch_templar_speed"
+		}
+	}
+
+	"teve_power_overwhelming"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"ID"			"9019"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityCastPoint"	"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"	"30 30 30 30"
+
+		"Modifiers"
+		{
+			"modifier_dark_arch_templar_power_overwhelming"
+			{
+				"Duration"	"15"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"75000"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"900"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CASTER"
+				"ModifierName" "modifier_dark_arch_templar_power_overwhelming"
+			}
+		}
+	}
+
+	"teve_taunt"
+	{
+		"BaseClass"		"axe_berserkers_call"
+
+		"ID"			"9020"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+
+		"AbilityCastPoint"	"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"	"8.0 8.0 8.0 8.0"
+
+		"AbilityManaCost"	"1500 1500 1500 1500"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"500"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_armor"	"0"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"6 6 6 6"
+			}
+		}
+	}
+
+	"teve_fortitude"
+	{
+		"BaseClass"		"ability_datadriven"
+	}
+
+	"teve_defiance"
+	{
+		"BaseClass"		"enraged_wildkin_toughness_aura"
+
+		"ID"			"9021"
+
+		"MaxLevel"		"1"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_armor"	"300"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"1000"
+			}
+		}
+	}
+
+	"teve_thorns"
+	{
+		"BaseClass"		"ability_datadriven"
+	}
+
+	"teve_sacrifice"
+	{
+		"BaseClass"		"ability_datadriven"
 	}
 }

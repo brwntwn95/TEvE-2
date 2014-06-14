@@ -13,9 +13,9 @@
 		"Ability2"			"teve_killing_technique"
 		"Ability3"			"teve_eviscerate"
 		"Ability4"			"teve_speed"
-		"Ability5"			"teve_assassinate"
+		"Ability5"			"teve_assassinate"		//Incomplete
 
-		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"2"
 		"AttributeBaseAgility"		"100"
@@ -34,10 +34,10 @@
 		"Ability1"			"teve_rapid_shot"
 		"Ability2"			"teve_enchanted_arrows"
 		"Ability3"			"teve_marksmanship"
-		"Ability4"			"medusa_split_shot"
-		"Ability5"			"teve_snipe"
+		"Ability4"			"teve_strafe"			//Incomplete
+		"Ability5"			"teve_snipe"			//Incomplete
 
-		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"3"
 		"AttributeBaseAgility"		"100"
@@ -45,6 +45,72 @@
 		"AttributeBaseIntelligence"	"80"
 		"AttributeIntelligenceGain"	"2"
 	}
+
+	"npc_dota_hero_teve_master_stalker"
+	{
+		"override_hero"			"npc_dota_hero_abaddon"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"5"
+		"Ability1"			"teve_vanish"
+		"Ability2"			"teve_master_evasion"
+		"Ability3"			"teve_backstab"			//Incomplete
+		"Ability4"			"teve_speed"
+		"Ability5"			"teve_stalk"			//Incomplete
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"3"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"10"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"2"
+	}
+
+	"npc_dota_hero_teve_dark_arch_templar"
+	{
+		"override_hero"			"npc_dota_hero_spectre"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"5"
+		"Ability1"			"teve_dark_psi_strike"
+		"Ability2"			"teve_grand_finisher_arts"	//Incomplete
+		"Ability3"			"teve_finisher_expertise"
+		"Ability4"			"teve_forbidden_psi_mastery"
+		"Ability5"			"teve_power_overwhelming"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"1.75"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"13"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"0.25"
+	}
+
+	"npc_dota_hero_teve_avenger"
+	{
+		"override_hero"			"npc_dota_hero_omniknight"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"5"
+		"Ability1"			"teve_taunt"
+		"Ability2"			"teve_fortitude"		//Incomplete
+		"Ability3"			"teve_defiance"
+		"Ability4"			"teve_thorns"			//Incomplete
+		"Ability5"			"teve_sacrifice"		//Incomplete
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"100"
+		"AttributeStrengthGain"		"9.75"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"2"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"3.25"
+	}
+
+
+
 
 
 	"npc_dota_hero_teve_punching_bag"

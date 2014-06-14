@@ -7,5 +7,16 @@
 {
 	"npc_dota_hero_phantom_assassin"		"1"		//Phantom Assassin
 	"npc_dota_hero_windrunner"			"1"		//Sniper
+	"npc_dota_hero_invoker"				"1"		//Arch Sage
+	"npc_dota_hero_chen"				"1"		//Hierophant
+	"npc_dota_hero_crystal_maiden"			"1"		//Prophetess
+	"npc_dota_hero_omniknight"			"1"		//Avenger
+	"npc_dota_hero_beast_master"			"1"		//Rune Master
+	"npc_dota_hero_disruptor"			"1"		//Summoner
+	"npc_dota_hero_spectre"				"1"		//Dark ArchTemplar
+	"npc_dota_hero_dragon_knight"			"1"		//Champion
+	"npc_dota_hero_abaddon"				"1"		//Master Stalker
+	"npc_dota_hero_templar_assassin"		"1"		//Grand Templar
+	"npc_dota_hero_keeper_of_the_light"		"1"		//White Wizard
 	"npc_dota_hero_pudge"				"1"		//punching bag
 }
