@@ -18,5 +18,7 @@
 	"npc_dota_hero_abaddon"				"1"		//Master Stalker
 	"npc_dota_hero_templar_assassin"		"1"		//Grand Templar
 	"npc_dota_hero_keeper_of_the_light"		"1"		//White Wizard
+
+	//NOT AN ACTUAL HERO
 	"npc_dota_hero_pudge"				"1"		//punching bag
 }

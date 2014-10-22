@@ -3,6 +3,39 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
+	"npc_dota_hero_novice"
+	{
+		"override_hero"			"npc_dota_hero_meepo"
+
+		"AbilityLayout"			"2"
+		"Ability1"			"teve_frenzy"
+		"Ability2"			"teve_noob"
+		"Ability3"			""
+		"Ability4"			""
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"7"
+		"AttributeStrengthGain"		"1.25"
+		"AttributeBaseAgility"		"6"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"6"
+		"AttributeIntelligenceGain"	"1"
+	}
+
+	//First Job
+	//==================================================================================
+
+	//Second Job
+	//==================================================================================
+
+
+	//Third Job
+	//==================================================================================
+
+
+	//Fourth Job
+	//==================================================================================
+
 	"npc_dota_hero_teve_phantom_assassin"
 	{
 		"override_hero"			"npc_dota_hero_phantom_assassin"
