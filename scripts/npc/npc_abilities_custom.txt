@@ -611,3 +611,941 @@
 		"BaseClass"		"ability_datadriven"
 	}
 }
+
+	//
+	// Champion
+	//-----------------------------------------------------------------------------------
+	
+	"teve_rapid_strikes"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"ID"			"9024"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+
+		"AbilityCastPoint"	"0.0 0.0 0.0 0.0"
+
+		"AbilityManaCost"	"1500 1500 1500 1500"
+
+		"AbilityCooldown"	"25 25 25 25"
+
+		"Modifiers"
+		{
+			"modifier_champion_rapid_strikes"
+			{
+				"Duration"	"20"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"5"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"300"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CASTER"
+				"ModifierName" "modifier_champion_rapid_strikes"
+			}
+		}
+	}
+
+	"teve_power_slam"
+	{
+		"BaseClass"		"centaur_hoof_stomp"
+
+		"ID"			"9025"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityCastPoint"	"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"	"5.0 5.0 5.0 5.0"
+
+		"AbilityManaCost"	"1800 1800 1800 1800"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"450"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stun_duration"				"2 2 2 2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stomp_damage"				"24000 24000 24000 24000"
+			}
+		}
+	}
+
+	"teve_fatal_strike"
+	{
+		"BaseClass"		"juggernaut_blade_dance"
+
+		"ID"			"9026"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"blade_dance_crit_mult"		"280 280 280 280"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"blade_dance_crit_chance"	"60 60 60 60"
+			}
+		}
+	}
+
+	"teve_smite"
+	{
+		"BaseClass"		"dragon_knight_dragon_tail"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"ID"			"9027"
+
+		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"	"10"
+
+		"AbilityManaCost"	"1240"
+
+		"AbilityCastRange"	"128"
+
+		"AbilityDamage"		"27000 27000 27000 27000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"stun_duration"	"6 6 6 6"
+			}
+		}
+	}
+
+	"teve_asura_strike"
+	{
+		"BaseClass"		"ability_datadriven"
+	}
+
+	//
+	// Summoner
+	//-----------------------------------------------------------------------------------
+	
+	"teve_lightning_storm"
+	{
+		"BaseClass"		"sniper_shrapnel"
+
+		"ID"			"9028"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCastPoint"	"0.5"
+
+		"AbilityCastRange"	"450"
+
+		"AbilityCooldown"	"6"
+
+		"AbilityDamage"		"21000"
+
+		"AbilityManaCost"	"6000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_movement_speed"			"0 0 0 0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"building_damage_pct"			"0 0 0 0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_delay"				"0.6 0.6 0.6 0.6"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_duration"				"0 0 0 0"
+			}
+		}
+	}
+
+	"teve_regeneration"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"ID"			"9029"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityManaCost"	"3600"
+		"AbilityCooldown"	"6"
+
+		"Modifiers"
+		{
+			"modifier_summoner_regeneration"
+			{
+				"Duration"	"5"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"3600"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"2400"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" 	"TARGET"
+				"ModifierName"	"modifier_summoner_regeneration"
+			}
+		}
+	}
+
+	"teve_tornado"
+	{
+		"BaseClass"		"invoker_tornado"
+
+		"ID"			"9030"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"AbilityCastRange"	"500"
+		"AbilityCastPoint"	"0.3"
+		"AbilityCooldown"	"5"
+		"AbilityManaCost"	"6000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"travel_distance"		"600"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"travel_speed"			"1000"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"area_of_effect"		"300"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_distance"		"0"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"end_vision_duration"		"0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"lift_duration"			"0.5"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"base_damage"			"36000"
+			}
+		}
+	}
+
+	"teve_arctic_freeze"
+	{
+		"BaseClass"		"brewmaster_thunder_clap"
+
+		"ID"			"9031"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"	"4.0 4.0 4.0 4.0"
+		"AbilityManaCost"	"4500 4500 4500 4500"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"radius"		"600 600 600 600"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"duration"		"3 3 3 3"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"duration_creeps"	"3 3 3 3"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"damage"		"30000 30000 30000 30000"
+			}
+			"05"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"movement_slow"		"20 20 20 20"
+			}
+			"06"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"attack_speed_slow"	"10 10 10 10"
+			}
+		}
+	}
+
+	"teve_armageddon"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"ID"			"9032"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+
+		"AbilityCastRange"	"500"
+
+		"AbilityCastPoint"	"0.3"
+
+		"AbilityCooldown"	"25"
+
+//		"AbilityManaCost"	"7500"
+
+		"Modifiers"
+		{
+			"modifier_armageddon_burn"
+			{
+				"Duration"	"5"
+				"ThinkInterval"	"0.5"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"		"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"2500"
+					}
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"
+				{
+					"Center"	"POINT"
+					"Radius"	"300"
+				}
+				"ModifierName"	"modifier_armageddon_burn"
+			}
+			"Damage"
+			{
+				"Target"
+				{
+					"Center"	"POINT"
+					"Radius"	"300"
+				}
+				"Type"		"DAMAGE_TYPE_PURE"
+				"Damage"	"90000"
+			}
+		}
+	}
+
+	//
+	// Prophetess
+	//-----------------------------------------------------------------------------------
+	
+	"teve_holy_light"
+	{
+		"BaseClass"			"omniknight_purification"
+
+		"ID"				"9033"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+
+		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+
+		"AbilityCastRange"		"700"
+
+		"AbilityCooldown"		"1.0"
+
+		"AbilityManaCost"		"3000 3000 3000 3000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"heal"		"15000 15000 15000 15000"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"0 0 0 0"
+			}
+		}
+	}
+
+	"teve_sanctus"
+	{
+		"BaseClass"			"dazzle_shadow_wave"
+
+		"ID"				"9034"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"
+
+		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+		"AbilityCastRange"		"600"
+		"AbilityCooldown"		"6 6 6 6"
+		"AbilityManaCost"		"4200"
+		"AbilityDamage"			"12000 12000 12000 12000"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"bounce_radius"		"600"
+			}
+			"02"
+			{	
+				"var_type"		"FIELD_INTEGER"
+				"damage_radius"		"0"
+			}
+			"03"
+			{	
+				"var_type"		"FIELD_INTEGER"
+				"max_targets"		"8 8 8 8"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"damage"		"12000 12000 12000 12000"
+			}
+		}
+	}
+
+	"teve_prayer"
+	{
+		"BaseClass"			"satyr_hellcaller_unholy_aura"
+
+		"ID"				"9035"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"health_regen"	"9"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"600"
+			}
+		}
+	}
+
+	"teve_rosary_basilica"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"ID"			"9036"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+
+		"AbilityCastPoint"	"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"	"10.0 10.0 10.0 10.0"
+		"AbilityManaCost"	"5400 5400 5400 5400"
+
+		"Modifiers"
+		{
+			"teve_rosary_basilica_heal"
+			{
+				"Duration"	"5"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"4500"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"
+				{
+						"Center"	"CASTER"
+						"Radius"	"600"
+						"Teams"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+						"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+				}
+				"ModifierName"	"teve_rosary_basilica_heal"
+			}
+		}
+	}
+
+	"teve_gloria_in_excelsis_deo"
+	{
+		"BaseClass"			"omniknight_guardian_angel"
+
+		"ID"				"9037"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+
+		"AbilityCooldown"		"20.0 20.0 20.0"
+		"AbilityCastPoint"		"0.5 0.5 0.5"
+		
+//		"AbilityManaCost"		"7500 7500 7500"
+		
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"duration"		"12 12 12"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"health_regen"		"0 0 0"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"radius"		"600 600 600"
+			}
+		}
+	}
+	
+	//
+	// Grand Templar
+	//-----------------------------------------------------------------------------------
+
+	"teve_psionic_surge"
+	{
+		"BaseClass"			"ability_datadriven"
+
+		"ID"				"9038"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+
+		"AbilityCastPoint"		"0.0 0.0 0.0 0.0"
+
+		"AbilityCooldown"		"3.0 3.0 3.0 3.0"
+		"AbilityManaCost"		"3000 3000 3000 3000"
+
+		"OnSpellStart"
+		{
+			"Damage"
+			{
+				"Target"
+				{
+					"Center"	"CASTER"
+					"Radius"	"600"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"		"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				}
+				"Type"		"DAMAGE_TYPE_PURE"
+				"Damage"	"24000"
+			}
+		}
+	}
+
+	"teve_psionic_unleash"
+	{
+		"BaseClass"			"dragon_knight_dragon_tail"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+
+		"ID"				"9039"
+
+		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"		"24"
+
+		"AbilityManaCost"		"6000"
+
+		"AbilityCastRange"		"600"
+
+		"AbilityDamage"			"6000 6000 6000 6000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"stun_duration"	"12 12 12 12"
+			}
+		}
+	}
+
+	"teve_psionic_energy"
+	{
+		"BaseClass"			"lich_frost_nova"
+
+		"ID"				"9040"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+		"AbilityCastRange"		"600"
+
+		"AbilityCoolDown"		"10.0"
+		"AbilityDuration"		"0.0"
+
+		"AbilityDamage"			"17500 17500 17500 17500"
+
+		"AbilityManaCost"		"4200 4200 4200 4200"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"aoe_damage"		"28000 28000 28000 28000"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"radius"		"600 600 600 600"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"slow_movement_speed"	"-0 -0 -0 -0"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"slow_attack_speed"	"-0 -0 -0 -0"
+			}
+		}
+	}
+
+	"teve_psionic_destruction"
+	{
+//Ummm, yea...(razor ult for now). CD 12
+		"BaseClass"			"razor_eye_of_the_storm"
+		"ID"				"9041"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"	
+		
+		"AbilityCastPoint"		"0.3 0.3 0.3"
+
+		"AbilityCooldown"		"12.0 12.0 12.0"
+
+		"AbilityManaCost"		"5000 5000 5000 5000"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"500 500 500"		
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"20.0 25.0 30.0"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"strike_interval"		"0.75 0.65 0.55"		
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_reduction"		"1 1 1"		
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"37 50 63"		
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"strike_interval_scepter"	"0.65 0.55 0.45"		
+			}
+		}
+	}
+
+	"teve_presence_of_mind"
+	{
+		"BaseClass"			"tinker_rearm"
+
+		"ID"				"9042"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+
+		"AbilityCastPoint"		"0.0 0.0 0.0"
+		"AbilityChannelTime"		"0.0 0.0 0.0"
+		
+		"AbilityCooldown"		"80.0 80.0 80.0"
+
+		"AbilityManaCost"		"1000 1000 1000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"channel_tooltip"			"0 0 0"
+			}
+		}
+	}
+	
+	//
+	// White Wizard
+	//-----------------------------------------------------------------------------------
+
+	"teve_jupiter_thunder"
+	{
+		"BaseClass"			"ability_datadriven"
+
+		"ID"				"9043"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+
+		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"		"2.0 2.0 2.0 2.0"
+		"AbilityManaCost"		"6000 6000 6000 6000"
+
+		"OnSpellStart"
+		{
+			"Damage"
+			{
+				"Target"
+				{
+					"Center"	"CASTER"
+					"Radius"	"600"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"		"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				}
+				"Type"		"DAMAGE_TYPE_PURE"
+				"Damage"	"30000"
+			}
+		}
+	}
+
+	"teve_white_shield"
+	{
+//Ummm, yea...(razor ult for now). CD 12
+		"BaseClass"			"razor_eye_of_the_storm"
+		"ID"				"9044"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"	
+		
+		"AbilityCastPoint"		"0.5 0.5 0.5"
+
+		"AbilityCooldown"		"40.0 40.0 40.0"
+
+		"AbilityManaCost"		"4500 4500 4500"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"500 500 500"		
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"30.0 30.0 30.0"		
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"strike_interval"		"0.75 0.65 0.55"		
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_reduction"		"0 0 0"		
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"2000 2000 2000"		
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"strike_interval_scepter"	"0.65 0.55 0.45"		
+			}
+		}
+	}
+
+	"teve_warmth"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"AbilityTextureName"	"placeholder"
+
+		"ID"			"9045"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_white_wizard_warmth"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	"450"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_white_wizard_warmth"
+		}
+	}
+
+	"teve_energy_shield"
+	{
+		"BaseClass"		"medusa_mana_shield"
+
+		"ID"			"9046"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		
+		"AbilityCastPoint"	"0.4 0.4 0.4 0.4"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"damage_per_mana"	"7.0"
+			}
+		}
+	}
+
+	"teve_cruel_ruin"
+	{
+		"BaseClass"				"lina_light_strike_array"
+
+		"ID"					"9047"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		
+		"AbilityCastRange"			"600"
+		"AbilityCastPoint"			"0.5 0.5 0.5 0.5"
+		
+		"AbilityCooldown"			"60.0 60.0 60.0 60.0"
+		"AbilityDuration"			"0 0 0 0"
+
+		"AbilityDamage"				"150000 150000 150000 150000"
+
+//		"AbilityManaCost"			"15000 15000 15000 15000"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"light_strike_array_aoe"		"700"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"light_strike_array_delay_time"		"8.5"
+			}
+						
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"light_strike_array_stun_duration"	"0.0"
+			}
+		}
+	}
+}
