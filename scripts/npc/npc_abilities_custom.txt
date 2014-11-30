@@ -1547,4 +1547,161 @@
 			}
 		}
 	}
+	
+	"teve_boreas"
+	{
+		"BaseClass"					"centaur_hoof_stomp"
+		
+		"ID"						"9048"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+		
+		"AbilityCastPoint"			"0.3 0.3 0.3 0.3"
+		"AbilityCooldown"			"6 6 6 6"
+		"AbilityManaCost"			"100 100 100 100"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"550"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"stun_duration"					"3.0 3.0 3.0 3.0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"900 1800 2700 3600"
+			}
+		}
+	}
+	
+	"teve_lightning_avenger"
+	{
+		"BaseClass"					"shadow_shaman_ether_shock"
+		
+		"ID"						"9049"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+		
+		"AbilityCastPoint"			"0.3 0.3 0.3 0.3"
+		"AbilityCooldown"			"6 6 6 6"
+		"AbilityManaCost"			"100 100 100 100"
+		
+		"AbilityDamage"				"1500 3000 4500 6000"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"start_radius"				"200 200 200 200"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"end_radius"				"300 300 300 300"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"end_distance"				"500 500 500 500"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"targets"					"12 12 12 12"
+			}
+		}
+	}
+	
+	"teve_warmth_2"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"AbilityTextureName"	"placeholder"
+
+		"ID"			"9050"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_white_wizard_warmth"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	"450"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_white_wizard_warmth"
+		}
+	}
+	
+	"teve_energy_shield_2"
+	{
+		"BaseClass"		"medusa_mana_shield"
+
+		"ID"			"9051"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		
+		"AbilityCastPoint"	"0.4 0.4 0.4 0.4"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"damage_per_mana"	"7.0"
+			}
+		}
+	}
+	
+	"teve_twilights_eve" //Without long cutscene or power shard cost
+	{
+		"BaseClass"					"centaur_hoof_stomp"
+		
+		"ID"						"9052"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+		
+		"AbilityCastPoint"			"0.3 0.3 0.3 0.3"
+		"AbilityCooldown"			"6 6 6 6"
+		"AbilityManaCost"			"100 100 100 100"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"700"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"stun_duration"					"0.0 0.0 0.0 0.0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"100000 200000 300000 400000"
+			}
+		}
+	}
 }

@@ -248,6 +248,26 @@
 		"AttributeIntelligenceGain"	"12"
 	}
 
+	"npc_dota_hero_teve_arch_sage"
+	{
+		"override_hero"			"npc_dota_hero_invoker"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"5"
+		"Ability1"			"teve_boreas"
+		"Ability2"			"teve_lightning_avenger"
+		"Ability3"			"teve_warmth_2"
+		"Ability4"			"teve_energy_shield_2"
+		"Ability5"			"teve_twilights_eve"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"3"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"100"
+		"AttributeIntelligenceGain"	"11"
+	}
 
 
 
