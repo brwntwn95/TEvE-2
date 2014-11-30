@@ -15,40 +15,45 @@
 		
 		public function LoadContainer() {
 			var card = ReplaceAsset(characterContainer.heroPortrait, "s_FullDeckCardWithMovie");
+			//Now to move the card to the "correct" location
 			card.x = card.x + (card.width / 2);
 			card.y = card.y + (6 * card.height / 7);
-			trace("a");
+			//And now to disable a bunch of the card that we dont want
 			card.dailyHeroQuestIcon.visible = false;
-			trace("b");
 			card.heroQuestIcon.visible = false;
-			trace("c");
 			card.heroQuestCompletedIcon.visible = false;
-			trace("d");
 			card.abilityContainer.visible = false;
-			trace("e");
+			
+			//Attribute
+			
+			//0 is Str
+			//1 is Agi
+			//2 is Int
+			var statPipIndex = 1;
+			
+			card.statIcon.visible = true;
+			card.statIcon.gotoAndStop(statPipIndex + 1);
+			card.statIcon.pipIndex = statPipIndex;
+            card.statIcon.pipNumber = 0;
+			
+			//And save
 			characterContainer.heroPortrait = (card as MovieClip);
 		}
 		
 		public function startCardVideo(heroName:String) : * {
-			 trace("Party time!!");
 			 var videoContainer:Object = characterContainer.heroPortrait.selectorBG.portraitVideoContainer;
-			 trace("a");
 			 var videoFilename:* = "videos/portraits/npc_dota_hero_" + heroName + ".usm";
-			 trace("b");
 			 this.cardVideoController.startVideo(0,videoContainer,videoFilename);
-			 trace("c");
+			 
 			 videoContainer.mouseEnabled = false;
-			 trace("d");
 			 videoContainer.mouseChildren = false;
-			 trace("e");
 			 videoContainer.alpha = 0;
-			 trace("f");
+			 
 			 var t:Tween = new Tween(200,videoContainer,{"alpha":1},{"ease":None.easeNone});
-			 trace("g");
 			 t.delay = 100;
 		  }
 		  
-				public function ReplaceAsset(btn, type) {
+		public function ReplaceAsset(btn, type) {
 			var parent = btn.parent;
 			var oldx = btn.x;
 			var oldy = btn.y;
