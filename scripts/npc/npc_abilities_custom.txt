@@ -1596,8 +1596,6 @@
 		"AbilityCooldown"			"6 6 6 6"
 		"AbilityManaCost"			"100 100 100 100"
 		
-		"AbilityDamage"				"1500 3000 4500 6000"
-	
 		"AbilitySpecial"
 		{
 			"01"
@@ -1619,6 +1617,11 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"targets"					"12 12 12 12"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"1500 3000 4500 6000"
 			}
 		}
 	}
@@ -1701,6 +1704,174 @@
 			{
 				"var_type"						"FIELD_INTEGER"
 				"stomp_damage"					"100000 200000 300000 400000"
+			}
+		}
+	}
+	
+	"teve_trueshot_aura"
+	{
+		"BaseClass"					"drow_ranger_trueshot"
+		"ID"						"9053"
+	
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"trueshot_ranged_damage"		"8 16 24 32"
+			}
+		}
+	}
+	
+	"teve_ensnare"
+	{
+		"BaseClass"					"naga_siren_ensnare"
+		"ID"						"9054"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCooldown"			"14.0 14.0 14.0 14.0"
+		"AbilityManaCost"			"0 0 0 0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"0.4 0.8 1.2 1.6"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"net_speed"			"1500 1500 1500 1500"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"fake_ensure_distance"		"900 900 900 900"
+			}
+		}
+	}
+	
+	"teve_critical_strike"
+	{
+		"BaseClass"					"juggernaut_blade_dance"
+		"ID"						"9055"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blade_dance_crit_mult"	"300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blade_dance_ctir_chance"	"1 2 3 4"
+			}
+		}
+	}
+	
+	"teve_adrenaline"
+	{
+		"BaseClass"					"ability_datadriven"
+
+		"AbilityTextureName"		"placeholder"
+
+		"ID"						"9056"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_monster_hunter_adrenaline"
+			{
+				"Passive" 		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"160"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 			"CASTER"
+			"ModifierName" 		"modifier_monster_hunter_adrenaline"
+		}
+	}
+	
+	"teve_blade_shield"
+	{
+		"BaseClass"						"death_prophet_exorcism"
+		
+		"ID"							"9057"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		
+		"AbilityCastPoint"				"0.5 0.5 0.5"
+
+		"AbilityCooldown"				"64.0"
+		"AbilityDuration"				"20.0 40.0 60.0"
+
+		"AbilityManaCost"				"200 300 400"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"900 900 900"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spirits"				"15 15 15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spirit_speed"			"700 700 700"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_distance"			"2000 2000 2000"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"give_up_distance"		"1200 1200 1200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_damage"			"2500 2500 2500"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_damage"			"2500 2500 2500"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_percent"			"0 0 0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"average_damage"		"2500 2500 2500"
 			}
 		}
 	}
