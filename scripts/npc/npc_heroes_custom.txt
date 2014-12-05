@@ -238,6 +238,8 @@
 		"Ability3"			"teve_warmth"
 		"Ability4"			"teve_energy_shield"
 		"Ability5"			"teve_cruel_ruin"
+		"Ability6"			""
+		"Ability7"			""
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
@@ -259,6 +261,8 @@
 		"Ability3"			"teve_warmth_2"
 		"Ability4"			"teve_energy_shield_2"
 		"Ability5"			"teve_twilights_eve"
+		"Ability6"			""
+		"Ability7"			""
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
@@ -288,6 +292,92 @@
 		"AttributeAgilityGain"		"9"
 		"AttributeBaseIntelligence"	"80"
 		"AttributeIntelligenceGain"	"2"
+	}
+	
+	"npc_dota_hero_teve_grand_inquisitor"
+	{
+		"override_hero"			"npc_dota_hero_sven"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"		"5"
+		"Ability1"			"teve_retribution"
+		"Ability2"			"teve_igni_strike"
+		"Ability3"			"teve_conviction"
+		"Ability4"			"teve_holy_repel"
+		"Ability5"			"teve_fanaticism"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"4.5"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"8"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"2.5"
+	}
+	
+	"npc_dota_hero_teve_rune_master"
+	{
+		"override_hero"			"npc_dota_hero_beastmaster"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"		"5"
+		"Ability1"			"teve_"
+		"Ability2"			"teve_"
+		"Ability3"			"teve_"
+		"Ability4"			"teve_"
+		"Ability5"			"teve_"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLIGENCE"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"4"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"10"
+		"AttributeBaseIntelligence"	"100"
+		"AttributeIntelligenceGain"	"8"
+	}
+	
+	"npc_dota_hero_teve_rune_master_wolf_form"
+	{
+		"override_hero"			"npc_dota_hero_lycan"
+//		"ModelScale"			"1.0"
+		"Model"					"models/heroes/lycan/lycan_wolf.vmdl"
+
+		"AbilityLayout"		"5"
+		"Ability1"			"teve_"
+		"Ability2"			"teve_"
+		"Ability3"			"teve_"
+		"Ability4"			"teve_"
+		"Ability5"			"teve_"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLIGENCE"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"4"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"10"
+		"AttributeBaseIntelligence"	"100"
+		"AttributeIntelligenceGain"	"8"
+	}
+	
+	"npc_dota_hero_teve_rune_master_bear_form"
+	{
+		"override_hero"			"npc_dota_hero_ursa"
+//		"ModelScale"			"1.0"
+		"Model"					"models/heroes/lone_druid/spirit_bear.vmdl"
+
+		"AbilityLayout"		"5"
+		"Ability1"			"teve_"
+		"Ability2"			"teve_"
+		"Ability3"			"teve_"
+		"Ability4"			"teve_"
+		"Ability5"			"teve_"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLIGENCE"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"4"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"10"
+		"AttributeBaseIntelligence"	"100"
+		"AttributeIntelligenceGain"	"8"
 	}
 
 

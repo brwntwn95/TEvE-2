@@ -1511,8 +1511,7 @@
 	{
 		"BaseClass"				"lina_light_strike_array"
 
-		"ID"					"9047"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-
+		"ID"					"9047"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 		
@@ -1711,7 +1710,7 @@
 	"teve_trueshot_aura"
 {
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"ranger_skill6"
+		"AbilityTextureName"			"placeholder"
 		
 		"MaxLevel"						"4"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1806,7 +1805,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"blade_dance_ctir_chance"	"1 2 3 4"
+				"blade_dance_crit_chance"	"1 2 3 4"
 			}
 		}
 	}
@@ -1904,6 +1903,196 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"average_damage"		"2500 2500 2500"
+			}
+		}
+	}
+	
+	"teve_retribution"
+	{
+		"BaseClass"					"centaur_hoof_stomp"
+		
+		"ID"						"9058"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+		
+		"AbilityCastPoint"			"0.3 0.3 0.3 0.3"
+		"AbilityCooldown"			"6 6 6 6"
+		"AbilityManaCost"			"100 100 100 100"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"600"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"stun_duration"					"2.0 2.0 2.0 2.0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"900 1800 2700 3600"
+			}
+		}
+	}
+	
+	"teve_igni_strike"
+	{
+		"BaseClass"			"dragon_knight_dragon_tail"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+
+		"ID"				"9059"
+
+		"AbilityCastPoint"		"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"		"5"
+
+		"AbilityManaCost"		"100"
+
+		"AbilityCastRange"		"600"
+
+		"AbilityDamage"			"800 1600 2400 3200"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"stun_duration"	"12 12 12 12"
+			}
+		}
+	}
+	
+	"teve_conviction"
+	{
+		"BaseClass"		"vengefulspirit_command_aura"
+		
+		"ID"			"9060"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage_pct"	"6 12 18 24"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"aura_radius"		"700"
+			}
+		}
+	}
+	
+	"teve_holy_repel"
+	{
+		"BaseClass"				"ability_datadriven"
+		"ID"					"9061"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | "
+		"AbilityTextureName"	"placeholder"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"duration"		"0.3 0.6 0.9 1.2"
+			}
+		}
+
+
+		"Modifiers"
+		{
+			"teve_holy_repel_effects"
+			{
+				"Duration"		"%duration"
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MISS_PERCENTAGE"				"30"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"-20"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"						"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"
+				{
+						"Center"	"CASTER"
+						"Radius"	"400"
+						"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				}
+				"ModifierName"	"teve_holy_repel_effects"
+			}
+		}
+	}
+	
+	"teve_fanaticism"
+	{
+		"BaseClass"				"ability_datadriven"
+		"ID"					"9062"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityTextureName"	"placeholder"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"radius"		"700"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"attack_speed"	"3 6 9 12"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"move_speed"	"2 4 6 8"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"teve_fanaticism_aura"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Aura"			"teve_fanaticism_effects"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_ALL"
+			}
+			"teve_fanaticism_effects"
+			{
+				"IsBuff"		"1"
+				"IsPurgable"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_speed"
+				}
 			}
 		}
 	}
