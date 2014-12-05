@@ -327,7 +327,7 @@
 		"Ability4"			"teve_"
 		"Ability5"			"teve_"
 
-		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLIGENCE"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"4"
 		"AttributeBaseAgility"		"80"
@@ -349,7 +349,7 @@
 		"Ability4"			"teve_"
 		"Ability5"			"teve_"
 
-		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLIGENCE"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"4"
 		"AttributeBaseAgility"		"80"
@@ -371,7 +371,7 @@
 		"Ability4"			"teve_"
 		"Ability5"			"teve_"
 
-		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLIGENCE"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"4"
 		"AttributeBaseAgility"		"80"
