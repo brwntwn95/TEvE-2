@@ -1099,7 +1099,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"health_regen"	"9"
+				"health_regen"	"9" //in teve 1 regen is "9%"
 			}
 			"02"
 			{
@@ -1547,6 +1547,10 @@
 		}
 	}
 	
+	//
+	// Arch Sage
+	//-----------------------------------------------------------------------------------
+
 	"teve_boreas"
 	{
 		"BaseClass"					"centaur_hoof_stomp"
@@ -1706,6 +1710,10 @@
 			}
 		}
 	}
+	
+	//
+	// Monster Hunter
+	//-----------------------------------------------------------------------------------
 	
 	"teve_trueshot_aura"
 {
@@ -1907,6 +1915,10 @@
 		}
 	}
 	
+	//
+	// Grand Inquisitor
+	//-----------------------------------------------------------------------------------
+	
 	"teve_retribution"
 	{
 		"BaseClass"					"centaur_hoof_stomp"
@@ -2000,7 +2012,7 @@
 	{
 		"BaseClass"				"ability_datadriven"
 		"ID"					"9061"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | "
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityTextureName"	"placeholder"
 		
 		"AbilitySpecial"
@@ -2093,6 +2105,507 @@
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_speed"
 				}
+			}
+		}
+	}
+	
+	//
+	// Rune Master
+	//-----------------------------------------------------------------------------------
+	
+	"teve_ferocity"
+	{
+		"BaseClass"						"ability_datadriven"
+		"ID"							"9063"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"10 20 30 40"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"10 20 30 40"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"300"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_lycanthrophy"
+	{
+		"BaseClass"						"ability_datadriven"
+		"ID"							"9064"
+		"AbilityTextureName"	"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"move_speed"		"4 8 12 16"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"atk_speed"			"4 8 12 16"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_speed"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_speed"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%atk_speed"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_speed"
+		}
+	}
+	
+	"teve_feral_rage"
+	{
+			"BaseClass"						"ability_datadriven"
+			"ID"							"9065"
+			
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityCastPoint"	"0.3 0.3 0.3 0.3"
+
+		"AbilityCooldown"	"30 30 30 30"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage"		"500 1000 1500 2000"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"lifesteal"			"5 10 15 20"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_feral_rage"
+			{
+				"Duration"	"15"
+				"OnDealDamage"
+				{
+					"Lifesteal"
+					{
+						"Target"			"ATTACKER"
+						"LifestealPercent"	"%lifesteal"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "CASTER"
+				"ModifierName" "modifier_rune_master_feral_rage"
+			}
+		}
+	}
+	
+	//
+	// Professional Witcher
+	//-----------------------------------------------------------------------------------
+	
+	"teve_final_group_style"
+	{
+		"BaseClass"					"ability_datadriven"
+		"ID"						"9066"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityCooldown"			"4.0"
+		"AbiliyCastPoint"			"0"
+		"MaxLevel"					"30"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"80 160 240 320"	//800 DPS per level
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_final_group_style_dmg"
+			{
+				"Duration"	"2"
+				"ThinkInterval"	"0.1"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"		"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"%damage"
+					}
+				}
+			}
+			"modifier_final_group_style_effects"
+			{
+				"Duration"	"2.1"
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"
+				{
+					"Center"	"CASTER"
+					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Radius"	"300"
+				}
+				"ModifierName"	"modifier_final_group_style_dmg"
+			}
+			"ApplyModifier"
+			{
+				"Target"		"CASTER"
+				"ModifierName"	"modifier_final_group_style_effects"
+			}
+		}
+	}
+	
+	"teve_final_silver_style"
+	{
+		"BaseClass"					"sven_great_cleave"
+		"ID"						"9067"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+				
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_radius"	"450.0"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_damage"	"3 6 9 12"
+			}
+		}
+	}
+	
+	"teve_avoid"
+	{
+		"BaseClass"					"phantom_assassin_blur"
+		"ID"						"9068"
+		
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_evasion"	"1 2 3 4"
+			}
+		}
+	}
+	
+	"teve_ultimate_mutation"
+	{
+		"BaseClass"				"ability_datadriven"
+		"ID"					"9069"
+		"AbilityTextureName"	"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"move_speed"		"4 8 12 16"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bonus_regen"		"0.6 1.2 1.8 2.4"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_professional_witcher_ultimate_mutation"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_speed"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"			"%bonus_regen"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_professional_witcher_ultimate_mutation"
+		}
+	}
+	
+//	"teve_36_strikes_of_the_heavenly_dragon"
+//	{
+//		"BaseClass"					"ability_datadriven"
+//		"ID"						""
+//		"AbilityCooldown"			""
+	}
+	
+	//
+	// Hierophant
+	//-----------------------------------------------------------------------------------
+	
+	"teve_holy_light_2"
+	{
+		"BaseClass"					"omniknight_purification"
+		"ID"						"9070"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+
+		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+
+		"AbilityCastRange"		"700"
+
+		"AbilityCooldown"		"0.0"
+
+		"AbilityManaCost"		"0 0 0 0"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"heal"		"500 1000 1500 2000"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"0 0 0 0"
+			}
+		}
+	}
+	
+	"teve_kyrie_eleison"
+	{
+		"BaseClass"						"lich_frost_armor"
+		"ID"							"9071"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+
+		"AbilityCooldown"				"5.0 5.0 5.0 5.0"
+		"AbilityDuration"				"1.0 2.0 3.0 4.0"
+
+		"AbilityManaCost"				"0 0 0 0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_bonus"			"9999 9999 9999 9999"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"			"2.0 2.0 2.0 2.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_movement_speed"	"0 0 0 0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_attack_speed"		"-30 -30 -30 -30"
+			}
+		}
+	}
+	
+	"teve_liturgy_of_the_word"
+	{
+		"BaseClass"						"legion_commander_press_the_attack"
+		"ID"							"9072"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"12.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed"			"10 20 30 40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen"				"0 0 0 0"
+			}
+		}
+	}
+	
+	"teve_gospel"
+	{
+		"BaseClass"						"ability_datadriven"
+		"ID"							"9073"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"7 14 21 28"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armour"			"1 2 3 4"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_hierophant_gospel_effects"
+			{
+				"Duration"		"30"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armour"
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"	"%bonus_damage"
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"		"TARGET"
+				"ModifierName"	"modifier_hierophant_gospel_effects"
 			}
 		}
 	}

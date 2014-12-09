@@ -321,17 +321,17 @@
 //		"ModelScale"			"1.0"
 
 		"AbilityLayout"		"5"
-		"Ability1"			"teve_"
-		"Ability2"			"teve_"
-		"Ability3"			"teve_"
-		"Ability4"			"teve_"
-		"Ability5"			"teve_"
+		"Ability1"			"teve_wearbear"
+		"Ability2"			"teve_wearwolf"
+		"Ability3"			"teve_ferocity"
+		"Ability4"			"teve_lycanthrophy"
+		"Ability5"			"teve_feral_rage"
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"4"
 		"AttributeBaseAgility"		"80"
-		"AttributeAgilityGain"		"10"
+		"AttributeAgilityGain"		"3"
 		"AttributeBaseIntelligence"	"100"
 		"AttributeIntelligenceGain"	"8"
 	}
@@ -343,17 +343,17 @@
 		"Model"					"models/heroes/lycan/lycan_wolf.vmdl"
 
 		"AbilityLayout"		"5"
-		"Ability1"			"teve_"
-		"Ability2"			"teve_"
-		"Ability3"			"teve_"
-		"Ability4"			"teve_"
-		"Ability5"			"teve_"
+		"Ability1"			"teve_wearbear"
+		"Ability2"			"teve_true_form"
+		"Ability3"			"teve_ferocity"
+		"Ability4"			"teve_lycanthrophy"
+		"Ability5"			"teve_feral_rage"
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"4"
 		"AttributeBaseAgility"		"80"
-		"AttributeAgilityGain"		"10"
+		"AttributeAgilityGain"		"3"
 		"AttributeBaseIntelligence"	"100"
 		"AttributeIntelligenceGain"	"8"
 	}
@@ -365,19 +365,61 @@
 		"Model"					"models/heroes/lone_druid/spirit_bear.vmdl"
 
 		"AbilityLayout"		"5"
-		"Ability1"			"teve_"
-		"Ability2"			"teve_"
-		"Ability3"			"teve_"
-		"Ability4"			"teve_"
-		"Ability5"			"teve_"
+		"Ability1"			"teve_true_form"
+		"Ability2"			"teve_wearwolf"
+		"Ability3"			"teve_ferocity"
+		"Ability4"			"teve_lycanthrophy"
+		"Ability5"			"teve_feral_rage"
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"4"
 		"AttributeBaseAgility"		"80"
-		"AttributeAgilityGain"		"10"
+		"AttributeAgilityGain"		"3"
 		"AttributeBaseIntelligence"	"100"
 		"AttributeIntelligenceGain"	"8"
+	}
+	
+	"npc_dota_hero_teve_professional_witcher"
+	{
+		"override_hero"			"npc_dota_hero_sven"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"		"5"
+		"Ability1"			"teve_final_group_style"
+		"Ability2"			"teve_final_silver_style"
+		"Ability3"			"teve_avoid"
+		"Ability4"			"teve_ultimate_mutation"
+		"Ability5"			"teve_36_strikes_of_the_heavanly_dragon"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"4"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"9"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"2"
+	}
+	
+	"npc_dota_hero_teve_hierophant"
+	{
+		"override_hero"			"npc_dota_hero_chen"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"		"5"
+		"Ability1"			"teve_holy_light_2"
+		"Ability2"			"teve_kyrie_eleison"
+		"Ability3"			"teve_liturgy_of_the_word"
+		"Ability4"			"teve_gospel"
+		"Ability5"			"teve_resurrection"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELECT"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"3.5"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"2.5"
+		"AttributeBaseIntelligence"	"100"
+		"AttributeIntelligenceGain"	"9"
 	}
 
 

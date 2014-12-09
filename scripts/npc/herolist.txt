@@ -39,6 +39,10 @@
 	"npc_dota_hero_skeleton_king"		"1"		//Professional Witcher
 	"npc_dota_hero_lycan"				"1"		//Rune Master WOLF FORM
 	"npc_dota_hero_ursa"				"1"		//Rune Master BEAR FORM
+	
+	
+	
+	"npc_dota_hero_dazzle"				"1"		//testHero
 
 	//NOT AN ACTUAL HERO
 	"npc_dota_hero_pudge"				"1"		//punching bag
