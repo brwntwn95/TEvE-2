@@ -107,7 +107,7 @@
 
 		"AbilityLayout"			"5"
 		"Ability1"			"teve_dark_psi_strike"
-		"Ability2"			"teve_grand_finisher_arts"	//Incomplete
+		"Ability2"			"teve_grand_finisher_arts"
 		"Ability3"			"teve_finisher_expertise"
 		"Ability4"			"teve_forbidden_psi_mastery"
 		"Ability5"			"teve_power_overwhelming"
@@ -413,7 +413,7 @@
 		"Ability4"			"teve_gospel"
 		"Ability5"			"teve_resurrection"
 
-		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELECT"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"80"
 		"AttributeStrengthGain"		"3.5"
 		"AttributeBaseAgility"		"80"

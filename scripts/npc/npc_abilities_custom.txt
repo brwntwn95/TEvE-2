@@ -395,54 +395,70 @@
 		"ID"			"9016"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-                "Modifiers"
-                {
-                        "modifier_grand_finisher_effects"
-                        {
-                                "Passive"                       "1"
-                                "OnAttackStart"
-                                {
-                                        "Random"
-                                        {
-                                                "Chance"        ".40"
-                                                "PseudeoRandom"         "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
-                                                "OnSuccess"
-                                                {
-                                                        "ApplyModifier"
-                                                        {
-                                                                "Target"                "CASTER"
-                                                                "ModifierName"  "modifier_grand_finisher_crit_success"
-                                                        }
-                                                }
-                                                "OnFailure"
-                                                {
-                                                        "RemoveModifier"
-                                                        {
-                                                                "Target"                "CASTER"
-                                                                "ModifierName"  "modifier_grand_finisher_crit_success"
-                                                        }
-                                                }
-                                        }
-                                }
-                                "Properties"
-                                {
-                                        "MODIFIER_PROPERTY_EVASION_CONSTANT"    "40"
-                                }
-                        }
-                        "modifier_grand_finisher_crit_success"
-                        {
-                                "Properties"
-                                {
-                                        "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"   "320"
-                                }
-                        }
-                }
-
-		"ApplyModifier"
+		
+		"AbilitySpecial"
 		{
-			"Target"	"CASTER"
-			"ModifierName"	"modifier_grand_finisher_effects"
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"1 2 3 40"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"1 2 3 40"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"320"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
 		}
 	}
 
@@ -2308,7 +2324,7 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityCooldown"			"4.0"
 		"AbiliyCastPoint"			"0"
-		"MaxLevel"					"30"
+//		"MaxLevel"					"30"
 		
 		"AbilitySpecial"
 		{
@@ -2321,26 +2337,31 @@
 		
 		"Modifiers"
 		{
-			"modifier_final_group_style_dmg"
+			"modifier_final_group_style_effects"
 			{
 				"Duration"	"2"
-				"ThinkInterval"	"0.1"
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_final_group_style_dmg"
+			{
+				"Duration"			"2"
+				"ThinkInterval"		"0.1"
 				"OnIntervalThink"
 				{
 					"Damage"
 					{
-						"Target"	"TARGET"
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Radius"	"300"
+						}
 						"Type"		"DAMAGE_TYPE_MAGICAL"
 						"Damage"	"%damage"
 					}
-				}
-			}
-			"modifier_final_group_style_effects"
-			{
-				"Duration"	"2.1"
-				"States"
-				{
-					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
 		}
@@ -2349,18 +2370,13 @@
 		{
 			"ApplyModifier"
 			{
-				"Target"
-				{
-					"Center"	"CASTER"
-					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Radius"	"300"
-				}
-				"ModifierName"	"modifier_final_group_style_dmg"
+				"Target"		"CASTER"
+				"ModifierName"	"modifier_final_group_style_effects"
 			}
 			"ApplyModifier"
 			{
 				"Target"		"CASTER"
-				"ModifierName"	"modifier_final_group_style_effects"
+				"ModifierName"	"modifier_final_group_style_dmg"
 			}
 		}
 	}
@@ -2499,6 +2515,7 @@
 		"BaseClass"						"lich_frost_armor"
 		"ID"							"9071"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		
 		"AbilityCastRange"				"800"
