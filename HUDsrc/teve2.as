@@ -40,25 +40,15 @@
 		
 		public function onLoaded() : void {
 			trace("\n\n-- TEvE 2 hud starting to load! --\n\n");
-			
-			loadingScreen = new LoadContainer();
+			loadingScreen = new LoadContainer(globals);
 			loadingScreen.x = 100;
 			loadingScreen.y = 100;
 			addChild(loadingScreen);
 			
 			Globals.instance.resizeManager.AddListener(this);
 			AutoReplaceAssets(this);
-			
-			var newObjectClass = getDefinitionByName("s_FullDeckCardWithMovie");
-			var newObject = new newObjectClass();
-			addChild(newObject);
-			newObject.x = 1000;
-			newObject.y = 500;
-			newObject.visible = true;
-			
-			//PrintTable(newObject);
-			PrintTable(loadingScreen);
-			loadingScreen.startCardVideo("lina");
+		
+			loadingScreen.characterContainer.heroPortrait.startCardVideo("lina");
 			loadingScreen.visible = true;
 		}
 		public function onResize(re:ResizeManager) : * {
