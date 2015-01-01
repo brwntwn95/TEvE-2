@@ -3,6 +3,432 @@
 {
 	"Version"		"1"
 	
+   //=======================================================================
+  // First Job
+ //=======================================================================	
+	
+	//Acolyte
+	
+	"teve_acolyte_1_heal"
+	{
+	    "BaseClass"         "ability_datadriven"
+
+        "ID"                "6000"
+
+            "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	    "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+
+            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+ 
+            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	    "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+
+            "AbilityCastPoint"  "0.3 0.3 0.3 0.3"
+
+            "AbilityCastRange"  "700"
+   
+            "AbilityCooldown"   "5.0"
+ 
+            "AbilityManaCost"   "90 100 110 120"
+
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                        "var_type" "FIELD_INTEGER"
+                        "heal"     "200 250 300 350"
+                }
+               
+                
+            }           
+            "OnSpellStart"
+           {
+                "Heal"
+                {
+	                "HealAmount" "%heal"
+                        "Target"     "TARGET"
+                }    			
+    	   }
+        }
+        
+    "teve_cripple"
+    {   
+	"BaseClass"             "ability_datadriven"
+	
+	"ID"                    "6001"
+	
+	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	"AbilityTextureName"    "pugna_decrepify"
+	
+	"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	
+	"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	"AbilityType"           "DOTA_ABILITY_TYPE_BASIC"
+	
+	"MaxLevel"              "4"
+	
+	"RequiredLevel"         "1"
+	
+	"LevelsBetweenUpgrades" "2"      
+	
+	"AbilityCastPoint"         "0.15 0.15 0.15 0.15"
+
+        "AbilityCastRange"         "650 650 650 650"
+
+        "AbilityCooldown"          "10 12 14 16"
+
+        "AbilityDuration"          "4 6 8 10"
+
+        "AbilityManaCost"          "100 120 140 160"
+
+        "AbilitySpecial"
+        {
+                "01"
+                {
+                        "var_type" "FIELD_INTEGER"
+                        "damage" "-20"
+                }
+                "02"
+                {
+                        "var_type" "FIELD_INTEGER"
+                        "duration"   "4 6 8 10"
+                }
+                "03"
+                {
+                        "var_type" "FIELD_INTEGER"
+                       "attack_speed"        "-20"
+                }
+                "04"
+                {
+                       "var_type" "FIELD_INTEGER"
+                        "movement_speed"          "-20"
+                }
+		   	
+	}		
+	"Modifiers"
+        {
+	        "modifier_acolyte_cripple"
+    	        {
+			"Duration"                "%duration"
+	                "Properties"
+			{                               "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"   "%damage"
+				                        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_speed"
+							"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"   "%attack_speed"
+			}								
+		}									
+	}
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"    "TARGET"
+                "ModifierName"  "modifier_acolyte_cripple"
+            }
+        }
+    }
+    
+	"teve_brilliance_aura"
+	{
+	"BaseClass"             "ability_datadriven"
+	
+	"ID"                    "6002"
+	
+        "AbilityTextureName"    "crystal_maiden_brilliance_aura"
+	
+	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	
+	"AbilitySpecial"
+	        {
+	               "01"
+		       {
+		           "var_type"  "FIELD_FLOAT"
+                           "mana_regen" "0.75 1.00 1.25 1.50"		
+                       }
+                       "02"
+                       {
+                           "var_type" "FIELD_INTEGER"
+                           "radius"   "600"
+                       }
+                }
+        
+           "Modifiers"
+           {
+               "modifier_brilliance_aura"
+               {
+                        "IsBuff"         "1"
+                        "IsPurgable"     "0"
+                        "IsHidden"       "1"
+                        "Passive"        "1"
+                        "Aura"           "brilliance_aura"
+                        "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Aura_Radius"   "%radius"
+                        "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+               }
+               "brilliance_aura"
+               {
+                        "IsHidden"    "0"
+                        "IsBuff"      "1"
+                        "IsPurgable"  "0"
+                        "Properties"  
+                        {
+                                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
+                        }
+	        }			
+            }
+        }
+	
+        "teve_acolyte_inner_fire"
+        {
+        "BaseClass"             "ability_datadriven"
+	
+	"ID"                    "6003"
+	
+	"AbilityTextureName"    "lina_fiery_soul"
+	
+	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	
+	"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	"AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+	
+	"AbilityCastPoint"      "0.20 0.20 0.20 0.20"
+	
+	"AbilityCastRange"      "700"
+	
+	"AbilityCooldown"       "7.0"
+	
+	"AbilityManaCost"       "40 60 80 100"
+	
+	"AbilitySpecial"
+	    {
+	            "01"
+		    {
+		       "var_type" "FIELD_INTEGER"
+			   "bonus_damage" "10 20 30 40"
+		    }
+		    "02"
+		    {
+			   "var_type" "FIELD_INTEGER"
+			   "bonus_armour" "1 2 3 4"
+	            }
+            }
+            "Modifiers"
+            {
+                "modifier_acolyte_inner_fire"
+                {
+                      "Duration" "30"
+                      "Properties"
+                    	{
+			        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armour"
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE" "%bonus_damage"
+ 		        }
+	       }
+	    }				
+	    "OnSpellStart"
+            {
+                "ApplyModifier"
+                {
+                    "Target"    "TARGET"
+                    "ModifierName"  "modifier_acolyte_inner_fire"
+                }
+            }
+        }	
+    
+
+	// Archer
+    //-----------------------------------------------------------------------------------
+
+   "teve_archer_power_shot"
+    {
+            "BaseClass"      "ability_datadriven"
+ 
+            "ID"             "6004"
+               
+                "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+                "AbilityTextureName"             "placeholder"
+                "AbilityUnitTargetTeam"          "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "AbilityUnitTargetType"          "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"             
+                "AbilityUnitDamageType"          "DAMAGE_TYPE_MAGICAL"
+                               
+                "AbilityType"                    "DOTA_ABILITY_TYPE_BASIC"
+                               
+                "MaxLevel"                       "4"
+                               
+                "RequiredLevel"                  "1"
+                               
+                "LevelsBetweenUpgrades"          "2"
+               
+                "AbilityCastPoint"       "0.20"
+               
+                "AbilityCooldown"        "7"
+               
+                "AbilityManaCost"        "80"
+               
+                "AbilityCastRange"       "600"
+               
+                "AbilityDamage"          "100 175 250 325"
+               
+                           
+                            "precache"
+                                {
+                                        "particle"                              "particles/econ/items/luna/luna_crescent_moon/luna_glaive_crescent_moon.vpcf"
+                                }
+                               
+                "AbilitySpecial"
+                {
+                        "01"
+                        {
+                            "var_type"  "FIELD_FLOAT"
+                            "stun_duration" "1.5"
+                        }
+                        "02"
+                        {
+                           "var_type"  "FIELD_INTEGER"
+                           "damage"    "100 175 250 325"
+                        }      
+                }
+                                "OnSpellStart"
+                                {
+                                        "TrackingProjectile"
+                                        {
+                                                "Target"                        "TARGET"
+                                                "EffectName"            "particles/econ/items/luna/luna_crescent_moon/luna_glaive_crescent_moon.vpcf"
+                                                "Dodgeable"                     "0"
+                                                "ProvidesVision"        "0"
+                                                "VisionRadius"          "0"
+                                                "MoveSpeed"                     "1234"
+                                                "SourceAttachment"      "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+                                        }
+                                }
+								
+				"OnProjectileHitUnit"
+				{
+       				        "Stun" 
+					{ 
+					        "Target" "TARGET" 
+					        "Duration" "%stun_duration" 
+				        }
+					"Damage" 
+					{ 
+						"Target" "TARGET" 
+						"Type" "DAMAGE_TYPE_MAGICAL"  
+						"Damage" "%damage" 
+					}
+
+										
+										      
+ 
+				}		
+    }  
+    
+	"teve_archer_searing_arrows"
+    {
+     "BaseClass"        "clinkz_searing_arrows"
+     "ID"               "6005"
+     "AbilityBehavior"                       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+     "AbilityUnitTargetTeam"                 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+     "AbilityUnitTargetType"                 "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+     "AbilityUnitDamageType"                 "DAMAGE_TYPE_PHYSICAL"
+     "AbilityCastRange"                      "600"
+     "AbilityCastPoint"                      "0.0 0.0 0.0 0.0"
+ 
+     "AbilityCooldown"                       "0.0 0.0 0.0 0.0"
+ 
+     "AbilityManaCost"                       "8 9 10 11"
+ 
+     "AbilitySpecial"
+                {
+                    "01"
+                    {
+                                "var_type"              "FIELD_INTEGER"
+                                "damage_bonus"          "10 20 30 40"
+                    }
+                }
+       }
+       
+     "teve_archer_trueshot_aura"
+    {
+   
+    "BaseClass"                             "ability_datadriven"
+ 
+    "ID"       "6006"
+    "AbilityTextureName"                    "drow_ranger_marksmanship"
+               
+    "MaxLevel"                              "4"
+    "AbilityBehavior"                       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+       
+    "AbilitySpecial"
+                {
+                        "01"
+                        {
+                                "var_type"              "FIELD_INTEGER"
+                                "bonus_damage"          "5 10 15 20"
+                        }
+                        "02"
+                        {
+                                "var_type"             "FIELD_INTEGER"
+                                "radius"               "700"
+                        }
+                }
+ 
+                "Modifiers"                            
+                {                                              
+                        "modifier_archer_trueshot_aura"        
+                        {
+                                "IsBuff"                                        "1"
+                                "IsPurgable"                            "0"
+                                "IsHidden"                                      "1"
+                                "Passive"                                       "1"
+                                "Aura"                                          "trueshot_aura"
+                                "Aura_Teams"                            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                                "Aura_Radius"                           "%radius"
+                                "Aura_Types"                            "DOTA_UNIT_TARGET_HERO"
+                                "Aura_Flags"                            "DOTA_UNIT_TARGET_FLAG_RANGED_ONLY"
+                        }
+                        "trueshot_aura"
+                        {
+                                "IsHidden"                                      "0"
+                                "IsBuff"                                        "1"
+                                "IsPurgable"                            "0"
+                                "Properties"
+                                {
+                                        "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE" "%bonus_damage"
+                                }
+                        }
+                }
+ 
+        
+ 
+    }
+    
+     "teve_archer_evasion"
+    {
+ 
+         
+	"BaseClass"			"phantom_assassin_blur"
+
+	"ID"				"6007"
+
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+	"AbilitySpecial"
+	    {
+		"01"
+		    {
+			      "var_type"	"FIELD_INTEGER"
+			      "bonus_evasion"	"2 4 6 8"
+		    }
+		
+	    }
+    }
+	
 	//===================================================================================
 	// Fourth Job
 	//
