@@ -1,0 +1,4 @@
+[submodule "ModDotaLib"]
+	path = ModDotaLib
+	url = http://github.com/ModDota/ModDotaLib
+	branch = dev

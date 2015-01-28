@@ -19,8 +19,14 @@ local function loadModule(name)
 end
 
 -- Load TEvE
+
+--TEST
+loadModule('bit')
+
 loadModule('lib.json')         -- Json Library
 loadModule('teve2')        -- Main program
+
+loadModule('CodeSaveLoad')
 --require("moondota/moondota")
 
 if totalErrors == 0 then

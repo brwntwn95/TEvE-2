@@ -8,6 +8,8 @@
 	import flash.utils.getQualifiedClassName;
 	import flash.utils.getDefinitionByName;
 	
+	import ModDotaLib.Utils.AssetUtils;
+	
 	
 	public class teve2 extends MovieClip {
 		//GameAPI stuff, requried for this to work
@@ -46,9 +48,9 @@
 			addChild(loadingScreen);
 			
 			Globals.instance.resizeManager.AddListener(this);
-			AutoReplaceAssets(this);
+			AssetUtils.AutoReplaceAssets(this);
 		
-			loadingScreen.characterContainer.heroPortrait.startCardVideo("lina");
+			loadingScreen.init();
 			loadingScreen.visible = true;
 		}
 		public function onResize(re:ResizeManager) : * {
@@ -103,28 +105,6 @@
             this.scaleY = re.ScreenHeight/maxStageHeight;
 		}
 		
-
-        public function AutoReplaceAssets(t) {
-        	var i:int;
-
-			switch(getQualifiedClassName(t)) {
-				case "DotoAssets::DotoContainer":
-					trace("OMGOMGOMG A DOTOCONTAINER");
-					ReplaceAsset(t, "DB4_outerpanel");
-					break;
-				default:
-					//trace("nvm, not interested in: "+getQualifiedClassName(t));
-			}
-			
-        	if(t is MovieClip) {
-        		// Loop over children
-	        	for(i = 0; i < t.numChildren; i++) {
-					// Recurse!
-	        		AutoReplaceAssets(t.getChildAt(i));
-	        	}
-        	}
-        }
-		
 		public function ReplaceAsset(btn, type) {
 			var parent = btn.parent;
 			var oldx = btn.x;
@@ -133,6 +113,7 @@
 			var oldheight = btn.height;
 			var olddepth = parent.getChildIndex(btn);
 			var oldname = btn.name;
+			trace("NAME: "+oldname);
 			var newObjectClass = getDefinitionByName(type);
 			var newObject = new newObjectClass();
 			newObject.x = oldx;

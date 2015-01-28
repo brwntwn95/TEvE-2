@@ -10,6 +10,12 @@ function TEvEGameMode:new (o)
 	return o
 end
 
+--questEnt = SpawnEntityFromTableSynchronous( "quest", { name = "Quest1", title = "#game_mode_15_desc" } )
+--for k,v in pairs(questEnt) do
+--	print(k)
+--	print(v)
+--end
+
 function TEvEGameMode:InitGameMode()
 	print(" --- TEvE 2 Hello World! --- ")
 	ListenToGameEvent('player_connect_full', Dynamic_Wrap(TEvEGameMode,"onPlayerConnect"), self)

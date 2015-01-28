@@ -124,9 +124,10 @@ local function string_to_table(letter)
 	insert(username_table, string_byte(letter))
 end
 
+CodeSaveLoad = {}
 -- The save Function takes username (a string) and userdata (a table)
 -- It returns a save code as a string which can be loaded with the load function
-function save(username, userdata)
+function CodeSaveLoad:save(username, userdata)
 	
 	--
 	username_table = {}
@@ -219,7 +220,7 @@ end
 -- It returns a two variables: 
 -- 		nil, nil: code loading has failed due to checksum mismatch
 --		true, datatable: code loding was successful, data is returned as a table
-function load(username, code)
+function CodeSaveLoad:load(username, code)
 	local num
 	local dat = {}
 	
