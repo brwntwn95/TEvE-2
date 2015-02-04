@@ -25,10 +25,330 @@
 	//First Job
 	//==================================================================================
 
+	"npc_dota_hero_teve_archer"
+	{
+		"override_hero"			"npc_dota_hero_<archer>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_archer_power_shot"
+		"Ability2"			"teve_archer_searing_arrows"
+		"Ability3"			"teve_archer_trueshot_aura"
+		"Ability4"			"teve_archer_evasion"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"14"
+		"AttributeStrengthGain"		"1.25"
+		"AttributeBaseAgility"		"18"
+		"AttributeAgilityGain"		"2.25"
+		"AttributeBaseIntelligence"	"14"
+		"AttributeIntelligenceGain"	"1"
+	}
+	
+	"npc_dota_hero_teve_druid"
+	{
+		"override_hero"			"npc_dota_hero_<druid>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_druid_disabling_roots"
+		"Ability2"			"teve_druid_rejuvenation"
+		"Ability3"			"teve_druid_thorns_aura"
+		"Ability4"			"teve_druid_firestorm"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"15"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"14"
+		"AttributeAgilityGain"		"1.25"
+		"AttributeBaseIntelligence"	"17"
+		"AttributeIntelligenceGain"	"1.75"
+	}
+	
+	"npc_dota_hero_teve_initiate"
+	{
+		"override_hero"			"npc_dota_hero_<initiate>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_initiate_fire_strike"
+		"Ability2"			"teve_initiate_chain_lightning"
+		"Ability3"			"teve_initiate_warmth"
+		"Ability4"			"teve_initiate_ice_strike"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"13"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseAgility"		"12"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"21"
+		"AttributeIntelligenceGain"	"2.5"
+	}
+	
+	"npc_dota_hero_teve_swordsman"
+	{
+		"override_hero"			"npc_dota_hero_<swordsman>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_swordsman_sword_strike"
+		"Ability2"			"teve_swordsman_devotion_aura"
+		"Ability3"			"teve_swordsman_critical_strike"
+		"Ability4"			"teve_swordsman_toughness"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"18"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseAgility"		"14"
+		"AttributeAgilityGain"		"1.25"
+		"AttributeBaseIntelligence"	"14"
+		"AttributeIntelligenceGain"	"1.25"
+	}
+	
+	"npc_dota_hero_teve_templar"
+	{
+		"override_hero"			"npc_dota_hero_<templar>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_templar_psionic_strike"
+		"Ability2"			"teve_templar_psionic_lightning"
+		"Ability3"			"teve_templar_blade_proficiency_1"
+		"Ability4"			"teve_templar_wind_walk"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"14"
+		"AttributeStrengthGain"		"0.75"
+		"AttributeBaseAgility"		"19"
+		"AttributeAgilityGain"		"2.5"
+		"AttributeBaseIntelligence"	"21"
+		"AttributeIntelligenceGain"	"2.5"
+	}
+	
+	"npc_dota_hero_teve_theif"
+	{
+		"override_hero"			"npc_dota_hero_<theif>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_thief_envenomed_strike"
+		"Ability2"			"teve_thief_dodge"
+		"Ability3"			"teve_thief_critical_strike"
+		"Ability4"			"teve_thief_agility"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"14"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseAgility"		"20"
+		"AttributeAgilityGain"		"2.5"
+		"AttributeBaseIntelligence"	"12"
+		"AttributeIntelligenceGain"	"1"
+	}
+	
+	"npc_dota_hero_teve_witch_hunter"
+	{
+		"override_hero"			"npc_dota_hero_<witch_hunter>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_witch_hunter_igni_strike"
+		"Ability2"			"teve_witch_hunter_witcher_group_style"
+		"Ability3"			"teve_witch_hunter_hunter"
+		"Ability4"			"teve_witch_hunter_mutation"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"16"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"16"
+		"AttributeAgilityGain"		"1.75"
+		"AttributeBaseIntelligence"	"14"
+		"AttributeIntelligenceGain"	"1.25"
+	}
+	
+	"npc_dota_hero_teve_acolyte"
+	{
+		"override_hero"			"npc_dota_hero_<acolyte>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_acolyte_1_heal"
+		"Ability2"			"teve_cripple"
+		"Ability3"			"teve_brilliance_aura"
+		"Ability4"			"teve_acolyte_inner_fire"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"15"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"15"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"16"
+		"AttributeIntelligenceGain"	"2"
+	}
+	
 	//Second Job
 	//==================================================================================
 
+	"npc_dota_hero_teve_hunter"
+	{
+		"override_hero"			"npc_dota_hero_<hunter>"
+//		"ModelScale"			"1.0"
 
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_hunter_ensnare"
+		"Ability2"			"teve_hunter_searing_arrows"
+		"Ability3"			"teve_hunter_trueshot_aura"
+		"Ability4"			"teve_hunter_rapid_fire"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"60"
+		"AttributeAgilityGain"		"3"
+		"AttributeBaseIntelligence"	"40"
+		"AttributeIntelligenceGain"	"1.5"
+	}
+	
+	"npc_dota_hero_teve_arch_druid"
+	{
+		"override_hero"			"npc_dota_hero_<arch_druid>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_"
+		"Ability2"			"teve_"
+		"Ability3"			"teve_arch_druid_twister"
+		"Ability4"			"teve_arch_druid_thunderstorm"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"40"
+		"AttributeAgilityGain"		"2"
+		"AttributeBaseIntelligence"	"60"
+		"AttributeIntelligenceGain"	"2.5"
+	}
+	
+	"npc_dota_hero_teve_mage"
+	{
+		"override_hero"			"npc_dota_hero_necrolyte"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_mage_flame_strike"
+		"Ability2"			"teve_mage_lightning_strike"
+		"Ability3"			"teve_mage_warmth"
+		"Ability4"			"teve_mage_mana_shield"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"40"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"60"
+		"AttributeIntelligenceGain"	"3.5"
+	}
+	
+	"npc_dota_hero_teve_knight"
+	{
+		"override_hero"			"npc_dota_hero_<knight>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_knight_power_strike"
+		"Ability2"			"teve_knight_power_slam"
+		"Ability3"			"teve_knight_devotion_aura"
+		"Ability4"			"teve_knight_battle_cry"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"60"
+		"AttributeStrengthGain"		"3.25"
+		"AttributeBaseAgility"		"40"
+		"AttributeAgilityGain"		"1.5"
+		"AttributeBaseIntelligence"	"40"
+		"AttributeIntelligenceGain"	"1.25"
+	}
+	
+	"npc_dota_hero_teve_arch_templar"
+	{
+		"override_hero"			"npc_dota_hero_<arch_templar>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_arch_templar_warp_strike"
+		"Ability2"			"teve_arch_templar_psi_nova"
+		"Ability3"			"teve_arch_templar_psi_technique"
+		"Ability4"			"teve_arch_templar_psionic_storm"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseAgility"		"60"
+		"AttributeAgilityGain"		"3.5"
+		"AttributeBaseIntelligence"	"40"
+		"AttributeIntelligenceGain"	"1.5"
+	}
+	
+	"npc_dota_hero_teve_rogue"
+	{
+		"override_hero"			"npc_dota_hero_<rogue>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_rogue_vanish"
+		"Ability2"			"teve_rogue_poisoned_attack"
+		"Ability3"			"teve_rogue_critical_strike"
+		"Ability4"			"teve_rogue_agility"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseAgility"		"60"
+		"AttributeAgilityGain"		"3"
+		"AttributeBaseIntelligence"	"40"
+		"AttributeIntelligenceGain"	"1"
+	}
+	
+	"npc_dota_hero_teve_slayer"
+	{
+		"override_hero"			"npc_dota_hero_kunkka"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_slayer_steel_group_style"
+		"Ability2"			"teve_slayer_silver_group_style"
+		"Ability3"			"teve_slayer_dodge"
+		"Ability4"			"teve_"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"1.75"
+		"AttributeBaseAgility"		"60"
+		"AttributeAgilityGain"		"2.75"
+		"AttributeBaseIntelligence"	"40"
+		"AttributeIntelligenceGain"	"1.5"
+	}
+	
+	"npc_dota_hero_teve_cleric"
+	{
+		"override_hero"			"npc_dota_hero_<cleric>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_cleric_heal"
+		"Ability2"			"teve_cleric_kyrie_eleison"
+		"Ability3"			"teve_cleric_brilliance_aura"
+		"Ability4"			"teve_cleric_healing_wave"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseAgility"		"40"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"60"
+		"AttributeIntelligenceGain"	"3"
+	}
+
+	
 	//Third Job
 	//==================================================================================
 

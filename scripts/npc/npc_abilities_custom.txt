@@ -181,9 +181,9 @@
             }
         }
 	
-        "teve_acolyte_inner_fire"
-        {
-        "BaseClass"             "ability_datadriven"
+    "teve_acolyte_inner_fire"
+    {
+    "BaseClass"             "ability_datadriven"
 	
 	"ID"                    "6003"
 	
@@ -352,7 +352,7 @@
                 }
        }
        
-     "teve_archer_trueshot_aura"
+    "teve_archer_trueshot_aura"
     {
    
     "BaseClass"                             "ability_datadriven"

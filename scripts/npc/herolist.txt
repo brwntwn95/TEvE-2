@@ -10,9 +10,26 @@
 	//First Job
 	//==================================================================================
 
+//	"npc_dota_hero_<archer>"			"1"		//Archer
+//	"npc_dota_hero_<druid>"				"1"		//Druid
+//	"npc_dota_hero_<initiate>"			"1"		//Initiate
+//	"npc_dota_hero_<swordsman>"			"1"		//Swordsman
+//	"npc_dota_hero_<templar>"			"1"		//Templar
+//	"npc_dota_hero_<theif>"				"1"		//Theif
+//	"npc_dota_hero_<witch_hunter>"		"1"		//Witch Hunter
+//	"npc_dota_hero_<acolyte>"			"1"		//Acolyte
+
 	//Second Job
 	//==================================================================================
 
+//	"npc_dota_hero_<arch_druid>"		"1"		//Arch Druid
+//	"npc_dota_hero_<arch_templar>"		"1"		//Arch Templar
+//	"npc_dota_hero_<cleric>"			"1"		//Cleric
+//	"npc_dota_hero_<hunter>"			"1"		//Hunter
+//	"npc_dota_hero_<knight>"			"1"		//Knight
+//	"npc_dota_hero_<rogue>"				"1"		//Rogue
+	"npc_dota_hero_necrolyte"			"1"		//Mage
+	"npc_dota_hero_kunkka"				"1"		//Slayer
 
 	//Third Job
 	//==================================================================================
