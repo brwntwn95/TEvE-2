@@ -15,7 +15,7 @@
 //	"npc_dota_hero_<initiate>"			"1"		//Initiate
 //	"npc_dota_hero_<swordsman>"			"1"		//Swordsman
 //	"npc_dota_hero_<templar>"			"1"		//Templar
-//	"npc_dota_hero_<theif>"				"1"		//Theif
+//	"npc_dota_hero_<thief>"				"1"		//Thief
 //	"npc_dota_hero_<witch_hunter>"		"1"		//Witch Hunter
 //	"npc_dota_hero_<acolyte>"			"1"		//Acolyte
 

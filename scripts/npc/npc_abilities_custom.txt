@@ -1600,7 +1600,7 @@
 		}
 	}
     
-    "teve_thief_agility"    //AGILITY MUST BE IN %
+    "teve_thief_agility"    //AGILITY MUST BE IN %.   Same as ln: 2148
 	{
 	    "BaseClass"             "ability_datadriven"
 	
@@ -1747,7 +1747,7 @@
 	}
 
 
-	"teve_cleric_brilliance_aura"   // NEEDS TO BE %
+	"teve_cleric_brilliance_aura"   // NEEDS TO BE %.  EDIT: Not sure if it is correct now, but its percentage based
 	{
 	    "BaseClass"             "ability_datadriven"
 	
@@ -1760,16 +1760,16 @@
 	    "AbilitySpecial"
 	    {
 	        "01"
-		{
+			{
 			    "var_type"  "FIELD_FLOAT"
-                            "mana_regen" "0.3 0.6 0.9 1.2"		
-                }
-                "02"
-                {
-                            "var_type" "FIELD_INTEGER"
-                            "radius"   "750"
-                }
+                "mana_regen" "0.3 0.6 0.9 1.2"		
             }
+            "02"
+            {
+                "var_type"	"FIELD_INTEGER"
+                "radius"	"750"
+            }
+        }
         
             "Modifiers"
              {
@@ -1791,7 +1791,7 @@
                         "IsPurgable"  "0"
                         "Properties"  
                         {
-                                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
+                                "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"	"%mana_regen"
                         }
                   }			
               }
@@ -2000,7 +2000,7 @@
 		}
 	}
 	
-	"teve_mage_mana_shield"                 // Damage per mana values  are not correctly!
+	"teve_mage_mana_shield"                 // Damage per mana values are not correctly!
 	{
 		"BaseClass"		"medusa_mana_shield"
 
@@ -2145,7 +2145,7 @@
                 }
        }
 
-	"teve_hunter_rapid_fire"                           // NEEDS TO BE %
+	"teve_hunter_rapid_fire"                           // NEEDS TO BE %.    Attack speed in dota 2 is already percentage based. ie: "8 16 24 32" is really "8% 16% 24% 32%" bonus of base attack time
 	{
 		"BaseClass"                     "clinkz_strafe"
 		
@@ -2528,7 +2528,7 @@
 	}
 
 
-    "teve_rogue_agility"                    // NEEDS TO BE %
+    "teve_rogue_agility"                    // NEEDS TO BE %. Same as previous atk speed percentage problem ln: 2148
 	{
 	    "BaseClass"             "ability_datadriven"
 	

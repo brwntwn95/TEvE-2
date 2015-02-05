@@ -125,9 +125,9 @@
 		"AttributeIntelligenceGain"	"2.5"
 	}
 	
-	"npc_dota_hero_teve_theif"
+	"npc_dota_hero_teve_thief"
 	{
-		"override_hero"			"npc_dota_hero_<theif>"
+		"override_hero"			"npc_dota_hero_<thief>"
 //		"ModelScale"			"1.0"
 
 		"AbilityLayout"			"4"
