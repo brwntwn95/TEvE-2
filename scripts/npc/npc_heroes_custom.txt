@@ -352,7 +352,86 @@
 	//Third Job
 	//==================================================================================
 
+	"npc_dota_hero_teve_marksman"
+	{
+		"override_hero"			"npc_dota_hero_<marksman>"
+//		"ModelScale"			"1.0"
 
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_marksman_rapid_shot"
+		"Ability2"			"teve_marksman_enchanted_arrows"
+		"Ability3"			"teve_marksman_precision"
+		"Ability4"			"teve_marksman_marksmanship"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"65"
+		"AttributeStrengthGain"		"1.75"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"7.5"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"1"
+	}
+	
+	"npc_dota_hero_teve_tracker"
+	{
+		"override_hero"			"npc_dota_hero_<tracker>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_tracker_ensnare"
+		"Ability2"			"teve_tracker_blade_shield"
+		"Ability3"			"teve_tracker_trueshot_aura"
+		"Ability4"			"teve_tracker_adrenaline"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"65"
+		"AttributeStrengthGain"		"2.5"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"5.5"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"2"
+	}
+	
+	"npc_dota_hero_teve_dark_templar"
+	{
+		"override_hero"			"npc_dota_hero_<dark_templar>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_dark_templar_warp_blade_finisher"
+		"Ability2"			"teve_dark_templar_finisher_arts"
+		"Ability3"			"teve_dark_templar_psi_proficency"
+		"Ability4"			"teve_dark_templar_dark_templar_mastery"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"65"
+		"AttributeStrengthGain"		"1.5"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"7.5"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"1"
+	}
+	
+	"npc_dota_hero_teve_high_templar"
+	{
+		"override_hero"			"npc_dota_hero_ancient_apparition"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_high_templar_psionic_blast"
+		"Ability2"			"teve_high_templar_psionic_break"
+		"Ability3"			"teve_high_templar_psionic_lightning"
+		"Ability4"			"teve_high_templar_psionic_storm"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"65"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseAgility"		"65"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"80"
+		"AttributeIntelligenceGain"	"7"
+	}
+	
 	//Fourth Job
 	//==================================================================================
 

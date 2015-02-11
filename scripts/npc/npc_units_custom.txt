@@ -3,6 +3,16 @@
 {
 	"Version"	"1"
 	
+	"npc_dummy_unit"
+	{
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"Model"						"models/development/invisiblebox.mdl"
+		"ModelScale"				"1.0"
+		"AbilityLayout"				"4"
+		"Ability1"					"teve_dummy_passive"
+		"Ability2"					"teve_high_templar_psionic_storm_effects"
+	}
+	
 }
 
 

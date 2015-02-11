@@ -34,7 +34,9 @@
 	//Third Job
 	//==================================================================================
 
-
+	"npc_dota_hero_<marksman>"			"1"		//Marksman
+	"npc_dota_hero_<tracker>"			"1"		//Tracker
+	
 	//Fourth Job
 	//==================================================================================
 
@@ -59,8 +61,8 @@
 	
 	
 	
-	"npc_dota_hero_dazzle"				"1"		//testHero
 
 	//NOT AN ACTUAL HERO
 	"npc_dota_hero_pudge"				"1"		//punching bag
+	"npc_dota_hero_ancient_apparition"	"1"		//testing hero - Dazzle is probably going to be used for one of the mage classes. AA wont be for any heroes
 }
