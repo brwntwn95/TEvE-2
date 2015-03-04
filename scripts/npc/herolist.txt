@@ -36,6 +36,9 @@
 
 	"npc_dota_hero_<marksman>"			"1"		//Marksman
 	"npc_dota_hero_<tracker>"			"1"		//Tracker
+	"npc_dota_hero_<high_templar>"		"1"		//High Templar
+	"npc_dota_hero_<dark_templar>"		"1"		//Dark Templar
+	"npc_dota_hero_<assassin>"			"1"		//Assassin
 	
 	//Fourth Job
 	//==================================================================================

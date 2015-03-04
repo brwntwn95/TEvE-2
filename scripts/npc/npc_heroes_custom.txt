@@ -432,6 +432,28 @@
 		"AttributeIntelligenceGain"	"7"
 	}
 	
+	"npc_dota_hero_teve_assassin"
+	{
+		"override_hero"			"npc_dota_hero_<assassin>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_high_assassin_"
+		"Ability2"			"teve_high_assassin_"
+		"Ability3"			"teve_high_assassin_"
+		"Ability4"			"teve_high_assassin_"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"65"
+		"AttributeStrengthGain"		"2"
+		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"6"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"2"
+	}
+
+
+
 	//Fourth Job
 	//==================================================================================
 

@@ -3604,6 +3604,128 @@
 		}
 	}
 	
+	
+	//
+	// Assassin
+	//-----------------------------------------------------------------------------------
+	
+	"teve_assassin_sonic_blow"
+	{
+		"BaseClass"					"ember_spirit_sleight_of_fist"
+		"ID"						"9090"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.8"
+		
+		"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+
+		"AbilityManaCost"				"0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"0 0 0 0"
+			}
+
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_hero_damage"			"160 320 480 640"
+			}
+
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"attack_interval"				"0.2"
+			}
+
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"creep_damage_penalty"			"0"
+			}
+		}
+	}
+	
+	"teve_assassin_evasion"
+	{
+		"BaseClass"			"phantom_assassin_blur"
+
+		"ID"				"9091"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_evasion"	"1 2 3 4"
+			}
+		}
+	}
+	
+	"teve_assassin_critical_strike"
+	{
+		"BaseClass"					"juggernaut_blade_dance"
+		"ID"						"9092"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blade_dance_crit_mult"	"300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blade_dance_crit_chance"	"2 4 6 8"
+			}
+		}
+	}
+	
+	"teve_assassin_agility"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		"AbilityTextureName"	"placeholder"
+
+		"ID"			"9093"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_assassin_agility"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"210"
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_assassin_agility"
+		}
+	}
+	
+	
 	//===================================================================================
 	// Fourth Job
 	//
