@@ -1,4 +1,5138 @@
 "DOTAAbilities"
 {
+      "Version"      "1"
+	//=======================
+	// Belt of Endurance
+	//=======================
+	"item_belt_of_endurance" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2000"		
+ 		
+		"ItemCost"         "3550"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_belt_of_endurance_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"   "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+				}
+            }				
+		}
+		
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"
+                "bonus_str" "22"
+				"bonus_agi" "2"
+				"bonus_int" "2"
+            }
+        }
+    }		
+	//=======================
+	// Blackpowder Musket
+	//=======================
+	"item_blackpowder_musket"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"2001"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"                     "item_blades_of_attack"
 
-}
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1100"
+		"ItemShopTags"					"damage;tutorial"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blades of attack"
+		"SideShop"						"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"22"
+			}
+		}
+	}
+	
+	//=======================
+	// Boots of Speed
+	//=======================
+	"item_boots_of_speed" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2002"		
+ 		
+		"ItemCost"         "4000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "0"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_boots_of_speed_modifier"
+			{
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"  "%bonus_mspeed"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"   "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+				}
+            }				
+		}
+		
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"
+                "bonus_str" "22"
+				"bonus_agi" "2"
+				"bonus_int" "2"
+				"bonus_mspeed"  "30"
+            }
+        }
+    }	
+	
+    //=======================
+	// Boots of the Eagle
+	//=======================
+    "item_boots_of_the_eagle" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2003"		
+ 		
+		"ItemCost"         "3400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_boots_of_the_eagle_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"   "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+				}
+            }				
+		}
+		
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"
+                "bonus_str" "2"
+				"bonus_agi" "20"
+				"bonus_int" "2"
+            }
+        }
+    }
+
+	//=======================
+	// Bracers of the Bear
+	//=======================
+    "item_bracers_of_the_bear" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2004"		
+ 		
+		"ItemCost"         "3000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_bracers_of_the_bear_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_str"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"          "%bonus_hp"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%bonus_armor"
+					
+				}
+            }				
+		}
+		
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"
+                "bonus_str" "10"							
+				"bonus_hp"  "300"			                     	          
+                "bonus_armor"  "2"		
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Celestial Orb
+	//=======================
+	
+	"item_celestial_orb" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2005"		
+ 		
+		"ItemCost"         "4000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_celestial_orb_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"   "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hpregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"
+                "bonus_str" "15"							
+				"bonus_agi"  "15"			                     	          
+                "bonus_int"  "15"
+                "bonus_hpregen" "5"				
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Crsyal Wand
+	//=======================
+	
+	"item_crystal_wand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2006"		
+ 		
+		"ItemCost"         "1500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_crystal_wand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	          
+                "bonus_int"  "15"
+                "bonus_dmg"	 "10"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Elderwood bow
+	//=======================
+	
+	"item_elderwood_bow" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2007"		
+ 		
+		"ItemCost"         "1200"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_elderwood_bow_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	          
+                "bonus_agi"  "6"
+                "bonus_dmg"	 "15"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Enchanted Axe
+	//=======================
+	
+	"item_enchanted_axe" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2008"		
+ 		
+		"ItemCost"         "4300"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_enchanted_axe_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "50"		 	
+			}	
+				
+        }
+    }
+
+    //=======================
+	// Moon Armor									
+	//=======================
+	
+	"item_moon_armor" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2009"		
+ 		
+		"ItemCost"         "2000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_enchanted_axe_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"	 "11"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Psi Blade									
+	//=======================
+	
+	"item_psi_blade" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2010"		
+ 		
+		"ItemCost"         "3200"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_psi_blade_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "45"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Reinforced Armor									
+	//=======================
+	
+	"item_reinforced_armor" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2011"		
+ 		
+		"ItemCost"         "2700"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_reinforced_armor_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"	 "18"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Stitches' Dagger 									
+	//=======================
+	
+	"item_stitches_dagger" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2012"		
+ 		
+		"ItemCost"         "2700"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_stitches_dagger_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "35"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Stitches' Totem								
+	//=======================
+	
+	"item_stitches_totem" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2013"		
+ 		
+		"ItemCost"         "4100"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_reinforced_armor_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"	 "23"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Superior Wand							
+	//=======================
+	
+	"item_superior_wand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2014"		
+ 		
+		"ItemCost"         "1300"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_superior_wand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "6"
+                "bonus_mana" "200"				
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Aiur's Legacy									
+	//=======================
+	
+	"item_aiurs_legacy" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2015"		
+ 		
+		"ItemCost"         "7000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_aiurs_legacy_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "80"		 	
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Arcane Staff									
+	//=======================
+	
+	"item_arcane_staff" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2016"		
+ 		
+		"ItemCost"         "7900"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_arcane_staff_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"    "%bonus_mregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"	 "80"	
+                "bonus_mregen" "5"				
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// BlackGrave Wand								
+	//=======================
+	
+	"item_blackgrave_wand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2017"		
+ 		
+		"ItemCost"         "4400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_blackgrave_wand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"				    
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"	 "45"	                				
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Cunning Edge								
+	//=======================
+	
+	"item_cunning_edge" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2018"		
+ 		
+		"ItemCost"         "5400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_cunning_edge_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"			    
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "80"		                				
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Death Reaven								
+	//=======================
+	
+	"item_death_reaven" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2019"		
+ 		
+		"ItemCost"         "13600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_death_reaven_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+                    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"	 "140"	
+                "bonus_str"	 "50"			
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Firebrand								
+	//=======================
+	
+	"item_firebrand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2020"		
+ 		
+		"ItemCost"         "4000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_firebrand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									
+                    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor" "20"	
+                "bonus_str"	 "15"
+                "bonus_agi"  "15"
+                "bonus_int"  "15"				
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// FrostShield								
+	//=======================
+	
+	"item_frostshield" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2021"		
+ 		
+		"ItemCost"         "2900"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_frostshield_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor" "20"					
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Frostfang			  Needs an frost skill!!				
+	//=======================
+	
+	"item_frostfang" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2022"		
+ 		
+		"ItemCost"         "3100"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_frostfang_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor" "20"					
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Ghost Armor		
+	//=======================
+	
+	"item_ghost_armor" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2023"		
+ 		
+		"ItemCost"         "9400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_ghost_armor_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+                    "MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor" "40"
+                "bonus_hp"	  "1500"			
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Golden Arrows		
+	//=======================
+	
+	"item_golden_arrows" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2024"		
+ 		
+		"ItemCost"         "22600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_golden_arrows_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+                    			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_agi" "30"
+                "bonus_dmg"	"230"			
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Guardian Naga		
+	//=======================
+	
+	"item_guardian_naga" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2024"		
+ 		
+		"ItemCost"         "11200"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_guardian_naga_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_int"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"	
+                    			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int" "115"
+                "bonus_hp"	"1500"			
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Helmet of Valor		
+	//=======================
+	
+	"item_helmet_of_valor" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2025"		
+ 		
+		"ItemCost"         "4300"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_helmet_of_valor_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_int"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"     "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agi"
+					
+                    			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int" "20"
+                "bonus_agi"	"20"
+                "bonus_str"	"20"			
+			}	
+				
+        }
+    }
+	
+	//=======================
+	// Homunculus		
+	//=======================
+	
+	"item_homunculus" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2026"		
+ 		
+		"ItemCost"         "10400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_homunculus_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                    
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+                    			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"     "100"
+                "bonus_mregen"	"5"
+                "bonus_mana"	"1200"			
+			}					
+        }
+    }
+	
+	//=======================
+	// Long Rifle		
+	//=======================
+	
+	"item_long_rifle" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2027"		
+ 		
+		"ItemCost"         "5800"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_long_rifle_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"  "65"			
+			}					
+        }
+    }
+	
+	//=======================
+	// Necklace of Seven Souls		
+	//=======================
+	
+	"item_necklace_of_seven_souls" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2028"		
+ 		
+		"ItemCost"         "25000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_necklace_of_seven_souls_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"			
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"  "300"			
+			}					
+        }
+    }
+	
+	//=======================
+	// Psionic Cuirass		
+	//=======================
+	
+	"item_psionic_cuirass" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2029"		
+ 		
+		"ItemCost"         "3500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_psionic_cuirass_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"  "20"
+				"bonus_mana"  "400"	
+			}					
+        }
+    }
+	
+	//=======================
+	// Ring of Melitele		
+	//=======================
+	
+	"item_ring_of_melitele" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2030"		
+ 		
+		"ItemCost"         "4200"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_ring_of_melitele_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"  "%bonus_hpregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"  "30"
+				"bonus_hpregen"  "20"	
+			}					
+        }
+    }
+	
+	//=======================
+	// Scroll of the Lich		
+	//=======================
+	
+	"item_scroll_of_the_lich" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2031"		
+ 		
+		"ItemCost"         "8600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_scroll_of_the_lich_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"  "95"	
+			}					
+        }
+    }
+	
+	//=======================
+	// Shield of the Avenger		
+	//=======================
+	
+	"item_shield_of_the_avenger" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2032"		
+ 		
+		"ItemCost"         "6000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_shield_of_the_avenger_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"  "40"	
+			}					
+        }
+    }
+	
+	//=======================
+	// Skull Staff		
+	//=======================
+	
+	"item_skull_staff" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2033"		
+ 		
+		"ItemCost"         "4400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_skull_staff_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_mana"   "500"
+				"bonus_mregen" "10"
+			}					
+        }
+    }
+	
+	//=======================
+	// Sniper Rifle		
+	//=======================
+	
+	"item_sniper_rifle" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2034"		
+ 		
+		"ItemCost"         "4400"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_sniper_rifle_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"   "80"
+			}					
+        }
+    }
+	
+	//=======================
+	// Soul Wand		
+	//=======================
+	
+	"item_soul_wand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2035"		
+ 		
+		"ItemCost"         "6700"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_soul_wand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"    "55"
+				"bonus_mregen" "15"
+			}					
+        }
+    }
+	
+	//=======================
+	// Stitches' Legacy		
+	//=======================
+	
+	"item_stitches_legacy" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2036"		
+ 		
+		"ItemCost"         "5100"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_stitches_legacy_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"				
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"   "50"
+				"bonus_armor" "10"
+			}					
+        }
+    }
+	
+	//=======================
+	// Stone of Vsmir		
+	//=======================
+	
+	"item_stone_of_vsmir" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2037"		
+ 		
+		"ItemCost"         "24500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_stone_of_vsmir_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+                    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"	
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"    "100"
+				"bonus_mregen" "5"
+				"bonus_int"    "100"
+				"bonus_str"    "100"
+				"bonus_agi"    "100"
+			}					
+        }
+    }
+	
+	//=======================
+	// Synergy Blade		
+	//=======================
+	
+	"item_synergy_blade" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2038"		
+ 		
+		"ItemCost"         "16000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_synergy_blade_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"    "180"				
+			}					
+        }
+    }
+	
+	//=======================
+	// VanCliffe's Armor		
+	//=======================
+	
+	"item_vancliffes_armor" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2039"		
+ 		
+		"ItemCost"         "4200"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_vancliffes_armor_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"				
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"    "28"				
+			}					
+        }
+    }
+	
+	//=======================
+	// Warchief's Pride		
+	//=======================
+	
+	"item_warchiefs_pride" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2040"		
+ 		
+		"ItemCost"         "6600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_warchiefs_pride_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"				
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"    "76"				
+			}					
+        }
+    }
+	
+	//=======================
+	// Sharp Claws		
+	//=======================
+	
+	"item_sharp_claws" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2041"		
+ 		
+		"ItemCost"         "700"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_sharp_claws_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"				
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"    "15"				
+			}					
+        }
+    }
+	
+	//=======================
+	// Atma's Defence	    Magic Resistance must be in %!!!!!!!!!	
+	//=======================
+	
+	"item_atmas_defence" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2042"		
+ 		
+		"ItemCost"         "16900"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_atmas_defence_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%bonus_magicresistpercentage"   
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_str"    "100"	
+				"bonus_agi"    "100"
+				"bonus_int"    "100"
+				"bonus_armor"  "40"
+				"bonus_magicresistpercentage"   "15"
+			}					
+        }
+    }
+	
+	//=======================
+	// Azurewrath	It needs an frost skill and a 30% 2x critical strike
+	//=======================
+	
+	"item_azurewrath" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2043"		
+ 		
+		"ItemCost"         "21600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_azurewrath_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"										   
+				}
+            }
+			"modifier_azurewrath_criticalchance"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_azurewrath_criticalbonus"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_azurewrath_criticalbonus"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_azurewrath_criticalbonus"
+						"Target"		"CASTER"
+					}
+				}
+			}			
+		}
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg" "180"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"30"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"200"
+            }		
+        }
+    }
+	
+	//=======================
+	// Battle Gauntlets
+	//=======================
+	
+	"item_battle_gauntlets" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2044"		
+ 		
+		"ItemCost"         "17600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_battle_gauntlets_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"   "300"
+				"bonus_armor" "40"
+			}					
+        }
+    }
+	
+	//=======================
+	// Blood Diamond
+	//=======================
+	
+	"item_blood_diamond" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2045"		
+ 		
+		"ItemCost"         "8900"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_blood_diamond_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_agi" "40"
+				"bonus_str" "40"
+				"bonus_int" "40"
+			}					
+        }
+    }
+	
+	//=======================
+	// Chillrend       It needs an frost skill!!!
+	//=======================
+	
+	"item_chillrend" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2046"		
+ 		
+		"ItemCost"         "11000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_chillrend_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg" "120"
+			}					
+        }
+    }
+	
+	//=======================
+	// Doombringer
+	//=======================
+	
+	"item_doombringer" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2047"		
+ 		
+		"ItemCost"         "25500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_doombringer_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg" "900"
+				"bonus_hp"  "3000"
+			}					
+        }
+    }
+	
+	//=======================
+	// Duriel's Shell
+	//=======================
+	
+	"item_duriels_shell" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2048"		
+ 		
+		"ItemCost"         "49000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_duriels_shell_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor" "200"
+			}					
+        }
+    }
+	
+	//=======================
+	// Dusk's Legacy
+	//=======================
+	
+	"item_dusks_legacy" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2049"		
+ 		
+		"ItemCost"         "9900"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_dusks_legacy_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"    "100"
+				"bonus_mregen" "15"
+			}					
+        }
+    }
+	
+	//=======================
+	// Frostbrand      It needs an Frost skill!!!!
+	//=======================
+	
+	"item_frostbrand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2050"		
+ 		
+		"ItemCost"         "16300"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_frostbrand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"    "300"
+			}					
+        }
+    }
+	
+	//=======================
+	// Hellmouth
+	//=======================
+	
+	"item_hellmouth" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2051"		
+ 		
+		"ItemCost"         "24800"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_hellmouth_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_hp"    "1500"
+				"bonus_armor" "240"
+			}					
+        }
+    }
+	
+	//=======================
+	// Hexfire's Edge      The attackspeed must be in % and critical!!!!!!
+	//=======================
+	
+	"item_hexfires_edge" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2052"		
+ 		
+		"ItemCost"         "43000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_hexfires_edge_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"  "bonus_dmg"
+				   "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "bonus_attackspeed"
+				}
+            }
+		    "modifier_hexfires_edge_criticalchance"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_hexfires_edge_criticalbonus"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_hexfires_edge_criticalbonus"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_hexfires_edge_criticalbonus"
+						"Target"		"CASTER"
+					}
+				}
+			}			
+		}	
+	}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"          "300"
+				"bonus_attackspeed"  "15"
+				
+			}
+            "02"
+            {
+                "var_type"  "FIELD_INTEGER"
+                "crit_chance" "40"
+            }
+            "03"
+			{
+                "var_type"  "FIELD_INTEGER"
+                "crit_bonus" "300"
+			}	
+        }
+    }
+	
+	//=======================
+	// Icecrown's Visage
+	//=======================
+	
+	"item_icecrowns_visage" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2053"		
+ 		
+		"ItemCost"         "36000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_icecrowns_visage_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_agi"   "100"
+				"bonus_int"   "100"
+				"bonus_str"   "100"
+				"bonus_armor" "160"
+			}					
+        }
+    }
+	
+	//=======================
+	// Infernostride
+	//=======================
+	
+	"item_infernostride" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2054"		
+ 		
+		"ItemCost"         "16000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_infernostride_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"     "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_int"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"     "%bonus_armor"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_mspeed"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_agi"   "60"
+				"bonus_int"   "60"
+				"bonus_str"   "60"
+				"bonus_armor" "70"
+				"bonus_mspeed" "70"
+			}					
+        }
+    }
+	
+	//=======================
+	// Lam Esen's Tome
+	//=======================
+	
+	"item_lam_esens_tome" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2055"		
+ 		
+		"ItemCost"         "18800"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_lam_esens_tome_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_mregen" "15"
+				"bonus_hp"     "3000"
+				"bonus_mana"   "3000"
+			}					
+        }
+    }
+	
+	//=======================
+	// Megaton Blades       It needs 80% 3x crit!!!!
+	//=======================
+	
+	"item_megaton_blades" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2056"		
+ 		
+		"ItemCost"         "51000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_megaton_blades_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		    "modifier_megaton_blades_criticalchance"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_megaton_blades_criticalbonus"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_megaton_blades_criticalbonus"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_megaton_blades_criticalbonus"
+						"Target"		"CASTER"
+					}
+				}
+			}			
+		}
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg" "1000"
+			}
+            "02"
+                "var_type"  "FIELD_INTEGER"
+                "crit_bonus" "300"
+		    }
+            "03"
+                "var_type"  "FIELD_INTEGER"
+                "crit_chance"  "80"				
+        }
+    }
+	
+	//=======================
+	// Mythpowder Rifle
+	//=======================
+	
+	"item_mythpowder_rifle" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2057"		
+ 		
+		"ItemCost"         "8600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_mythpowder_rifle_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg" "1000"
+				"bonus_agi" "30"
+			}					
+        }
+    }
+	
+	//=======================
+	// Phoenix's Stone
+	//=======================
+	
+	"item_phoenixs_stone" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2058"		
+ 		
+		"ItemCost"         "28000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_phoenixs_stone_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_str" "140"
+				"bonus_agi" "140"
+				"bonus_int" "140"
+			}					
+        }
+    }
+	
+	//=======================
+	// Shield of Unending Flame      Magic resist must be in % !!!!!
+	//=======================
+	
+	"item_shield_of_unending_flame" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2059"		
+ 		
+		"ItemCost"         "28000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_shield_of_unending_flame_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"     "%bonus_armor"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%bonus_mresistance"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"  "120"
+				"bonus_mresistance"  "35"
+			}					
+        }
+    }
+	
+	//=======================
+	// Staff of the Ages
+	//=======================
+	
+	"item_staff_of_the_ages" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2060"		
+ 		
+		"ItemCost"         "30500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_staff_of_the_ages_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int" "400"
+			}					
+        }
+    }
+	
+	//=======================
+	// Sword of Blessed Flame
+	//=======================
+	
+	"item_sword_of_blessed_flame" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2061"		
+ 		
+		"ItemCost"         "9000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_sword_of_blessed_flame_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg" "100"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Pendant of Nagre
+	//=======================
+	
+	"item_the_pendant_of_nagre" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2062"		
+ 		
+		"ItemCost"         "28800"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_pendant_of_nagre_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"  "%bonus_hpregen"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"      "400"
+				"bonus_hpregen"  "50"
+				"bonus_mana"     "1200"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Spirit Shroud
+	//=======================
+	
+	"item_the_spirit_shroud" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2063"		
+ 		
+		"ItemCost"         "13000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_spirit_shroud_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%bonus_mresistance"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"         "15"
+				"bonus_agi"         "15"
+				"bonus_str"         "15"
+				"bonus_armor"       "70"
+				"bonus_mresistance" "15"
+			}					
+        }
+    }
+	
+	//=======================
+	// Tome of the Unlife
+	//=======================
+	
+	"item_tome_of_the_unlife" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2064"		
+ 		
+		"ItemCost"         "40000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_tome_of_the_unlife_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"         "15"
+			}					
+        }
+    }
+	
+	//=======================
+	// Zakarum's Hand      Magic resistance must be %!!!!!
+	//=======================
+	
+	"item_zakarums_hand" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2065"		
+ 		
+		"ItemCost"         "38000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_zakarums_hand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				    "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%bonus_mresistance"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"         "300"
+				"bonus_mana"        "5000"
+				"bonus_mresistance" "15"
+			}					
+        }
+    }
+	
+	//=======================
+	// Faith
+	//=======================
+	
+	//=======================
+	// Fate
+	//=======================
+	
+	//=======================
+	// Hope
+	//=======================
+	
+	//=======================
+	// Inspirit
+	//=======================
+	
+	//=======================
+	// Raising Heart
+	//=======================
+	
+	//=======================
+	// Reinforce
+	//=======================
+	
+	//=======================
+	// Rune Sihill
+	//=======================
+	
+	//=======================
+	// Tooth of Belial
+	//=======================
+	
+	//=======================
+	// Whirlwind
+	//=======================
+	
+	//=======================
+	// Angel's Sanctuary
+	//=======================
+	
+	"item_angels_sanctuary" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2066"		
+ 		
+		"ItemCost"         "49000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_angels_sanctuary_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"       "460"
+			}					
+        }
+    }
+	
+	//=======================
+	// Atalanta's Speed       Evasion and attack speed must be in %!!!!!
+	//=======================
+	
+	"item_atalantas_speed" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2067"		
+ 		
+		"ItemCost"         "98700"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_atalantas_speed_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"     "%bonus_dmg"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"        "%bonus_agi"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"           "%bonus_evasion"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"         "6000"
+				"bonus_agi"         "1000"
+				"bonus_attackspeed" "120"
+				"bonus_evasion"     "40"
+			}					
+        }
+    }
+	
+	//=======================
+	// Athena's Aim
+	//=======================
+	
+	"item_athenas_aim" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2068"		
+ 		
+		"ItemCost"         "36000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_athenas_aim_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"     "%bonus_dmg"					
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"         "1400"
+			}					
+        }
+    }
+	
+	//=======================
+	// Atlantean's Tome
+	//=======================
+	
+	"item_atlanteans_tome" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2069"		
+ 		
+		"ItemCost"         "76000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_atlanteans_tome_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+                    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_int"          "1000"
+				"bonus_mregen"       "50"
+				"bonus_mana"         "8000"
+			}					
+        }
+    }
+	
+	//=======================
+	// Black Hades
+	//=======================
+	
+	"item_atlanteans_tome" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2070"		
+ 		
+		"ItemCost"         "54500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_atlanteans_tome_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"        "520"
+			}					
+        }
+    }
+	
+	//=======================
+	// Dawn's Legacy     Attack Speed must be in % and it needs a Scroll of Teleport skill.
+	//=======================
+	
+	"item_dawns_legacy" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2071"		
+ 		
+		"ItemCost"         "48000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_dawns_legacy_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"     "%bonus_armor"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_mspeed"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_armor"        "120"
+				"bonus_mspeed"       "100"
+				"bonus_attackspeed"  "30"
+			}					
+        }
+    }
+	
+	//=======================
+	// Demonic Aggression
+	//=======================
+	
+	"item_demonic_aggression" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2072"		
+ 		
+		"ItemCost"         "40000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_demonic_aggression_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_mspeed"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"        "1000"
+				"bonus_mspeed"       "80"
+				"bonus_attackspeed"  "50"
+			}					
+        }
+    }
+	
+	//=======================
+	// Double-Barrel Rifle
+	//=======================
+	
+	"item_doublebarrel_rifle" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2073"		
+ 		
+		"ItemCost"         "24500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_doublebarrel_rifle_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"        "700"
+			}					
+        }
+    }
+	
+	//=======================
+	// Eagle Eye
+	//=======================
+	
+	"item_eagle_eye" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2073"		
+ 		
+		"ItemCost"         "84000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_eagle_eye_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"       "%bonus_evasion"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_dmg"          "2400"
+				"bonus_attackspeed"  "60"
+				"bonus_attackspeed"  "20"
+			}					
+        }
+    }
+	
+	//=======================
+	// Guardian Angel
+	//=======================
+	
+	"item_guardian_angel" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2074"		
+ 		
+		"ItemCost"         "42000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_guardian_angel_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%bonus_mresistance"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"     "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_mresistance"  "30"
+				"bonus_armor"        "400"
+			}					
+        }
+    }
+	
+	//=======================
+	// Hand of Blessed Light
+	//=======================
+	
+	"item_hand_of_blessed_light" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2075"		
+ 		
+		"ItemCost"         "65000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_hand_of_blessed_light_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{									                                       
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "bonus_mregen" "25"
+				"bonus_int"    "540"
+				"bonus_agi"    "40"
+				"bonus_str"    "40"
+			}					
+        }
+    }
+	
+	//=======================
+	// Hannah's Legend
+	//=======================
+	
+	//=======================
+	// Megaera's Edge
+	//=======================
+	
+	//=======================
+	// Neptune's Eye
+	//=======================
+	
+	"item_neptunes_eye" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2076"		
+ 		
+		"ItemCost"         "78600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_neptunes_eye_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{			
+				    "MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  
+                "bonus_hp"   "20000"				
+                "bonus_mana" "15000"
+			}					
+        }
+    }
+	
+	//=======================
+	// Moon Orb
+	//=======================
+	
+	"item_moon_orb" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2077"		
+ 		
+		"ItemCost"         "78600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_orb_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{			
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+                "bonus_mana" "30000"
+			}					
+        }
+    }
+	
+	//=======================
+	// Ritual Dagger
+	//=======================
+	
+	"item_ritual_dagger" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2078"		
+ 		
+		"ItemCost"         "90000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_ritual_dagger_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{			
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"           "%bonus_evasion"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+                "bonus_dmg"     "2500"
+				"bonus_agi"     "1000"
+				"bonus_evasion" "10"
+			}					
+        }
+    }
+	
+	//=======================
+	// Sun Orb
+	//=======================
+	
+	"item_sun_orb" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2079"		
+ 		
+		"ItemCost"         "90000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_sun_orb_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{			
+					"MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+                "bonus_hp"  "30000"
+			}					
+        }
+    }
+	
+	//=======================
+	// Templar Plate
+	//=======================
+	
+	"item_templar_plate" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2080"		
+ 		
+		"ItemCost"         "90000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_templar_plate_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{			
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+                "bonus_str"  "600"
+				"bonus_agi"  "600"
+				"bonus_armor"  "500"
+				"bonus_dmg"  "1000"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Ark Royal
+	//=======================
+	
+	"item_the_ark_royal" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2081"		
+ 		
+		"ItemCost"         "34500"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_ark_royal_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{			
+					
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_dmg"  "1800"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Grandfather             Attackspeed must be in %
+	//=======================
+	
+	"item_the_grandfather" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2082"		
+ 		
+		"ItemCost"         "96000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_ark_royal_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_dmg"          "2500"
+				"bonus_attackspeed"  "60"
+				"bonus_armor"        "400"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Heart of Evo
+	//=======================
+	
+	"item_the_heart_of_evo" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2083"		
+ 		
+		"ItemCost"         "26600"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_ark_royal_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_HEALTH_BONUS"		   "%bonus_hp"
+					"MODIFIER_PROPERTY_MANA_BONUS"             "%bonus_mana"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_hp"          "6500"
+				"bonus_mana"        "3000"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Patriarch
+	//=======================
+	
+	"item_the_patriarch" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2084"		
+ 		
+		"ItemCost"         "66000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_patriarch_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"   "%bonus_dmg"
+				}
+            }
+            "modifier_the_patriarch_criticalchance"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_the_patriarch_criticalbonus"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_the_patriarch_criticalbonus"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_the_patriarch_criticalbonus"
+						"Target"		"CASTER"
+					}
+				}
+			}			
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_dmg"          "1600"
+			}
+            "02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"20"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"350"
+            }				
+        }
+    }
+	
+	//=======================
+	// The Psionic Razor
+	//=======================
+	
+	"item_the_psionic_razor" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2085"		
+ 		
+		"ItemCost"         "27800"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_psionic_razor_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"   "%bonus_dmg"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_dmg"          "800"
+				"bonus_attackspeed"  "10"
+			}					
+        }
+    }
+	
+	//=======================
+	// The Stone of Jordan
+	//=======================
+	
+	"item_the_stone_of_jordan" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2086"		
+ 		
+		"ItemCost"         "42000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_the_stone_of_jordan_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"   "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_agi"  "300"
+				"bonus_int"  "300"
+				"bonus_str"  "300"
+			}					
+        }
+    }
+	
+	//=======================
+	// Titan's Aegis
+	//=======================
+	
+	"item_titans_aegis" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2087"		
+ 		
+		"ItemCost"         "59900"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_titans_aegis_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_armor"  "560"
+			}					
+        }
+    }
+	
+	//=======================
+	// Winter's Heart
+	//=======================
+	
+	"item_winters_heart" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2088"		
+ 		
+		"ItemCost"         "85000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_winters_heart_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	   "%bonus_mregen"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"  "%bonus_int"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_mregen"  "80"
+				"bonus_int"  "1200"
+			}					
+        }
+    }
+	
+	//=======================
+	// Wrath of the Lich King
+	//=======================
+	
+	"item_wrath_of_the_lich_king" 
+	{
+	    "BaseClass"        "item_datadriven"
+        "ID"               "2089"		
+ 		
+		"ItemCost"         "85000"
+		"ItemKillable"     "0"
+		"ItemSellable"     "0"
+		"ItemPurchasable"  "1"
+		"ItemDroppable"    "1"
+		
+		"ItemStockMax"     "1"
+		"ItemStockTime"    "100"
+		"ItemStockInitial" "3"
+		
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+		
+		"ItemDisplayCharges" "1"
+		
+		"SideShop"          "1"
+		"SecretShop"        "0"
+		
+		"Modifiers"
+		{
+			"item_wrath_of_the_lich_king_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"  "%bonus_hpregen"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"
+				}
+            }				
+		}
+		
+		"AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"  "FIELD_INTEGER"  				
+				"bonus_armor"  "800"
+				"bonus_hpregen"  "100"
+			}					
+        }
+    }
