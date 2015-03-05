@@ -3726,6 +3726,315 @@
 	}
 	
 	
+	// Stalker
+	
+	"teve_stalker_vanish"
+	{
+	    "BaseClass"     "nyx_assassin_vendetta"
+		
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"    "placeholder"
+		"AbilityType"           "DOTA_ABILITY_TYPE_BASIC"
+                "AbilityUnitDamageType" "DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"     "SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"       "2"
+		"AbilityDamage"         "80 160 240 320"
+		
+		"ID"            "6056"
+		
+		"AbilityCooldown"       "20"
+		
+		"AbilityManaCost"       "70 90 110 130"
+		
+		"AbilitySpecial"
+		{
+		        "01"
+		       {
+			                   "var_type"  "FIELD_FLOAT"
+				                "duration"  "10.0 10.0 10.0 10.0"
+			}
+                        "02"                                                                                                                                                                                                                                 
+                        {
+                               "var_type"  "FIELD_FLOAT"
+                               "fade_time" "0.60"
+                        }
+                        "03"
+                        {
+			        "var_type"  "FIELD_INTEGER"
+				"movement_speed"  "20 20 20 20"
+			}
+                        "04"			
+			 {
+                                "var_type"	"FIELD_INTEGER"
+                                "bonus_damage" "80 160 240 320"
+                        }
+                        "05"
+                        {
+                                "var_type"  "FIELD_FLOAT"
+                                "cooldown_scepter"  "0 0 0 0"
+                        }
+		}
+       }
+	
+	"teve_stalker_evasion"
+	
+	"teve_stalker_critical_strike"
+	{
+		"BaseClass"						"ability_datadriven"
+		"ID"							"6058"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"2 4 6 8"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"300"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_thief_critical_strike_ev"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_thief_critical_strike_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_thief_critical_strike_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_thief_critical_strike_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	"teve_stalker_agility"
+	
+	// Imperial Knight
+	
+	"teve_imperial_knight_shield_bash"
+	{
+	    "BaseClass"     "ability_datadriven"
+		
+		"ID"            "6060"
+		
+	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityTextureName"         "placeholder"
+		"AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+		
+		"AbilityType"                "DOTA_ABILITY_TYPE_BASIC"
+		
+		"MaxLevel"               "4"
+
+                "RequiredLevel"          "1"
+
+                "LevelsBetweenUpgrades"  "2"
+				
+		"AbilityCastPoint"  "0.10"
+		
+		"AbilityCooldown"   "10 10 10 10"
+		
+		"AbilityManaCost"   "80 100 120 140"
+		
+		"AbilityCastRange"  "100"
+		
+		"AbilityDamage"     "150 30 450 600"
+		
+		"AbilitySpecial"
+		{
+		        "01"
+			{
+			    "var_type"  "FIELD_FLOAT"
+				"stun_duration"  "0.20 0.40 0.60 0.80"
+			}
+			"02"
+			{
+			    "var_type"  "FIELD_INTEGER"
+				"damage"         "150 300 450 600"
+			}
+                }
+		"OnSpellStart"    
+		{    
+		    "Stun" 
+			{ 
+					"Target" "TARGET" 
+					"Duration" "%stun_duration" 
+		        }
+			"Damage" 
+			{ 
+			        "Target" "TARGET" 
+					"Type" "DAMAGE_TYPE_MAGICAL"  
+					"Damage" "%damage"
+			}
+               }			
+        }
+	
+	"teve_imperial_knight_rapid_strikes"
+	
+	"teve_imperial_knight_critical_hit"
+	{
+		"BaseClass"						"ability_datadriven"
+		"ID"							"6061"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"2 4 6 8"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"250"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_thief_critical_strike_ev"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_thief_critical_strike_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_thief_critical_strike_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_thief_critical_strike_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	"teve_imperial_knight_avatar"
+	
+	// Crusader
+	
+	"teve_crusader_heal"
+	
+	"teve_crusader_divine_shield"
+	
+	"teve_crusader_devotion_aura"
+	{
+	    "BaseClass"             "ability_datadriven"
+	
+	    "ID"                    "6065"
+	
+            "AbilityTextureName"    "placeholder"
+	
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+		{
+			                "var_type"  "FIELD_FLOAT"
+                            "bonus_armor" "1.0 2.0 3.0 4.0"		
+                }
+                "02"
+                {
+                            "var_type"  "FIELD_FLOAT"
+                            "radius"    "600"	
+                }				
+            }
+            "Modifiers"
+            {
+                 "modifier_swordsman_devotion_aura"
+                 {
+                        "IsBuff"         "1"
+                        "IsPurgable"     "0"
+                        "IsHidden"       "1"
+                        "Passive"        "1"
+                        "Aura"      "swordsman_devotion_aura"
+                        "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Aura_Radius"   "%radius"
+                        "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                 }
+                 "swordsman_devotion_aura"
+                 {
+                        "IsHidden"    "0"
+                        "IsBuff"      "1"
+                        "IsPurgable"  "0"
+                        "Properties"  
+                        {
+                                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%bonus_armor"
+                        }
+		 }			
+            }
+	}
+	
+	"teve_crusader_thorns"
+	
+	
+	
+	
 	//===================================================================================
 	// Fourth Job
 	//
