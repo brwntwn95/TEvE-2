@@ -1,6 +1,7 @@
 "DOTAAbilities"
 {
       "Version"      "1"
+        // ID    2000-2091
 	//=======================
 	// Belt of Endurance
 	//=======================
@@ -1331,7 +1332,7 @@
 	"item_guardian_naga" 
 	{
 	    "BaseClass"        "item_datadriven"
-        "ID"               "2024"		
+        "ID"               "2091"		
  		
 		"ItemCost"         "11200"
 		"ItemKillable"     "0"
@@ -4179,7 +4180,7 @@
 	"item_eagle_eye" 
 	{
 	    "BaseClass"        "item_datadriven"
-        "ID"               "2073"		
+        "ID"               "2090"		
  		
 		"ItemCost"         "84000"
 		"ItemKillable"     "0"
