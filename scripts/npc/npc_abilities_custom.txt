@@ -1946,7 +1946,7 @@
 			    "var_type"  "FIELD_INTEGER"
 				"damage"         "100 200 300 400"
 			}
-                }
+        }
 		"OnSpellStart"    
 		{    
 		    "Stun" 
@@ -3728,7 +3728,7 @@
 	
 	// Stalker
 	
-	"teve_stalker_vanish"
+ 	"teve_stalker_vanish"
 	{
 	    "BaseClass"     "nyx_assassin_vendetta"
 		
@@ -3777,6 +3777,9 @@
        }
 	
 	"teve_stalker_evasion"
+	{
+	
+	}
 	
 	"teve_stalker_critical_strike"
 	{
@@ -3844,7 +3847,10 @@
 	}
 	
 	"teve_stalker_agility"
+	{
 	
+	}
+	 
 	// Imperial Knight
 	
 	"teve_imperial_knight_shield_bash"
@@ -3907,6 +3913,9 @@
         }
 	
 	"teve_imperial_knight_rapid_strikes"
+	{
+	
+	}
 	
 	"teve_imperial_knight_critical_hit"
 	{
@@ -3974,12 +3983,21 @@
 	}
 	
 	"teve_imperial_knight_avatar"
+	{
+	
+	}
 	
 	// Crusader
 	
 	"teve_crusader_heal"
+	{
+	
+	}
 	
 	"teve_crusader_divine_shield"
+	{
+	
+	}
 	
 	"teve_crusader_devotion_aura"
 	{
@@ -3993,21 +4011,21 @@
 	
 	    "AbilitySpecial"
 	    {
-	        "01"
-		{
+			"01"
+			{
 			                "var_type"  "FIELD_FLOAT"
                             "bonus_armor" "1.0 2.0 3.0 4.0"		
-                }
-                "02"
-                {
+			}
+			"02"
+			{
                             "var_type"  "FIELD_FLOAT"
                             "radius"    "600"	
-                }				
-            }
-            "Modifiers"
+			}				
+        }
+        "Modifiers"
+        {
+			"modifier_swordsman_devotion_aura"
             {
-                 "modifier_swordsman_devotion_aura"
-                 {
                         "IsBuff"         "1"
                         "IsPurgable"     "0"
                         "IsHidden"       "1"
@@ -4016,9 +4034,9 @@
                         "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
                         "Aura_Radius"   "%radius"
                         "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                 }
-                 "swordsman_devotion_aura"
-                 {
+            }
+            "swordsman_devotion_aura"
+            {
                         "IsHidden"    "0"
                         "IsBuff"      "1"
                         "IsPurgable"  "0"
@@ -4026,11 +4044,14 @@
                         {
                                 "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%bonus_armor"
                         }
-		 }			
-            }
+			}			
+        }
 	}
 	
 	"teve_crusader_thorns"
+	{
+	
+	}
 	
 	
 	

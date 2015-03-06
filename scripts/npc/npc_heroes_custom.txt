@@ -414,7 +414,7 @@
 	
 	"npc_dota_hero_teve_high_templar"
 	{
-		"override_hero"			"npc_dota_hero_ancient_apparition"
+		"override_hero"			"npc_dota_hero_<high_templar>"
 //		"ModelScale"			"1.0"
 
 		"AbilityLayout"			"4"
@@ -438,10 +438,10 @@
 //		"ModelScale"			"1.0"
 
 		"AbilityLayout"			"4"
-		"Ability1"			"teve_high_assassin_"
-		"Ability2"			"teve_high_assassin_"
-		"Ability3"			"teve_high_assassin_"
-		"Ability4"			"teve_high_assassin_"
+		"Ability1"			"teve_assassin_sonic_blow"
+		"Ability2"			"teve_assassin_evasion"
+		"Ability3"			"teve_assassin_critical_strike"
+		"Ability4"			"teve_assassin_agility"
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"65"
@@ -450,6 +450,66 @@
 		"AttributeAgilityGain"		"6"
 		"AttributeBaseIntelligence"	"65"
 		"AttributeIntelligenceGain"	"2"
+	}
+
+	"npc_dota_hero_teve_stalker"
+	{
+		"override_hero"			"npc_dota_hero_<stalker>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_stalker_vanish"
+		"Ability2"			"teve_stalker_evasion"
+		"Ability3"			"teve_stalker_critical_strike"
+		"Ability4"			"teve_stalker_agility"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"65"
+		"AttributeStrengthGain"		"3"
+ 		"AttributeBaseAgility"		"80"
+		"AttributeAgilityGain"		"5"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"2"
+	}
+	
+	"npc_dota_hero_teve_imperial_knight"
+	{
+		"override_hero"			"npc_dota_hero_<imperial_knight>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_imperial_knight_shield_bash"
+		"Ability2"			"teve_imperial_knight_rapid_strikes" 
+		"Ability3"			"teve_imperial_knight_critical_hit"
+		"Ability4"			"teve_imperial_knight_avatar"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"5"
+		"AttributeBaseAgility"		"65"
+		"AttributeAgilityGain"		"3"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"2"
+	}
+	
+	"npc_dota_hero_teve_crusader"
+	{
+		"override_hero"			"npc_dota_hero_<crusader>"
+//		"ModelScale"			"1.0"
+
+		"AbilityLayout"			"4"
+		"Ability1"			"teve_crusader_heal"
+		"Ability2"			"teve_crusader_divine_shield"
+		"Ability3"			"teve_crusader_devotion_aura"
+		"Ability4"			"teve_crusader_thorns"
+
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"80"
+		"AttributeStrengthGain"		"4.2"
+		"AttributeBaseAgility"		"65"
+		"AttributeAgilityGain"		"2"
+		"AttributeBaseIntelligence"	"65"
+		"AttributeIntelligenceGain"	"3.8"
 	}
 
 

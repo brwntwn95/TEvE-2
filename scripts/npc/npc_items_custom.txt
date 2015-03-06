@@ -7,7 +7,7 @@
 	//=======================
 	"item_belt_of_endurance" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2000"		
  		
 		"ItemCost"         "3550"
@@ -16,13 +16,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -62,7 +62,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"2001"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"2001"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"                     "item_blades_of_attack"
 
@@ -91,7 +91,7 @@
 	//=======================
 	"item_boots_of_speed" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2002"		
  		
 		"ItemCost"         "4000"
@@ -100,9 +100,9 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
@@ -146,7 +146,7 @@
 	//=======================
     "item_boots_of_the_eagle" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2003"		
  		
 		"ItemCost"         "3400"
@@ -155,13 +155,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -200,7 +200,7 @@
 	//=======================
     "item_bracers_of_the_bear" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2004"		
  		
 		"ItemCost"         "3000"
@@ -209,13 +209,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -257,7 +257,7 @@
 	
 	"item_celestial_orb" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2005"		
  		
 		"ItemCost"         "4000"
@@ -266,13 +266,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -315,7 +315,7 @@
 	
 	"item_crystal_wand" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2006"		
  		
 		"ItemCost"         "1500"
@@ -324,13 +324,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -370,7 +370,7 @@
 	
 	"item_elderwood_bow" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2007"		
  		
 		"ItemCost"         "1200"
@@ -379,13 +379,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -425,7 +425,7 @@
 	
 	"item_enchanted_axe" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2008"		
  		
 		"ItemCost"         "4300"
@@ -434,13 +434,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -478,7 +478,7 @@
 	
 	"item_moon_armor" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2009"		
  		
 		"ItemCost"         "2000"
@@ -487,13 +487,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -530,7 +530,7 @@
 	
 	"item_psi_blade" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2010"		
  		
 		"ItemCost"         "3200"
@@ -539,13 +539,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -583,7 +583,7 @@
 	
 	"item_reinforced_armor" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2011"		
  		
 		"ItemCost"         "2700"
@@ -592,13 +592,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -636,7 +636,7 @@
 	
 	"item_stitches_dagger" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2012"		
  		
 		"ItemCost"         "2700"
@@ -645,13 +645,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -689,7 +689,7 @@
 	
 	"item_stitches_totem" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2013"		
  		
 		"ItemCost"         "4100"
@@ -698,13 +698,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -742,7 +742,7 @@
 	
 	"item_superior_wand" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2014"		
  		
 		"ItemCost"         "1300"
@@ -751,13 +751,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -796,7 +796,7 @@
 	
 	"item_aiurs_legacy" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2015"		
  		
 		"ItemCost"         "7000"
@@ -805,13 +805,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -848,7 +848,7 @@
 	
 	"item_arcane_staff" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2016"		
  		
 		"ItemCost"         "7900"
@@ -857,13 +857,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -902,7 +902,7 @@
 	
 	"item_blackgrave_wand" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2017"		
  		
 		"ItemCost"         "4400"
@@ -911,13 +911,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -954,7 +954,7 @@
 	
 	"item_cunning_edge" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2018"		
  		
 		"ItemCost"         "5400"
@@ -963,13 +963,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1006,7 +1006,7 @@
 	
 	"item_death_reaven" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2019"		
  		
 		"ItemCost"         "13600"
@@ -1015,13 +1015,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1060,7 +1060,7 @@
 	
 	"item_firebrand" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2020"		
  		
 		"ItemCost"         "4000"
@@ -1069,13 +1069,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1127,13 +1127,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1165,13 +1165,14 @@
     }
 	
 	//=======================
-	// Frostfang			  Needs an frost skill!!				
+	// Frostfang
 	//=======================
 	
 	"item_frostfang" 
 	{
 	    "BaseClass"        "item_datadriven"
         "ID"               "2022"		
+		"AbilityBehavior"  "DOTA_ABILITY_BEHAVIOR_PASSIVE"
  		
 		"ItemCost"         "3100"
 		"ItemKillable"     "0"
@@ -1179,13 +1180,7 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
-		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
-		
-		"ItemDisplayCharges" "1"
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1200,9 +1195,38 @@
 				
 				"Properties"
 				{									                    
-                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"   "%bonus_armor"					
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"   "%bonus_damage"					
 				}
             }				
+			"item_frostfang_effects"
+			{
+				"Duration"		"2"
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_slow"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_slow"
+				}
+				"Target"		"TARGET"
+			}
+			"item_frostfang_orb"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Orb"
+				{
+					"Priority"		"DOTA_ORB_PRIORITY_ABILITY"
+				}
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"item_frostfang_effects"
+						"Target"		"TARGET"
+						"Duration"		"2"
+					}
+				}
+			}
 		}
 		
 		"AbilitySpecial"
@@ -1210,9 +1234,18 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"            			                     	                      
-                "bonus_armor" "20"					
+                "bonus_damage" "40"					
 			}	
-				
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"move_slow"			"-35"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attack_slow"		"-45"
+			}
         }
     }
 	
@@ -1222,7 +1255,7 @@
 	
 	"item_ghost_armor" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2023"		
  		
 		"ItemCost"         "9400"
@@ -1231,13 +1264,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1276,7 +1309,7 @@
 	
 	"item_golden_arrows" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2024"		
  		
 		"ItemCost"         "22600"
@@ -1285,13 +1318,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1331,7 +1364,7 @@
 	
 	"item_guardian_naga" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2091"		
  		
 		"ItemCost"         "11200"
@@ -1340,13 +1373,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1386,7 +1419,7 @@
 	
 	"item_helmet_of_valor" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2025"		
  		
 		"ItemCost"         "4300"
@@ -1395,13 +1428,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1444,7 +1477,7 @@
 	
 	"item_homunculus" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2026"		
  		
 		"ItemCost"         "10400"
@@ -1453,13 +1486,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1500,7 +1533,7 @@
 	
 	"item_long_rifle" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2027"		
  		
 		"ItemCost"         "5800"
@@ -1509,13 +1542,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1551,7 +1584,7 @@
 	
 	"item_necklace_of_seven_souls" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2028"		
  		
 		"ItemCost"         "25000"
@@ -1560,13 +1593,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1602,7 +1635,7 @@
 	
 	"item_psionic_cuirass" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2029"		
  		
 		"ItemCost"         "3500"
@@ -1611,13 +1644,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1655,7 +1688,7 @@
 	
 	"item_ring_of_melitele" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2030"		
  		
 		"ItemCost"         "4200"
@@ -1664,13 +1697,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1708,7 +1741,7 @@
 	
 	"item_scroll_of_the_lich" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2031"		
  		
 		"ItemCost"         "8600"
@@ -1717,13 +1750,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1759,7 +1792,7 @@
 	
 	"item_shield_of_the_avenger" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2032"		
  		
 		"ItemCost"         "6000"
@@ -1768,13 +1801,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1810,7 +1843,7 @@
 	
 	"item_skull_staff" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2033"		
  		
 		"ItemCost"         "4400"
@@ -1819,13 +1852,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1863,7 +1896,7 @@
 	
 	"item_sniper_rifle" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2034"		
  		
 		"ItemCost"         "4400"
@@ -1872,13 +1905,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1914,7 +1947,7 @@
 	
 	"item_soul_wand" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2035"		
  		
 		"ItemCost"         "6700"
@@ -1923,13 +1956,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -1967,7 +2000,7 @@
 	
 	"item_stitches_legacy" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2036"		
  		
 		"ItemCost"         "5100"
@@ -1976,13 +2009,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2020,7 +2053,7 @@
 	
 	"item_stone_of_vsmir" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2037"		
  		
 		"ItemCost"         "24500"
@@ -2029,13 +2062,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2079,7 +2112,7 @@
 	
 	"item_synergy_blade" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2038"		
  		
 		"ItemCost"         "16000"
@@ -2088,13 +2121,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2130,7 +2163,7 @@
 	
 	"item_vancliffes_armor" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2039"		
  		
 		"ItemCost"         "4200"
@@ -2139,13 +2172,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2181,7 +2214,7 @@
 	
 	"item_warchiefs_pride" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2040"		
  		
 		"ItemCost"         "6600"
@@ -2190,13 +2223,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2232,7 +2265,7 @@
 	
 	"item_sharp_claws" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2041"		
  		
 		"ItemCost"         "700"
@@ -2241,13 +2274,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2278,12 +2311,12 @@
     }
 	
 	//=======================
-	// Atma's Defence	    Magic Resistance must be in %!!!!!!!!!	
+	// Atma's Defence
 	//=======================
 	
 	"item_atmas_defence" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2042"		
  		
 		"ItemCost"         "16900"
@@ -2292,13 +2325,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2337,13 +2370,14 @@
     }
 	
 	//=======================
-	// Azurewrath	It needs an frost skill and a 30% 2x critical strike
+	// Azurewrath
 	//=======================
 	
 	"item_azurewrath" 
 	{
 	    "BaseClass"        "item_datadriven"
         "ID"               "2043"		
+		"AbilityBehavior"  "DOTA_ABILITY_BEHAVIOR_PASSIVE"
  		
 		"ItemCost"         "21600"
 		"ItemKillable"     "0"
@@ -2351,13 +2385,7 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
-		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
-		
-		"ItemDisplayCharges" "1"
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2371,8 +2399,8 @@
 				"IsHidden" "1"
 				
 				"Properties"
-				{									                                       
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"										   
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
 				}
             }
 			"modifier_azurewrath_criticalchance"
@@ -2394,7 +2422,6 @@
 						}
 					}
 				}
-				
 			}
 			
 			"modifier_azurewrath_criticalbonus"
@@ -2413,8 +2440,36 @@
 						"Target"		"CASTER"
 					}
 				}
-			}			
-		}
+			}
+			"item_azurewrath_effects"
+			{
+				"Duration"		"2"
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_slow"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_slow"
+				}
+				"Target"		"TARGET"
+			}
+			"item_azurewrath_orb"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Orb"
+				{
+					"Priority"		"DOTA_ORB_PRIORITY_ABILITY"
+				}
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"item_azurewrath_effects"
+						"Target"		"TARGET"
+						"Duration"		"2"
+					}
+				}
+			}
 		}
 		
 		"AbilitySpecial"
@@ -2434,6 +2489,16 @@
 				"var_type"			"FIELD_INTEGER"
 				"crit_bonus"		"200"
             }		
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"move_slow"			"-35"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attack_slow"		"-45"
+			}
         }
     }
 	
@@ -2443,7 +2508,7 @@
 	
 	"item_battle_gauntlets" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2044"		
  		
 		"ItemCost"         "17600"
@@ -2452,13 +2517,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2496,7 +2561,7 @@
 	
 	"item_blood_diamond" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2045"		
  		
 		"ItemCost"         "8900"
@@ -2505,13 +2570,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2546,13 +2611,14 @@
     }
 	
 	//=======================
-	// Chillrend       It needs an frost skill!!!
+	// Chillrend
 	//=======================
 	
 	"item_chillrend" 
 	{
 	    "BaseClass"        "item_datadriven"
         "ID"               "2046"		
+		"AbilityBehavior"  "DOTA_ABILITY_BEHAVIOR_PASSIVE"
  		
 		"ItemCost"         "11000"
 		"ItemKillable"     "0"
@@ -2560,13 +2626,7 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
-		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
-		
-		"ItemDisplayCharges" "1"
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2580,10 +2640,39 @@
 				"IsHidden" "1"
 				
 				"Properties"
-				{									                                       
-					
+				{									                    
+                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"   "%bonus_damage"					
 				}
-            }				
+            }
+			"item_chillrend_effects"
+			{
+				"Duration"		"2"
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_slow"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_slow"
+				}
+				"Target"		"TARGET"
+			}
+			"item_chillrend_orb"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Orb"
+				{
+					"Priority"		"DOTA_ORB_PRIORITY_ABILITY"
+				}
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"item_chillrend_effects"
+						"Target"		"TARGET"
+						"Duration"		"2"
+					}
+				}
+			}
 		}
 		
 		"AbilitySpecial"
@@ -2591,8 +2680,18 @@
             "01"
             {
                 "var_type"  "FIELD_INTEGER"            			                     	                      
-                "bonus_dmg" "120"
-			}					
+                "bonus_damage" "120"					
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"move_slow"			"-35"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attack_slow"		"-45"
+			}
         }
     }
 	
@@ -2602,7 +2701,7 @@
 	
 	"item_doombringer" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2047"		
  		
 		"ItemCost"         "25500"
@@ -2611,13 +2710,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2655,7 +2754,7 @@
 	
 	"item_duriels_shell" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2048"		
  		
 		"ItemCost"         "49000"
@@ -2664,13 +2763,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2706,7 +2805,7 @@
 	
 	"item_dusks_legacy" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2049"		
  		
 		"ItemCost"         "9900"
@@ -2715,13 +2814,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2754,13 +2853,16 @@
     }
 	
 	//=======================
-	// Frostbrand      It needs an Frost skill!!!!
+	// Frostbrand
 	//=======================
 	
 	"item_frostbrand" 
 	{
 	    "BaseClass"        "item_datadriven"
-        "ID"               "2050"		
+        "ID"               "2050"
+		"AbilityBehavior"  "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
  		
 		"ItemCost"         "16300"
 		"ItemKillable"     "0"
@@ -2768,13 +2870,7 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
-		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
-		
-		"ItemDisplayCharges" "1"
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2788,19 +2884,59 @@
 				"IsHidden" "1"
 				
 				"Properties"
-				{									                                       
+				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
 				}
-            }				
+            }
+			"item_frostbrand_effects"
+			{
+				"Duration"		"2"
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_slow"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_slow"
+				}
+				"Target"		"TARGET"
+			}
+			"item_frostbrand_orb"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Orb"
+				{
+					"Priority"		"DOTA_ORB_PRIORITY_ABILITY"
+					"ProjectileName"	"particles\items2_fx\skadi_projectile.vpcf"
+				}
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"item_frostbrand_effects"
+						"Target"		"TARGET"
+						"Duration"		"2"
+					}
+				}
+			}
 		}
-		
+
 		"AbilitySpecial"
         {
             "01"
             {
-                "var_type"  "FIELD_INTEGER"            			                     	                      
+                "var_type"  "FIELD_INTEGER"
                 "bonus_dmg"    "300"
-			}					
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"move_slow"		"-35"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"attack_slow"	"-45"
+			}
         }
     }
 	
@@ -2810,7 +2946,7 @@
 	
 	"item_hellmouth" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2051"		
  		
 		"ItemCost"         "24800"
@@ -2819,13 +2955,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2863,8 +2999,9 @@
 	
 	"item_hexfires_edge" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2052"		
+		"AbilityBehavior"  "DOTA_ABILITY_BEHAVIOR_PASSIVE"
  		
 		"ItemCost"         "43000"
 		"ItemKillable"     "0"
@@ -2872,13 +3009,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -2893,10 +3030,11 @@
 				
 				"Properties"
 				{									                                       
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"  "bonus_dmg"
-				   "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "bonus_attackspeed"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_dmg"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attackspeed"
 				}
             }
+			
 		    "modifier_hexfires_edge_criticalchance"
 			{
 				"Passive" 	"1"
@@ -2936,8 +3074,7 @@
 					}
 				}
 			}			
-		}	
-	}
+		}
 		
 		"AbilitySpecial"
         {
@@ -2945,15 +3082,18 @@
             {
                 "var_type"  "FIELD_INTEGER"            			                     	                      
                 "bonus_dmg"          "300"
-				"bonus_attackspeed"  "15"
-				
 			}
-            "02"
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_attackspeed"  "15"
+			}
+            "03"
             {
                 "var_type"  "FIELD_INTEGER"
                 "crit_chance" "40"
             }
-            "03"
+            "04"
 			{
                 "var_type"  "FIELD_INTEGER"
                 "crit_bonus" "300"
@@ -2967,7 +3107,7 @@
 	
 	"item_icecrowns_visage" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2053"		
  		
 		"ItemCost"         "36000"
@@ -2976,13 +3116,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3024,7 +3164,7 @@
 	
 	"item_infernostride" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2054"		
  		
 		"ItemCost"         "16000"
@@ -3033,13 +3173,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3083,7 +3223,7 @@
 	
 	"item_lam_esens_tome" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2055"		
  		
 		"ItemCost"         "18800"
@@ -3092,13 +3232,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3133,13 +3273,14 @@
     }
 	
 	//=======================
-	// Megaton Blades       It needs 80% 3x crit!!!!
+	// Megaton Blades
 	//=======================
 	
 	"item_megaton_blades" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2056"		
+		"AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
  		
 		"ItemCost"         "51000"
 		"ItemKillable"     "0"
@@ -3147,13 +3288,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3171,7 +3312,7 @@
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
 				}
             }				
-		    "modifier_megaton_blades_criticalchance"
+			"modifier_megaton_blades_criticalchance"
 			{
 				"Passive" 	"1"
 				"IsHidden"	"1"
@@ -3190,7 +3331,6 @@
 						}
 					}
 				}
-				
 			}
 			
 			"modifier_megaton_blades_criticalbonus"
@@ -3209,7 +3349,7 @@
 						"Target"		"CASTER"
 					}
 				}
-			}			
+			}
 		}
 		"AbilitySpecial"
         {
@@ -3219,12 +3359,15 @@
                 "bonus_dmg" "1000"
 			}
             "02"
+			{
                 "var_type"  "FIELD_INTEGER"
                 "crit_bonus" "300"
 		    }
             "03"
+			{
                 "var_type"  "FIELD_INTEGER"
-                "crit_chance"  "80"				
+                "crit_chance"  "80"
+			}
         }
     }
 	
@@ -3234,7 +3377,7 @@
 	
 	"item_mythpowder_rifle" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2057"		
  		
 		"ItemCost"         "8600"
@@ -3243,13 +3386,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3287,7 +3430,7 @@
 	
 	"item_phoenixs_stone" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2058"		
  		
 		"ItemCost"         "28000"
@@ -3296,13 +3439,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3342,7 +3485,7 @@
 	
 	"item_shield_of_unending_flame" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2059"		
  		
 		"ItemCost"         "28000"
@@ -3351,13 +3494,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3395,7 +3538,7 @@
 	
 	"item_staff_of_the_ages" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2060"		
  		
 		"ItemCost"         "30500"
@@ -3404,13 +3547,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3446,7 +3589,7 @@
 	
 	"item_sword_of_blessed_flame" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2061"		
  		
 		"ItemCost"         "9000"
@@ -3455,13 +3598,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3497,7 +3640,7 @@
 	
 	"item_the_pendant_of_nagre" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2062"		
  		
 		"ItemCost"         "28800"
@@ -3506,13 +3649,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3552,7 +3695,7 @@
 	
 	"item_the_spirit_shroud" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2063"		
  		
 		"ItemCost"         "13000"
@@ -3561,13 +3704,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3611,7 +3754,7 @@
 	
 	"item_tome_of_the_unlife" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2064"		
  		
 		"ItemCost"         "40000"
@@ -3620,13 +3763,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3662,7 +3805,7 @@
 	
 	"item_zakarums_hand" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2065"		
  		
 		"ItemCost"         "38000"
@@ -3671,13 +3814,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3753,7 +3896,7 @@
 	
 	"item_angels_sanctuary" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2066"		
  		
 		"ItemCost"         "49000"
@@ -3762,13 +3905,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3804,7 +3947,7 @@
 	
 	"item_atalantas_speed" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2067"		
  		
 		"ItemCost"         "98700"
@@ -3813,13 +3956,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3861,7 +4004,7 @@
 	
 	"item_athenas_aim" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2068"		
  		
 		"ItemCost"         "36000"
@@ -3870,13 +4013,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3912,7 +4055,7 @@
 	
 	"item_atlanteans_tome" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2069"		
  		
 		"ItemCost"         "76000"
@@ -3921,13 +4064,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -3967,7 +4110,7 @@
 	
 	"item_atlanteans_tome" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2070"		
  		
 		"ItemCost"         "54500"
@@ -3976,13 +4119,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4013,12 +4156,12 @@
     }
 	
 	//=======================
-	// Dawn's Legacy     Attack Speed must be in % and it needs a Scroll of Teleport skill.
+	// Dawn's Legacy     It needs a Scroll of Teleport skill.
 	//=======================
 	
 	"item_dawns_legacy" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2071"		
  		
 		"ItemCost"         "48000"
@@ -4027,13 +4170,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4073,7 +4216,7 @@
 	
 	"item_demonic_aggression" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2072"		
  		
 		"ItemCost"         "40000"
@@ -4082,13 +4225,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4128,7 +4271,7 @@
 	
 	"item_doublebarrel_rifle" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2073"		
  		
 		"ItemCost"         "24500"
@@ -4137,13 +4280,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4179,7 +4322,7 @@
 	
 	"item_eagle_eye" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2090"		
  		
 		"ItemCost"         "84000"
@@ -4188,13 +4331,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4234,7 +4377,7 @@
 	
 	"item_guardian_angel" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2074"		
  		
 		"ItemCost"         "42000"
@@ -4243,13 +4386,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4287,7 +4430,7 @@
 	
 	"item_hand_of_blessed_light" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2075"		
  		
 		"ItemCost"         "65000"
@@ -4296,13 +4439,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4352,7 +4495,7 @@
 	
 	"item_neptunes_eye" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2076"		
  		
 		"ItemCost"         "78600"
@@ -4361,13 +4504,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4405,7 +4548,7 @@
 	
 	"item_moon_orb" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2077"		
  		
 		"ItemCost"         "78600"
@@ -4414,13 +4557,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4456,7 +4599,7 @@
 	
 	"item_ritual_dagger" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2078"		
  		
 		"ItemCost"         "90000"
@@ -4465,13 +4608,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4511,7 +4654,7 @@
 	
 	"item_sun_orb" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2079"		
  		
 		"ItemCost"         "90000"
@@ -4520,13 +4663,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4562,7 +4705,7 @@
 	
 	"item_templar_plate" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2080"		
  		
 		"ItemCost"         "90000"
@@ -4571,13 +4714,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4619,7 +4762,7 @@
 	
 	"item_the_ark_royal" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2081"		
  		
 		"ItemCost"         "34500"
@@ -4628,13 +4771,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4671,7 +4814,7 @@
 	
 	"item_the_grandfather" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2082"		
  		
 		"ItemCost"         "96000"
@@ -4680,13 +4823,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4726,7 +4869,7 @@
 	
 	"item_the_heart_of_evo" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2083"		
  		
 		"ItemCost"         "26600"
@@ -4735,13 +4878,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4779,7 +4922,7 @@
 	
 	"item_the_patriarch" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2084"		
  		
 		"ItemCost"         "66000"
@@ -4788,13 +4931,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4879,7 +5022,7 @@
 	
 	"item_the_psionic_razor" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2085"		
  		
 		"ItemCost"         "27800"
@@ -4888,13 +5031,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4932,7 +5075,7 @@
 	
 	"item_the_stone_of_jordan" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2086"		
  		
 		"ItemCost"         "42000"
@@ -4941,13 +5084,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -4987,7 +5130,7 @@
 	
 	"item_titans_aegis" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2087"		
  		
 		"ItemCost"         "59900"
@@ -4996,13 +5139,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -5038,7 +5181,7 @@
 	
 	"item_winters_heart" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2088"		
  		
 		"ItemCost"         "85000"
@@ -5047,13 +5190,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"
@@ -5091,7 +5234,7 @@
 	
 	"item_wrath_of_the_lich_king" 
 	{
-	    "BaseClass"        "item_datadriven"
+	    "BaseClass"        "item_datadriven"               "AbilityBehavior"    "DOTA_ABILITY_BEHAVIOR_PASSIVE"  //this would be a new line but isn't due to being mass added to fix errors
         "ID"               "2089"		
  		
 		"ItemCost"         "85000"
@@ -5100,13 +5243,13 @@
 		"ItemPurchasable"  "1"
 		"ItemDroppable"    "1"
 		
-		"ItemStockMax"     "1"
-		"ItemStockTime"    "100"
-		"ItemStockInitial" "3"
+
+
+
 		
 		"ItemShareability" "ITEM_NOT_SHAREABLE"
 		
-		"ItemDisplayCharges" "1"
+
 		
 		"SideShop"          "1"
 		"SecretShop"        "0"

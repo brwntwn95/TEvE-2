@@ -39,6 +39,16 @@
 	"npc_dota_hero_<high_templar>"		"1"		//High Templar
 	"npc_dota_hero_<dark_templar>"		"1"		//Dark Templar
 	"npc_dota_hero_<assassin>"			"1"		//Assassin
+	"npc_dota_hero_<witcher>"			"1"		//Witcher
+	"npc_dota_hero_<inquisitor>"		"1"		//Inquisitor
+	"npc_dota_hero_<priest>"			"1"		//Priest
+	"npc_dota_hero_<matriarch>"			"1"		//Matriarch
+	"npc_dota_hero_<wizard>"			"1"		//Wizard
+	"npc_dota_hero_<sage>"				"1"		//Sage
+	"npc_dota_hero_<shaman>"			"1"		//Shaman
+	"npc_dota_hero_<shapeshifter>"		"1"		//ShapeShifter
+	"npc_dota_hero_<shapeshifter_wolf>"	"1"		//ShapeShifter WOLF FORM
+	"npc_dota_hero_<shapeshifter_bear>"	"1"		//ShapeShifter BEAR FORM
 	
 	//Fourth Job
 	//==================================================================================
@@ -65,7 +75,7 @@
 	
 	
 
-	//NOT AN ACTUAL HERO
+	//NOT ACTUAL HEROES
 	"npc_dota_hero_pudge"				"1"		//punching bag
 	"npc_dota_hero_ancient_apparition"	"1"		//testing hero - Dazzle is probably going to be used for one of the mage classes. AA wont be for any heroes
 }
