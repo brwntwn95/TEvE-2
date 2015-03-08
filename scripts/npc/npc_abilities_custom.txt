@@ -4570,6 +4570,635 @@
             }
 	}
 	
+	// Matriarch
+	
+	"teve_matriarch_holy_light"
+	{
+	        "BaseClass"         "ability_datadriven"
+
+            "ID"                "6091"
+
+             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+
+            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+ 
+            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+
+            "AbilityCastPoint"  "0.15 0.15 0.15 0..15"
+
+            "AbilityCastRange"  "800"
+   
+            "AbilityCooldown"   "5.0"
+ 
+            "AbilityManaCost"   "60 80 100 120"
+
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "heal"                          "150 300 450 600"
+                }
+                "02"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "damage"                        "150 300 450 600"
+                }
+                "03"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "radius"                        "0"
+                }
+                "04"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "max_targets"           "1"
+                }
+            }
+ 
+            "OnSpellStart"
+            {
+                "Heal"
+                {
+                    "Target"
+                    {
+                        "Center"        "TARGET"
+                        "Radius"        "%
+						"
+                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        "MaxTargets" "%max_targets"
+                    }
+                    "HealAmount"    "%heal"
+                }
+                "Damage"
+                {
+                    "Target"
+                    {
+                        "Center"        "TARGET"
+                        "Radius"        "%radius"
+                        "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        "MaxTargets" "%max_targets"
+                    }
+                    "Type"                  "DAMAGE_TYPE_MAGICAL"
+                    "Damage"                "%damage"
+                }
+	   }
+       }			
+	
+	"teve_matriarch_kyrie_eleison"
+	{
+  	        "BaseClass"						"lich_frost_armor"
+		
+		"ID"							"6092"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityTextureName"            "placeholder"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+
+		"AbilityCooldown"				"30.0"
+		"AbilityDuration"				"0.7 1.4 2.1 2.8"
+
+		"AbilityManaCost"				"80 110 140 170"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_bonus"			"9999 9999 9999 9999"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"			"0.0 0.0 0.0 0.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_movement_speed"	"0 0 0 0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_attack_speed"		"0 0 0 0"
+			}
+		}
+	}
+	
+	// Wizard
+	
+	"teve_wizard_blizzard"
+	{
+	        "BaseClass"                     "abyssal_underlord_firestorm"
+		"ID"							"6095"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.8"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"8.0"
+		"AbilityManaCost"				"100 125 150 175"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"400"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_duration"					"1.0"
+			}		
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_count"					"1"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_damage"					"150 300 450 600"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_interval"					"1.0"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"burn_damage"					"0 0 0 0"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_interval"					"0.0"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_duration"					"0.0"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"first_wave_delay"				"0.9"
+			}
+		}
+	}
+	
+	"teve_wizard_thunder_strike"
+	{
+	
+	}
+	
+	"teve_wizard_warmth"
+	{
+	        "BaseClass"		"ability_datadriven"
+
+		"AbilityTextureName"	"placeholder"
+
+		"ID"			"6097"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+		        "01"
+			{
+			    "var_type"    "FIELD_INTEGER"
+				"mana_regen"  "10 20 30 40"
+	                }
+                }			
+		"Modifiers"
+		{
+			"modifier_mage_warmth"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	"%mana_regen"
+				} 
+			}
+		}
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_mage_warmth"
+		}
+	}
+	
+	"teve_wizard_mana_shield"        
+	{
+	 
+	}
+	
+	// Sage
+	
+	"teve_sage_pyroclasm"
+	{
+	        "BaseClass"                     "abyssal_underlord_firestorm"
+		"ID"							"6097"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.4"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"100 125 150 175"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"400"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_duration"					"1.0"
+			}		
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_count"					"1"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_damage"					"200 400 600 800"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_interval"					"1.0"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"burn_damage"					"0 0 0 0"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_interval"					"0.0"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_duration"					"0.0"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"first_wave_delay"				"0.9"
+			}
+		}
+	}
+	
+	"teve_sage_polymorph"         //Need to change the hex model into sheep.
+	{
+		"BaseClass"                     "lion_voodoo"
+		"ID"					        "6098"		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		
+	
+		"AbilityCastRange"				"650"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		
+		"AbilityCooldown"				"15 15 15 15"
+
+
+		"AbilityManaCost"				"60 85 110 135"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"0.5 1 1.5 2"           //The duration is halved if the target is a Boss!
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed"					"100"
+			}
+		}
+	}
+	
+	"teve_sage_warmth"
+	{
+		
+	    "BaseClass"		        "ability_datadriven"
+		"AbilityTextureName"	"placeholder"
+		"ID"			        "6099"
+		"AbilityBehavior"	    "DOTA_ABILITY_BEHAVIOR_PASSIVE"	
+		"AbilitySpecial"
+		{
+		        "01"
+			{
+			    "var_type"    "FIELD_INTEGER"
+				"mana_regen"  "10 20 30 40"
+			}
+                }			
+		"Modifiers"
+		{
+			"modifier_mage_warmth"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	"%mana_regen"
+				} 
+			}
+		}
+		"ApplyModifier"
+		{
+			"Target" "CASTER"
+			"ModifierName" "modifier_mage_warmth"
+		}
+	}
+	
+	"teve_sage_mana_shield"
+	{
+	
+	}
+	
+	// Shaman
+	
+	"teve_shaman_entangle"
+	{
+	    "BaseClass"                  "ability_datadriven"
+            "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+		
+		"ID"                         "6103"
+		
+		"AbilityCastPoint"           "0.10 0.10 0.10 0.10"
+		
+		"AbilityCooldown"            "8 8 8 8"
+		
+		"AbilityManaCost"            "50 75 100 125"
+		
+		"AbilityCastRange"           "650"
+		
+		"AbilityDamage"              "30 60 90 120"
+		
+		"AbilitySpecial"
+		{
+		        "01"
+			{
+			    "var_type"    "FIELD_INTEGER"
+				"damage"      "5 10 15 20"   //200 dps
+			}
+			"02"
+			{
+			    "var_type"    "FIELD_INTEGER"
+				"duration"    "3 3 3 3"
+			}	
+               }
+               "Modifiers"
+               {
+  	            "modifier_shaman_entangle_dps"
+	            {
+			  "States" 
+		          {
+			            "MODIFIER_STATE_ROOTED"    "MODIFIER_STATE_VALUE_ENABLED"
+			  }
+                          "Duration"  "%duration"				
+		          "ThinkInterval"		"0.1"
+		          "OnIntervalThink"
+			  {
+		                "Damage"
+			        {					    
+					    	"Target"	"TARGET"					
+						    "Type"		"DAMAGE_TYPE_MAGICAL"
+						    "Damage"	"%damage"
+				}
+			  }
+		    }
+	       }
+		"OnSpellStart"
+	        {
+		    "ApplyModifier"
+		    {			   
+			    "Target" "TARGET"
+			    "ModifierName" "modifier_shaman_entangle_dps"
+		    }	
+		}
+	}
+	
+	"teve_shaman_lightning_storm"      //the values are not correctly!
+	{
+	    "BaseClass"                     "abyssal_underlord_firestorm"
+		"ID"							"6104"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.15"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"12.0"
+		"AbilityManaCost"				"70 100 130 160"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"350"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_duration"					"3.0"
+			}		
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_count"					"3"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_damage"					"40 80 120 160"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_interval"					"1.0"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"burn_damage"					"0 0 0 0"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_interval"					"0.0"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_duration"					"0.0"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"first_wave_delay"				"0.9"
+			}
+		}
+	}
+	
+	// ShapeShifter
+	
+	"teve_shapeshifter_werewolf"
+	{
+	
+	}
+	
+	"teve_shapeshifter_werebear"
+	{
+	
+	}
+	
+	"teve_shapeshifter_ferocity"
+	{
+	    "BaseClass"						"ability_datadriven"
+		"ID"							"6107"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"10 10.5 11 11.5"  //Every 20 levels increases evade chance by 10%. Level 41+ increases 10% as well, to the level limit of 50.
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"250"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_shapeshifter_lycanthrophy"
+	{
+	       "BaseClass"       "ability_datadriven"
+	       "ID"              "6108"
+	        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	        "Modifiers"
+		{
+			"modifier_shapeshifter_lycanthrophy"
+			{
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{								
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%move_speed"
+				}
+                        }				
+		}
+		
+	    "AbilitySpecial"
+            {
+                "01"
+                {
+                        "var_type"  "FIELD_INTEGER"  				
+			"bonus_attackspeed"  "3 6 9 12"
+		}					
+		"02"
+		{
+			"var_type"  "FIELD_INTEGER"
+			"move_speed" "3 3 3 3"   //Every 20 levels increases movement speed by 3%.
+                }
+            }
+        } 
 	
 	//===================================================================================
 	// Fourth Job
