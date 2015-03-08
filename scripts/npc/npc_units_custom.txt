@@ -10,7 +10,7 @@
 		"ModelScale"				"1.0"
 		"AbilityLayout"				"4"
 		"Ability1"					"teve_dummy_passive"
-		"Ability2"					"teve_high_templar_psionic_storm_effects"
+//		"Ability2"					"teve_high_templar_psionic_storm_effects"
 	}
 	
 }
