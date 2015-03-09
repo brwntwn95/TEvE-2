@@ -3,6 +3,70 @@
 {
 	"Version"		"1"
 	
+	//Novice
+	
+	"teve_novice_frenzy"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"placeholder"
+		"MaxLevel" 						"5"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+		"precache"
+		{
+			"particle"  "particles/items2_fx/mask_of_madness.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movespeed"		"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attackspeed"		"40 60 80 100 120"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_frenzy_effects"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+		
+				"EffectName"		"particles/items2_fx/mask_of_madness.vpcf"
+				"EffectAttachType"	"follow_hitloc"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movespeed" 
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_frenzy_effects"
+				"Target" 		"CASTER"
+				"Duration"		"%duration"
+			}
+		}
+	}
+	
    //=======================================================================
   // First Job
  //=======================================================================	
@@ -13,7 +77,7 @@
 	{
 	    "BaseClass"         "ability_datadriven"
 
-        "ID"                "6000"
+        //"ID"                "6000"
 
             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	
@@ -57,7 +121,7 @@
     {   
 	"BaseClass"             "ability_datadriven"
 	
-	"ID"                    "6001"
+	//"ID"                    "6001"
 	
 	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	
@@ -131,11 +195,11 @@
         }
     }
     
-	"teve_brilliance_aura"     //NEEDS TO BE %
+	"teve_brilliance_aura"
 	{
 	"BaseClass"             "ability_datadriven"
 	
-	"ID"                    "6002"
+	//"ID"                    "6002"
 	
         "AbilityTextureName"    "crystal_maiden_brilliance_aura"
 	
@@ -175,7 +239,7 @@
                         "IsPurgable"  "0"
                         "Properties"  
                         {
-                                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
+                                "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_regen"
                         }
 	        }			
             }
@@ -185,7 +249,7 @@
     {
     "BaseClass"             "ability_datadriven"
 	
-	"ID"                    "6003"
+	//"ID"                    "6003"
 	
 	"AbilityTextureName"    "lina_fiery_soul"
 	
@@ -248,7 +312,7 @@
     {
             "BaseClass"      "ability_datadriven"
  
-            "ID"             "6004"
+            //"ID"             "6004"
                
                 "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
                 "AbilityTextureName"             "placeholder"
@@ -330,7 +394,7 @@
 	"teve_archer_searing_arrows"
     {
      "BaseClass"        "clinkz_searing_arrows"
-     "ID"               "6005"
+     //"ID"               "6005"
      "AbilityBehavior"                       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
      "AbilityUnitTargetTeam"                 "DOTA_UNIT_TARGET_TEAM_ENEMY"
      "AbilityUnitTargetType"                 "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -357,7 +421,7 @@
    
     "BaseClass"                             "ability_datadriven"
  
-    "ID"       "6006"
+    //"ID"       "6006"
     "AbilityTextureName"                    "drow_ranger_marksmanship"
                
     "MaxLevel"                              "4"
@@ -413,7 +477,7 @@
          
 	"BaseClass"			"phantom_assassin_blur"
 
-	"ID"				"6007"
+	//"ID"				"6007"
 
 	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -436,7 +500,7 @@
 	{
 	    "BaseClass"      "ability_datadriven"
  
-            "ID"             "6008"
+            //"ID"             "6008"
                
                "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
                "AbilityTextureName"             "placeholder"
@@ -484,7 +548,7 @@
         {
         "BaseClass"     "ability_datadriven"
 
-        "ID"            "6009"	
+        //"ID"            "6009"	
 
         "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
         "AbilityTextureName"     "placeholder"
@@ -532,7 +596,7 @@
 	"teve_templar_blade_proficency_1"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6010"
+		//"ID"							"6010"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -627,7 +691,7 @@
 		"FightRecapLevel"       "2"
 		"AbilityDamage"         "80 160 240 320"
 		
-		"ID"            "6011"
+		//"ID"            "6011"
 		
 		"AbilityCooldown"       "10"
 		
@@ -670,7 +734,7 @@
 	{
 	    "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6012"
+		//"ID"            "6012"
 		
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -725,11 +789,11 @@
                 }			
         }
 
-	"teve_initiate_chain_lightning"   //DAMAGE REDUCTION MUST BE WITHOUT %
+	"teve_initiate_chain_lightning"
         { 		
 	    "BaseClass"                     "rubick_fade_bolt"
 		
-		"ID"							"6013"														
+		//"ID"							"6013"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -793,7 +857,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"6014"
+		//"ID"			"6014"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -828,7 +892,7 @@
 	{
 		"BaseClass"                     "jakiro_ice_path"
 		
-		"ID"							"6014"									
+		//"ID"							"6014"									
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -881,7 +945,7 @@
 		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
 		
-		"ID"                         "6015"
+		//"ID"                         "6015"
 		
 		"AbilityCastPoint"           "0.20 0.20 0.20 0.20"
 		
@@ -941,7 +1005,7 @@
 	{
 	    "BaseClass"                     "legion_commander_press_the_attack"
 		
-		"ID"							"6016"									
+		//"ID"							"6016"									
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
@@ -977,35 +1041,16 @@
 		}
 	}
 	
-	"teve_druid_thorns_aura"   //RETURN DAMAGE MUST BE IN %
+	"teve_druid_thorns_aura"
 	{
-	    "BaseClass"                    "centaur_return"
-		
-		"ID"							"6017"	
-		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"return_damage"				"3 6 9 12"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"strength_pct"				"0 0 0 0"
-			}
-		}
+	
 	}
 	
 	"teve_druid_firestorm"
 	{
 	    "BaseClass"                     "abyssal_underlord_firestorm"
 	
-		"ID"							"6018"														
+		//"ID"							"6018"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"			
 		"AbilityCastRange"				"650"
@@ -1072,7 +1117,7 @@
 	{
 	    "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6019"
+		//"ID"            "6019"
 		
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -1131,7 +1176,7 @@
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6020"
+	    //"ID"                    "6020"
 	
             "AbilityTextureName"    "placeholder"
 	
@@ -1179,7 +1224,7 @@
 	"teve_swordsman_critical_strike"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6021"
+		//"ID"							"6021"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1253,7 +1298,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"6022"
+		//"ID"			"6022"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -1284,7 +1329,7 @@
 	{
 	    "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6023"
+		//"ID"            "6023"
 		
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -1342,7 +1387,7 @@
     "teve_witch_hunter_witcher_group_style"
 	{
 		"BaseClass"             "tidehunter_ravage"
-		"ID"					"6024"										
+		//"ID"					"6024"										
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -1378,11 +1423,11 @@
 		}
 	}
 
-    "teve_witch_hunter_hunter"    //ATTACKSPEED MUST BE IN %
+    "teve_witch_hunter_hunter"
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6020"
+	    //"ID"                    "6020"
 	
             "AbilityTextureName"    "placeholder"
 	
@@ -1431,7 +1476,7 @@
 	{
 		"BaseClass"			"satyr_hellcaller_unholy_aura"
 
-		"ID"				"6021"
+		//"ID"				"6021"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -1456,7 +1501,7 @@
 	{
 	    "BaseClass"             "queenofpain_shadow_strike"
 		
-		"ID"					"6022"										
+		//"ID"					"6022"										
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -1507,7 +1552,7 @@
     "teve_thief_dodge"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6023"
+		//"ID"							"6023"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1538,7 +1583,7 @@
     "teve_thief_critical_strike"
        {
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6024"
+		//"ID"							"6024"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1600,11 +1645,11 @@
 		}
 	}
     
-    "teve_thief_agility"    //AGILITY MUST BE IN %.   Same as ln: 2148
+    "teve_thief_agility"
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6025"
+	    //"ID"                    "6025"
 	
             "AbilityTextureName"    "placeholder"
 	
@@ -1661,7 +1706,7 @@
 	{
 	    "BaseClass"         "ability_datadriven"
 
-            "ID"                "6026"
+            //"ID"                "6026"
 
              "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	
@@ -1706,7 +1751,7 @@
 	{
 		"BaseClass"						"lich_frost_armor"
 		
-		"ID"							"6027"
+		//"ID"							"6027"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"            "placeholder"
@@ -1747,11 +1792,11 @@
 	}
 
 
-	"teve_cleric_brilliance_aura"   // NEEDS TO BE %.  EDIT: Not sure if it is correct now, but its percentage based
+	"teve_cleric_brilliance_aura"
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6028"
+	    //"ID"                    "6028"
 	
             "AbilityTextureName"    "crystal_maiden_brilliance_aura"
 	
@@ -1801,7 +1846,7 @@
 	{
 		"BaseClass"			"dazzle_shadow_wave"
 
-		"ID"				"6029"
+		//"ID"				"6029"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -1841,65 +1886,72 @@
 
     // Mage
 
-    "teve_mage_flame_strike"    //Not Working Properly
+	"teve_mage_flame_strike"
 	{
-	    "BaseClass"                     "abyssal_underlord_firestorm"
-		"ID"							"6030"						
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"AbilityCastRange"				"600"
-		"AbilityCastPoint"				"0.7"
-		"FightRecapLevel"				"1"
-		
-		"AbilityCooldown"				"10.0"
-		"AbilityManaCost"				"75 100 125 150"
+		"BaseClass"		"ability_datadriven"
+
+		//"ID"			"9036"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+
+		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"	"10.0 10.0 10.0 10.0"
+//		"AbilityManaCost"	"75"
 
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"400"
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"25 50 75 100"		//50 dps per level
 			}
 			"02"
 			{
-				"var_type"						"FIELD_FLOAT"
-				"wave_duration"					"2"
-			}		
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"2.0"
+			}
 			"03"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"wave_count"					"6"
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"500"
 			}
-			"04"
+		}
+
+		"Modifiers"
+		{
+			"modifier_flame_strike_damage"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"wave_damage"					"50 100 150 200"
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+				"Duration"			"%duration"
+		
+				"ThinkInterval"  "0.5"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"
+						{
+							"Center"  	"TARGET"
+							"Radius" 	"%radius"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						}
+						"Type"			"DAMAGE_TYPE_MAGICAL"
+						"Damage"		"%damage"
+					}
+				}
 			}
-			"05"
+		}
+
+		"OnSpellStart"
+		{
+			"CreateThinker"
 			{
-				"var_type"						"FIELD_FLOAT"
-				"wave_interval"					"1.0"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"burn_damage"					"5 10 15 20"
-			}
-			"07"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"burn_interval"					"1.0"
-			}
-			"08"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"burn_duration"					"2.0"
-			}
-			"09"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"first_wave_delay"				"0.9"
+				"ModifierName"	"modifier_flame_strike_damage"
+				"Target" 		"POINT"
 			}
 		}
 	}
@@ -1908,7 +1960,7 @@
 	{
 	    "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6031"
+		//"ID"            "6031"
 		
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -1969,7 +2021,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"6032"
+		//"ID"			"6032"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -2004,7 +2056,7 @@
 	{
 		"BaseClass"		"medusa_mana_shield"
 
-		"ID"			"6032"
+		//"ID"			"6032"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		
@@ -2026,7 +2078,7 @@
 	"teve_hunter_ensnare"
 	{
 		"BaseClass"                     "naga_siren_ensnare"
-		"ID"							"6034"														
+		//"ID"							"6034"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -2070,7 +2122,7 @@
 	"teve_hunter_searing_arrows"             
         {
                   "BaseClass"        "clinkz_searing_arrows"
-                "ID"               "6034"
+                //"ID"               "6034"
                 "AbilityBehavior"                       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
                 "AbilityUnitTargetTeam"                 "DOTA_UNIT_TARGET_TEAM_ENEMY"
                 "AbilityUnitTargetType"                 "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -2098,7 +2150,7 @@
    
                 "BaseClass"                             "ability_datadriven"
  
-                "ID"       "6035"
+                //"ID"       "6035"
                 "AbilityTextureName"                    "drow_ranger_marksmanship"
                
                 "MaxLevel"                                              "4"
@@ -2145,11 +2197,11 @@
                 }
        }
 
-	"teve_hunter_rapid_fire"                           // NEEDS TO BE %.    Attack speed in dota 2 is already percentage based. ie: "8 16 24 32" is really "8% 16% 24% 32%" bonus of base attack time
+	"teve_hunter_rapid_fire"
 	{
 		"BaseClass"                     "clinkz_strafe"
 		
-		"ID"							"6034"														
+		//"ID"							"6034"														
 																
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"FightRecapLevel"				"1"
@@ -2183,7 +2235,7 @@
 	{
 	        "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6037"
+		//"ID"            "6037"
 		
 	        "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -2242,7 +2294,7 @@
 	{
 		"BaseClass"             "lich_frost_nova"
 		
-		"ID"					"6038"														
+		//"ID"					"6038"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -2295,7 +2347,7 @@
 	"teve_arch_templar_psi_technique"
 	{
 		"BaseClass"                     "vengefulspirit_command_aura"
-		"ID"					"6039"												
+		//"ID"					"6039"												
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		
@@ -2323,7 +2375,7 @@
 	"teve_arch_templar_psionic_storm"
 	{
 	    "BaseClass"                     "abyssal_underlord_firestorm"
-		"ID"							"6030"						
+		//"ID"							"6030"						
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"AbilityCastRange"				"600"
@@ -2398,7 +2450,7 @@
 		"FightRecapLevel"       "2"
 		"AbilityDamage"         "80 160 240 320"
 		
-		"ID"            "6040"
+		//"ID"            "6040"
 		
 		"AbilityCooldown"       "20"
 		
@@ -2437,7 +2489,7 @@
 	"teve_rogue_poisoned_attack"
 	{
 		"BaseClass"             "venomancer_poison_sting"
-	 	"ID"					"6041"														
+	 	//"ID"					"6041"														
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -2465,7 +2517,7 @@
 "teve_rogue_critical_strike"
     {
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6042"
+		//"ID"							"6042"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -2528,11 +2580,11 @@
 	}
 
 
-    "teve_rogue_agility"                    // NEEDS TO BE %. Same as previous atk speed percentage problem ln: 2148
+    "teve_rogue_agility"
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6043"
+	    //"ID"                    "6043"
 	
             "AbilityTextureName"    "placeholder"
 	
@@ -2579,10 +2631,20 @@
 
 // Arch Druid
 
+	"teve_arch_druid_wearwolf"
+	{
+	
+	}
+	
+	"teve_arch_druid_wearbear"
+	{
+	
+	}
+
 	"teve_arch_druid_twister"
 	{
 		"BaseClass"             "magnataur_shockwave"
-		"ID"					"6044"													
+		//"ID"					"6044"													
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -2624,7 +2686,7 @@
 	"teve_arch_druid_thunderstorm"
 	{
 		"BaseClass"                     "abyssal_underlord_firestorm"
-		"ID"							"6045"														
+		//"ID"							"6045"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		
@@ -2690,7 +2752,7 @@
 	{
 	    "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6046"
+		//"ID"            "6046"
 		
 	        "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -2749,7 +2811,7 @@
 	{
 		
 		"BaseClass"                     "brewmaster_thunder_clap"
-		"ID"							"6047"							
+		//"ID"							"6047"							
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -2800,7 +2862,7 @@
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6048"
+	    //"ID"                    "6048"
 	
             "AbilityTextureName"    "placeholder"
 	
@@ -2849,7 +2911,7 @@
 	{
 		"BaseClass"             "sven_gods_strength"
 		
-		"ID"					"6049"			
+		//"ID"					"6049"			
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -2886,7 +2948,7 @@
 	{
 		"BaseClass"             "juggernaut_blade_fury"
 		
-		"ID"					"5028"				
+		//"ID"					"5028"				
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -2916,7 +2978,7 @@
 	"teve_slayer_silver_group_style"            
 	{
 		"BaseClass"             "sven_great_cleave"
-		"ID"					"6050"													
+		//"ID"					"6050"													
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySpecial"
@@ -2942,7 +3004,7 @@
          
 	    "BaseClass"			"phantom_assassin_blur"
 
-	    "ID"				"6051"
+	    //"ID"				"6051"
 
 	    "AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -2958,6 +3020,36 @@
 	    }
 	}
 	
+	"teve_slayer_mutation"
+	{
+		"BaseClass"				"ability_datadriven"
+		//"ID"					"9069"
+		"AbilityTextureName"	"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bonus_regen"		"0.3 0.6 0.9 1.2"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_slayer_mutation"
+			{
+				"Passive" 	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_regen"
+				}
+			}
+		}
+	}
+	
 	//===================================================================================
 	// Third Job
 	//
@@ -2971,7 +3063,7 @@
 	{
 		"BaseClass"		"clinkz_strafe"
 
-		"ID"			"9074"
+		//"ID"			"9074"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
@@ -3001,7 +3093,7 @@
 	{
 		"BaseClass"		"clinkz_searing_arrows"
 
-		"ID"			"9075"
+		//"ID"			"9075"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3029,7 +3121,7 @@
 	{
 		"BaseClass"		"juggernaut_blade_dance"
 
-		"ID"			"9076"
+		//"ID"			"9076"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3053,7 +3145,7 @@
 	{
 		"BaseClass"		"vengefulspirit_command_aura"
 		
-		"ID"			"9077"
+		//"ID"			"9077"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3081,7 +3173,7 @@
 	"teve_tracker_ensnare"
 	{
 		"BaseClass"					"naga_siren_ensnare"
-		"ID"						"9078"
+		//"ID"						"9078"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3113,7 +3205,7 @@
 	{
 		"BaseClass"						"death_prophet_exorcism"
 		
-		"ID"							"9079"
+		//"ID"							"9079"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
@@ -3180,7 +3272,7 @@
 	"teve_tracker_trueshot_aura"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"ID"							"9080"
+		//"ID"							"9080"
 		"AbilityTextureName"			"placeholder"
 		
 		"MaxLevel"						"4"
@@ -3233,7 +3325,7 @@
 
 		"AbilityTextureName"		"placeholder"
 
-		"ID"						"9081"
+		//"ID"						"9081"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3264,7 +3356,7 @@
 	"teve_dark_templar_warp_blade_finisher"
 	{
 		"BaseClass"					"ember_spirit_sleight_of_fist"
-		"ID"						"9082"
+		//"ID"						"9082"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3311,7 +3403,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9083"
+		//"ID"			"9083"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -3385,7 +3477,7 @@
 	{
 		"BaseClass"		"vengefulspirit_command_aura"
 		
-		"ID"			"9084"
+		//"ID"			"9084"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3411,7 +3503,7 @@
 
 		"AbilityTextureName"		"placeholder"
 
-		"ID"						"9085"
+		//"ID"						"9085"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3442,7 +3534,7 @@
 	"teve_high_templar_psionic_blast"
 	{
 		"BaseClass"						"sven_storm_bolt"
-		"ID"							"9086"
+		//"ID"							"9086"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -3488,7 +3580,7 @@
 	{
 		"BaseClass"		"pugna_decrepify"
 
-		"ID"			"9087"
+		//"ID"			"9087"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
@@ -3532,7 +3624,7 @@
 	{
 		"BaseClass"		"sven_storm_bolt"
 		
-		"ID"			"9088"
+		//"ID"			"9088"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -3580,7 +3672,7 @@
 
 		"AbilityTextureName"		"placeholder"
 
-		"ID"						"9089"
+		//"ID"						"9089"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 
 		"AbilityCastRange"	"500"
@@ -3612,7 +3704,7 @@
 	"teve_assassin_sonic_blow"
 	{
 		"BaseClass"					"ember_spirit_sleight_of_fist"
-		"ID"						"9090"
+		//"ID"						"9090"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3659,7 +3751,7 @@
 	{
 		"BaseClass"			"phantom_assassin_blur"
 
-		"ID"				"9091"
+		//"ID"				"9091"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3677,7 +3769,7 @@
 	"teve_assassin_critical_strike"
 	{
 		"BaseClass"					"juggernaut_blade_dance"
-		"ID"						"9092"
+		//"ID"						"9092"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -3702,7 +3794,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"9093"
+		//"ID"			"9093"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3740,7 +3832,7 @@
 		"FightRecapLevel"       "2"
 		"AbilityDamage"         "80 160 240 320"
 		
-		"ID"            "6056"
+		//"ID"            "6056"
 		
 		"AbilityCooldown"       "20"
 		
@@ -3780,7 +3872,7 @@
 	{
 		"BaseClass"			"phantom_assassin_blur"
 
-		"ID"				"6057"
+		//"ID"				"6057"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3798,7 +3890,7 @@
 	"teve_stalker_critical_strike"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6058"
+		//"ID"							"6058"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -3866,7 +3958,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"6058"
+		//"ID"			"6058"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3895,7 +3987,7 @@
 	{
 	    "BaseClass"     "ability_datadriven"
 		
-		"ID"            "6060"
+		//"ID"            "6060"
 		
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
@@ -3954,7 +4046,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"6060"
+		//"ID"			"6060"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
@@ -3989,7 +4081,7 @@
 	"teve_imperial_knight_critical_hit"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"6061"
+		//"ID"							"6061"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -4055,7 +4147,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"6062"
+		//"ID"			"6062"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
@@ -4098,7 +4190,7 @@
 	{
 	        "BaseClass"         "ability_datadriven"
 
-            "ID"                "6063"
+            //"ID"                "6063"
 
              "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	
@@ -4176,7 +4268,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"6064"
+		//"ID"			"6064"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
@@ -4218,7 +4310,7 @@
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6065"
+	    //"ID"                    "6065"
 	
             "AbilityTextureName"    "placeholder"
 	
@@ -4273,7 +4365,7 @@
 	"teve_witcher_dancing_pheonix"
 	{
                 "BaseClass"                                     "ability_datadriven"
-                "ID"                                            "6080"
+                //"ID"                                            "6080"
                
                 "AbilityBehavior"                       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
                 "AbilityCooldown"                       "6.0"
@@ -4339,7 +4431,7 @@
 	{
 		
 		"BaseClass"             "sven_great_cleave"
-		"ID"					"6081"									
+		//"ID"					"6081"									
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySpecial"
@@ -4361,7 +4453,7 @@
 	"teve_witcher_dodge"
 	{
 	    "BaseClass"             "phantom_assassin_blur"	
-		"ID"					"6082"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		//"ID"					"6082"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySpecial"
 		{
@@ -4387,7 +4479,7 @@
 	{
 	
 		"BaseClass"				"ability_datadriven"
-		"ID"					"6083"
+		//"ID"					"6083"
 		"AbilityTextureName"	"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -4443,7 +4535,7 @@
 	{
 	
 	    "BaseClass"     "ability_datadriven"
-		"ID"            "6084"
+		//"ID"            "6084"
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"         "placeholder"
 		"AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -4501,7 +4593,7 @@
 	{
                 "BaseClass"					"centaur_hoof_stomp"
 		
-		"ID"						"6085"
+		//"ID"						"6085"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
@@ -4534,7 +4626,7 @@
 	{
 	
 	        "BaseClass"             "phantom_assassin_blur"	
-		"ID"					"6086"														
+		//"ID"					"6086"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySpecial"
 		{
@@ -4559,7 +4651,7 @@
 	"teve_inquisitor_enthralling_presence"
 	{	
 	        "BaseClass"				"ability_datadriven"
-		"ID"					"6087"
+		//"ID"					"6087"
 		"AbilityTextureName"	"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -4609,7 +4701,7 @@
 	"teve_priest_heal"
 	{
 		"BaseClass"						"omniknight_purification"
-		"ID"							"6088"
+		//"ID"							"6088"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
@@ -4643,7 +4735,7 @@
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6088"
+	    //"ID"                    "6088"
 	
     	    "AbilityTextureName"    "lina_fiery_soul"
 	
@@ -4708,7 +4800,7 @@
 		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
 		
-		"ID"                         "6089"
+		//"ID"                         "6089"
 		
 		"AbilityCastPoint"           "0.10 0.10 0.10 0.10"
 		
@@ -4769,7 +4861,7 @@
 	{
 	    "BaseClass"             "ability_datadriven"
 	
-	    "ID"                    "6090"
+	    //"ID"                    "6090"
 
             "AbilityTextureName"    "crystal_maiden_brilliance_aura"
 	
@@ -4821,7 +4913,7 @@
 	{
 	        "BaseClass"         "ability_datadriven"
 
-            "ID"                "6091"
+            //"ID"                "6091"
 
              "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	
@@ -4899,7 +4991,7 @@
 	{
   	        "BaseClass"						"lich_frost_armor"
 		
-		"ID"							"6092"
+		//"ID"							"6092"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityTextureName"            "placeholder"
@@ -4943,7 +5035,7 @@
 	{
 		"BaseClass"			"dazzle_shadow_wave"
 
-		"ID"				"6093"
+		//"ID"				"6093"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -4986,7 +5078,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"6094"
+		//"ID"			"6094"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 
@@ -5056,7 +5148,7 @@
 	"teve_wizard_blizzard"
 	{
 	        "BaseClass"                     "abyssal_underlord_firestorm"
-		"ID"							"6095"														
+		//"ID"							"6095"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		
@@ -5117,7 +5209,7 @@
 	
 	"teve_wizard_thunder_strike"
 	{
-		"ID"					"6096"
+		//"ID"					"6096"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -5168,7 +5260,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"6097"
+		//"ID"			"6097"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -5200,7 +5292,7 @@
 	
 	"teve_wizard_mana_shield"        
 	{
-		"ID"					"6098"
+		//"ID"					"6098"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		
 		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
@@ -5226,7 +5318,7 @@
 	"teve_sage_pyroclasm"
 	{
 	        "BaseClass"                     "abyssal_underlord_firestorm"
-		"ID"							"6097"														
+		//"ID"							"6097"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		
@@ -5288,7 +5380,7 @@
 	"teve_sage_polymorph"         //Need to change the hex model into sheep.
 	{
 		"BaseClass"                     "lion_voodoo"
-		"ID"					        "6098"		
+		//"ID"					        "6098"		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -5324,7 +5416,7 @@
 		
 	    "BaseClass"		        "ability_datadriven"
 		"AbilityTextureName"	"placeholder"
-		"ID"			        "6099"
+		//"ID"			        "6099"
 		"AbilityBehavior"	    "DOTA_ABILITY_BEHAVIOR_PASSIVE"	
 		"AbilitySpecial"
 		{
@@ -5354,7 +5446,7 @@
 	
 	"teve_sage_mana_shield"
 	{
-		"ID"					"6099"
+		//"ID"					"6099"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		
 		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
@@ -5380,7 +5472,7 @@
 	"teve_shaman_lightning_fury"
 	{
 		"BaseClass"		"zuus_arc_lightning"
-		"ID"			"6010"
+		//"ID"			"6010"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -5420,7 +5512,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"6101"
+		//"ID"			"6101"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -5459,7 +5551,7 @@
 		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
 		
-		"ID"                         "6103"
+		//"ID"                         "6103"
 		
 		"AbilityCastPoint"           "0.10 0.10 0.10 0.10"
 		
@@ -5518,7 +5610,7 @@
 	"teve_shaman_lightning_storm"      //the values are not correctly!
 	{
 	    "BaseClass"                     "abyssal_underlord_firestorm"
-		"ID"							"6104"														
+		//"ID"							"6104"														
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"AbilityCastRange"				"550"
@@ -5591,7 +5683,7 @@
 	"teve_shapeshifter_ferocity"
 	{
 	    "BaseClass"						"ability_datadriven"
-		"ID"							"6107"
+		//"ID"							"6107"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -5676,7 +5768,7 @@
 	"teve_shapeshifter_lycanthrophy"
 	{
 	       "BaseClass"       "ability_datadriven"
-	       "ID"              "6108"
+	       //"ID"              "6108"
 	        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	        "Modifiers"
 		{
@@ -5726,7 +5818,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
-		"ID"			"9001"
+		//"ID"			"9001"
 
 		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
 
@@ -5753,7 +5845,7 @@
 	{
 		"BaseClass"		"vengefulspirit_command_aura"
 		
-		"ID"			"9002"
+		//"ID"			"9002"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -5778,7 +5870,7 @@
 	{
 		"BaseClass"		"juggernaut_blade_dance"
 
-		"ID"			"9003"
+		//"ID"			"9003"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -5804,7 +5896,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"9004"
+		//"ID"			"9004"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -5839,7 +5931,7 @@
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 
-		"ID"			"9005"
+		//"ID"			"9005"
 
 		"AbilityCooldown"	"5"
 
@@ -5868,7 +5960,7 @@
 	{
 		"BaseClass"		"clinkz_strafe"
 
-		"ID"			"9006"
+		//"ID"			"9006"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
@@ -5898,7 +5990,7 @@
 	{
 		"BaseClass"		"clinkz_searing_arrows"
 
-		"ID"			"9007"
+		//"ID"			"9007"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -5926,7 +6018,7 @@
 	{
 		"BaseClass"		"vengefulspirit_command_aura"
 		
-		"ID"			"9008"
+		//"ID"			"9008"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -5950,7 +6042,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9009"
+		//"ID"			"9009"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -5970,7 +6062,7 @@
 	{
 		"BaseClass"		"sniper_assassinate"
 
-		"ID"			"9010"
+		//"ID"			"9010"
 
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
@@ -6006,7 +6098,7 @@
 	{
 		"BaseClass"			"bounty_hunter_wind_walk"
 
-		"ID"				"9011"
+		//"ID"				"9011"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"
@@ -6041,7 +6133,7 @@
 	{
 		"BaseClass"			"phantom_assassin_blur"
 
-		"ID"				"9012"
+		//"ID"				"9012"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -6058,12 +6150,12 @@
 
 	"teve_backstab"
 	{
-		"ID"				"9013"
+		//"ID"				"9013"
 	}
 
 	"teve_stalk"
 	{
-		"ID"				"9014"
+		//"ID"				"9014"
 	}
 
 	//
@@ -6079,7 +6171,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
-		"ID"			"9015"
+		//"ID"			"9015"
 
 		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
 
@@ -6106,7 +6198,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9016"
+		//"ID"			"9016"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -6180,7 +6272,7 @@
 	{
 		"BaseClass"		"vengefulspirit_command_aura"
 		
-		"ID"			"9017"
+		//"ID"			"9017"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -6202,7 +6294,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"9018"
+		//"ID"			"9018"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -6230,7 +6322,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9019"
+		//"ID"			"9019"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
@@ -6269,7 +6361,7 @@
 	{
 		"BaseClass"		"axe_berserkers_call"
 
-		"ID"			"9020"
+		//"ID"			"9020"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
 
@@ -6309,7 +6401,7 @@
 	{
 		"BaseClass"		"enraged_wildkin_toughness_aura"
 
-		"ID"			"9021"
+		//"ID"			"9021"
 
 		"MaxLevel"		"1"
 
@@ -6349,7 +6441,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9024"
+		//"ID"			"9024"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
@@ -6386,7 +6478,7 @@
 	{
 		"BaseClass"		"centaur_hoof_stomp"
 
-		"ID"			"9025"
+		//"ID"			"9025"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
@@ -6421,7 +6513,7 @@
 	{
 		"BaseClass"		"juggernaut_blade_dance"
 
-		"ID"			"9026"
+		//"ID"			"9026"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -6450,7 +6542,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
-		"ID"			"9027"
+		//"ID"			"9027"
 
 		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
 
@@ -6486,7 +6578,7 @@
 	{
 		"BaseClass"		"sniper_shrapnel"
 
-		"ID"			"9028"
+		//"ID"			"9028"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -6541,7 +6633,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9029"
+		//"ID"			"9029"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -6576,7 +6668,7 @@
 	{
 		"BaseClass"		"invoker_tornado"
 
-		"ID"			"9030"
+		//"ID"			"9030"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -6630,7 +6722,7 @@
 	{
 		"BaseClass"		"brewmaster_thunder_clap"
 
-		"ID"			"9031"
+		//"ID"			"9031"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -6679,7 +6771,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9032"
+		//"ID"			"9032"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 
@@ -6739,46 +6831,87 @@
 	
 	"teve_holy_light"
 	{
-		"BaseClass"			"omniknight_purification"
+	        "BaseClass"         "ability_datadriven"
 
-		"ID"				"9033"
+            //"ID"                "6091"
 
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
 
-		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+ 
+            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 
-		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+            "AbilityCastPoint"  "0.15 0.15 0.15 0.15"
 
-		"AbilityCastRange"		"700"
+            "AbilityCastRange"  "800"
+   
+            "AbilityCooldown"   "5.0"
+ 
+            "AbilityManaCost"   "60 80 100 120"
 
-		"AbilityCooldown"		"1.0"
-
-		"AbilityManaCost"		"3000 3000 3000 3000"
-
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"heal"		"15000 15000 15000 15000"
-			}
-			"02"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"radius"	"0 0 0 0"
-			}
-		}
-	}
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "heal"                          "500 1000 1500 2000"
+                }
+                "02"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "damage"                        "500 1000 1500 2000"
+                }
+                "03"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "radius"                        "0"
+                }
+                "04"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "max_targets"           "1"
+                }
+            }
+ 
+            "OnSpellStart"
+            {
+                "Heal"
+                {
+                    "Target"
+                    {
+                        "Center"        "TARGET"
+                        "Radius"        "%radius"
+                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        "MaxTargets" "%max_targets"
+                    }
+                    "HealAmount"    "%heal"
+                }
+                "Damage"
+                {
+                    "Target"
+                    {
+                        "Center"        "TARGET"
+                        "Radius"        "%radius"
+                        "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        "MaxTargets" "%max_targets"
+                    }
+                    "Type"                  "DAMAGE_TYPE_MAGICAL"
+                    "Damage"                "%damage"
+                }
+	   }
+       }
 
 	"teve_sanctus"
 	{
 		"BaseClass"			"dazzle_shadow_wave"
 
-		"ID"				"9034"
+		//"ID"				"9034"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -6820,7 +6953,7 @@
 	{
 		"BaseClass"			"satyr_hellcaller_unholy_aura"
 
-		"ID"				"9035"
+		//"ID"				"9035"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -6829,7 +6962,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"health_regen"	"9" //in teve 1 regen is "9%"
+				"health_regen"	"9" //in teve 1 regen is "9%" (perhaps 9% of a base hp regen?)
 			}
 			"02"
 			{
@@ -6843,7 +6976,7 @@
 	{
 		"BaseClass"		"ability_datadriven"
 
-		"ID"			"9036"
+		//"ID"			"9036"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 
@@ -6912,7 +7045,7 @@
 	{
 		"BaseClass"			"omniknight_guardian_angel"
 
-		"ID"				"9037"
+		//"ID"				"9037"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
 
@@ -6950,7 +7083,7 @@
 	{
 		"BaseClass"			"ability_datadriven"
 
-		"ID"				"9038"
+		//"ID"				"9038"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 
@@ -6985,7 +7118,7 @@
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
 
-		"ID"				"9039"
+		//"ID"				"9039"
 
 		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
 
@@ -7012,7 +7145,7 @@
 	{
 		"BaseClass"			"lich_frost_nova"
 
-		"ID"				"9040"
+		//"ID"				"9040"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -7059,7 +7192,7 @@
 	{
 //Ummm, yea...(razor ult for now). CD 12
 		"BaseClass"			"razor_eye_of_the_storm"
-		"ID"				"9041"
+		//"ID"				"9041"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"	
@@ -7109,7 +7242,7 @@
 	{
 		"BaseClass"			"tinker_rearm"
 
-		"ID"				"9042"
+		//"ID"				"9042"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -7140,7 +7273,7 @@
 	{
 		"BaseClass"			"ability_datadriven"
 
-		"ID"				"9043"
+		//"ID"				"9043"
 
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 
@@ -7170,7 +7303,7 @@
 	{
 //Ummm, yea...(razor ult for now). CD 12
 		"BaseClass"			"razor_eye_of_the_storm"
-		"ID"				"9044"
+		//"ID"				"9044"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"	
@@ -7222,7 +7355,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"9045"
+		//"ID"			"9045"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -7245,23 +7378,26 @@
 		}
 	}
 
-	"teve_energy_shield"
+	"teve_energy_shield_2"
 	{
-		"BaseClass"		"medusa_mana_shield"
-
-		"ID"			"9046"
-
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		//"ID"					"5506"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		
-		"AbilityCastPoint"	"0.4 0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
 
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"		"FIELD_FLOAT"
-				"damage_per_mana"	"7.0"
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_mana"		"0.2 0.4 0.6 0.8"			//0.2 till lvl 21 where it is 0.3/lvl
 			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"absorption_tooltip"		"95"
+			}
+		
 		}
 	}
 
@@ -7269,7 +7405,7 @@
 	{
 		"BaseClass"				"lina_light_strike_array"
 
-		"ID"					"9047"
+		//"ID"					"9047"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 		
@@ -7313,7 +7449,7 @@
 	{
 		"BaseClass"					"centaur_hoof_stomp"
 		
-		"ID"						"9048"
+		//"ID"						"9048"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
@@ -7346,7 +7482,7 @@
 	{
 		"BaseClass"					"shadow_shaman_ether_shock"
 		
-		"ID"						"9049"
+		//"ID"						"9049"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -7393,7 +7529,7 @@
 
 		"AbilityTextureName"	"placeholder"
 
-		"ID"			"9050"
+		//"ID"			"9050"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -7418,21 +7554,24 @@
 	
 	"teve_energy_shield_2"
 	{
-		"BaseClass"		"medusa_mana_shield"
-
-		"ID"			"9051"
-
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		//"ID"					"5506"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		
-		"AbilityCastPoint"	"0.4 0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
 
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"		"FIELD_FLOAT"
-				"damage_per_mana"	"7.0"
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_mana"		"0.2 0.4 0.6 0.8"			//0.2 till lvl 21 where it is 0.3/lvl
 			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"absorption_tooltip"		"95"
+			}
+		
 		}
 	}
 	
@@ -7440,7 +7579,7 @@
 	{
 		"BaseClass"					"centaur_hoof_stomp"
 		
-		"ID"						"9052"
+		//"ID"						"9052"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
@@ -7526,7 +7665,7 @@
 	"teve_ensnare"
 	{
 		"BaseClass"					"naga_siren_ensnare"
-		"ID"						"9054"
+		//"ID"						"9054"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -7557,7 +7696,7 @@
 	"teve_critical_strike"
 	{
 		"BaseClass"					"juggernaut_blade_dance"
-		"ID"						"9055"
+		//"ID"						"9055"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
@@ -7582,7 +7721,7 @@
 
 		"AbilityTextureName"		"placeholder"
 
-		"ID"						"9056"
+		//"ID"						"9056"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -7609,7 +7748,7 @@
 	{
 		"BaseClass"						"death_prophet_exorcism"
 		
-		"ID"							"9057"
+		//"ID"							"9057"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
@@ -7681,7 +7820,7 @@
 	{
 		"BaseClass"					"centaur_hoof_stomp"
 		
-		"ID"						"9058"
+		//"ID"						"9058"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
@@ -7719,7 +7858,7 @@
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
 
-		"ID"				"9059"
+		//"ID"				"9059"
 
 		"AbilityCastPoint"		"0.5 0.5 0.5 0.5"
 
@@ -7746,7 +7885,7 @@
 	{
 		"BaseClass"		"vengefulspirit_command_aura"
 		
-		"ID"			"9060"
+		//"ID"			"9060"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
 
@@ -7769,7 +7908,7 @@
 	"teve_holy_repel"
 	{
 		"BaseClass"				"ability_datadriven"
-		"ID"					"9061"
+		//"ID"					"9061"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityTextureName"	"placeholder"
 		
@@ -7820,7 +7959,7 @@
 	"teve_fanaticism"
 	{
 		"BaseClass"				"ability_datadriven"
-		"ID"					"9062"
+		//"ID"					"9062"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
 		"AbilityTextureName"	"placeholder"
 		
@@ -7874,7 +8013,7 @@
 	"teve_ferocity"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"9063"
+		//"ID"							"9063"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -7960,7 +8099,7 @@
 	"teve_lycanthrophy"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"9064"
+		//"ID"							"9064"
 		"AbilityTextureName"	"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -8002,7 +8141,7 @@
 	"teve_feral_rage"
 	{
 			"BaseClass"						"ability_datadriven"
-			"ID"							"9065"
+			//"ID"							"9065"
 			
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
@@ -8061,7 +8200,7 @@
 	"teve_final_group_style"
 	{
 		"BaseClass"					"ability_datadriven"
-		"ID"						"9066"
+		//"ID"						"9066"
 		
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityCooldown"			"4.0"
@@ -8126,7 +8265,7 @@
 	"teve_final_silver_style"
 	{
 		"BaseClass"					"sven_great_cleave"
-		"ID"						"9067"
+		//"ID"						"9067"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 				
@@ -8149,7 +8288,7 @@
 	"teve_avoid"
 	{
 		"BaseClass"					"phantom_assassin_blur"
-		"ID"						"9068"
+		//"ID"						"9068"
 		
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -8167,7 +8306,7 @@
 	"teve_ultimate_mutation"
 	{
 		"BaseClass"				"ability_datadriven"
-		"ID"					"9069"
+		//"ID"					"9069"
 		"AbilityTextureName"	"placeholder"
 
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -8209,7 +8348,7 @@
 //	"teve_36_strikes_of_the_heavenly_dragon"
 //	{
 //		"BaseClass"					"ability_datadriven"
-//		"ID"						""
+//		//"ID"						""
 //		"AbilityCooldown"			""
 //	}
 	
@@ -8219,43 +8358,86 @@
 	
 	"teve_holy_light_2"
 	{
-		"BaseClass"					"omniknight_purification"
-		"ID"						"9070"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	        "BaseClass"         "ability_datadriven"
 
-		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+            //"ID"                "6091"
 
-		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
 
-		"AbilityCastRange"		"700"
+            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+ 
+            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 
-		"AbilityCooldown"		"0.0"
+            "AbilityCastPoint"  "0.15 0.15 0.15 0..15"
 
-		"AbilityManaCost"		"0 0 0 0"
+            "AbilityCastRange"  "800"
+   
+            "AbilityCooldown"   "5.0"
+ 
+            //"AbilityManaCost"   "60 80 100 120"
 
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"heal"		"500 1000 1500 2000"
-			}
-			"02"
-			{
-				"var_type"	"FIELD_INTEGER"
-				"radius"	"0 0 0 0"
-			}
-		}
-	}
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "heal"                          "500 1000 1500 2000"
+                }
+                "02"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "damage"                        "500 1000 1500 2000"
+                }
+                "03"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "radius"                        "0"
+                }
+                "04"
+                {
+                    "var_type"                      "FIELD_INTEGER"
+                    "max_targets"           "1"
+                }
+            }
+ 
+            "OnSpellStart"
+            {
+                "Heal"
+                {
+                    "Target"
+                    {
+                        "Center"        "TARGET"
+                        "Radius"        "%radius"
+                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        "MaxTargets" "%max_targets"
+                    }
+                    "HealAmount"    "%heal"
+                }
+                "Damage"
+                {
+                    "Target"
+                    {
+                        "Center"        "TARGET"
+                        "Radius"        "%radius"
+                        "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                        "MaxTargets" "%max_targets"
+                    }
+                    "Type"                  "DAMAGE_TYPE_MAGICAL"
+                    "Damage"                "%damage"
+                }
+	   }
+       }
 	
 	"teve_kyrie_eleison"
 	{
 		"BaseClass"						"lich_frost_armor"
-		"ID"							"9071"
+		//"ID"							"9071"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -8296,7 +8478,7 @@
 	"teve_liturgy_of_the_word"
 	{
 		"BaseClass"						"legion_commander_press_the_attack"
-		"ID"							"9072"
+		//"ID"							"9072"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 
@@ -8327,7 +8509,7 @@
 	"teve_gospel"
 	{
 		"BaseClass"						"ability_datadriven"
-		"ID"							"9073"
+		//"ID"							"9073"
 		"AbilityTextureName"			"placeholder"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"

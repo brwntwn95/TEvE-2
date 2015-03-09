@@ -5,7 +5,7 @@
 
 "CustomHeroList"
 {
-//	"npc_dota_hero_<NOVICE>"			"1"		//Novice
+	"npc_dota_hero_meepo"			"1"		//Novice
 
 	//First Job
 	//==================================================================================

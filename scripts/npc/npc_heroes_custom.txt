@@ -7,9 +7,9 @@
 	{
 		"override_hero"			"npc_dota_hero_meepo"
 
-		"AbilityLayout"			"2"
-		"Ability1"			"teve_frenzy"
-		"Ability2"			"teve_noob"
+		"AbilityLayout"			"1"
+		"Ability1"			"teve_novice_frenzy"
+		"Ability2"			""
 		"Ability3"			""
 		"Ability4"			""
 
@@ -317,7 +317,7 @@
 		"Ability1"			"teve_slayer_steel_group_style"
 		"Ability2"			"teve_slayer_silver_group_style"
 		"Ability3"			"teve_slayer_dodge"
-		"Ability4"			"teve_"
+		"Ability4"			"teve_slayer_mutation"
 
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"40"
