@@ -6829,83 +6829,109 @@
 	// Prophetess
 	//-----------------------------------------------------------------------------------
 	
-	"teve_holy_light"
+	"teve_holy_light" //Particle not displaying correctly - impact effect split between target and caster because that's the only way I could find to make it sort of work
 	{
-	        "BaseClass"         "ability_datadriven"
+		"BaseClass"         "ability_datadriven"
 
-            //"ID"                "6091"
+		//"ID"                "6091"
 
-             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	
-	        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+		 "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 
-            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+		"AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+
+		"AbilityCastPoint"  "0.25"
+
+		"AbilityCastRange"  "800"
+
+		"AbilityCooldown"   "5.0"
+
+		"AbilityManaCost"   "60 80 100 120"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"heal"                          "500 1000 1500 2000"
+			}
+			"02"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"damage"                        "500 1000 1500 2000"
+			}
+			"03"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"radius"                        "0"
+			}
+			"04"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"max_targets"           "1"
+			}
+		}
+
+		"precache"
+		{
+			"particle"  "particles/teve_holy_light.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		}
  
-            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	
-	        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-
-            "AbilityCastPoint"  "0.15 0.15 0.15 0.15"
-
-            "AbilityCastRange"  "800"
-   
-            "AbilityCooldown"   "5.0"
- 
-            "AbilityManaCost"   "60 80 100 120"
-
-            "AbilitySpecial"
+        "OnSpellStart"
+        {
+            "Heal"
             {
-                "01"
+                "Target"
                 {
-                    "var_type"                      "FIELD_INTEGER"
-                    "heal"                          "500 1000 1500 2000"
+                    "Center"        "TARGET"
+                    "Radius"        "%radius"
+                    "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                    "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    "MaxTargets" "%max_targets"
                 }
-                "02"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "damage"                        "500 1000 1500 2000"
-                }
-                "03"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "radius"                        "0"
-                }
-                "04"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "max_targets"           "1"
-                }
+                "HealAmount"    "%heal"
             }
- 
-            "OnSpellStart"
+            "Damage"
             {
-                "Heal"
+                "Target"
                 {
-                    "Target"
-                    {
-                        "Center"        "TARGET"
-                        "Radius"        "%radius"
-                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                        "MaxTargets" "%max_targets"
-                    }
-                    "HealAmount"    "%heal"
+                    "Center"        "TARGET"
+                    "Radius"        "%radius"
+                    "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                    "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    "MaxTargets" "%max_targets"
                 }
-                "Damage"
-                {
-                    "Target"
-                    {
-                        "Center"        "TARGET"
-                        "Radius"        "%radius"
-                        "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                        "MaxTargets" "%max_targets"
-                    }
-                    "Type"                  "DAMAGE_TYPE_MAGICAL"
-                    "Damage"                "%damage"
-                }
-	   }
-       }
+                "Type"                  "DAMAGE_TYPE_MAGICAL"
+                "Damage"                "%damage"
+            }
+            "FireSound"
+            {
+            	"EffectName"	"Hero_Omniknight.Purification"
+            	"Target" 		"TARGET"
+            }
+            "FireEffect"
+            {
+            	"EffectName"        "particles/teve_holy_light_impact.vpcf"
+            	"EffectAttachType"  "follow_origin"
+            	"Target"            "TARGET"
+				"ControlPointEntities"
+            	{
+            		"TARGET"	"attach_origin"
+            		"TARGET"	"attach_origin"
+            		"TARGET"	"attach_origin"
+            		"TARGET"	"attach_origin"
+            		"TARGET"	"attach_origin"
+					"CASTER"	"attach_hitloc"
+            	}
+            }
+		}
+	}
 
 	"teve_sanctus"
 	{
@@ -6918,10 +6944,10 @@
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"
 
-		"AbilityCastPoint"		"0.3 0.3 0.3 0.3"
+		"AbilityCastPoint"		"0.5"
 		"AbilityCastRange"		"600"
 		"AbilityCooldown"		"6 6 6 6"
-		"AbilityManaCost"		"4200"
+//		"AbilityManaCost"		"4200"
 		"AbilityDamage"			"12000 12000 12000 12000"
 
 		"AbilitySpecial"
