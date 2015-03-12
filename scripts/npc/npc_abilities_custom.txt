@@ -6829,7 +6829,7 @@
 	// Prophetess
 	//-----------------------------------------------------------------------------------
 	
-	"teve_holy_light" //Particle not displaying correctly - impact effect split between target and caster because that's the only way I could find to make it sort of work
+	"teve_holy_light"
 	{
 		"BaseClass"         "ability_datadriven"
 
@@ -6845,7 +6845,7 @@
 
 		"AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 
-		"AbilityCastPoint"  "0.25"
+		"AbilityCastPoint"  "0.5 0.5 0.5 0.5"
 
 		"AbilityCastRange"  "800"
 
@@ -6917,18 +6917,15 @@
             }
             "FireEffect"
             {
+            	"EffectName"        "particles/teve_holy_light_cast.vpcf"
+            	"EffectAttachType"  "attach_hitloc"
+            	"Target"            "CASTER"
+            }
+            "FireEffect"
+            {
             	"EffectName"        "particles/teve_holy_light_impact.vpcf"
             	"EffectAttachType"  "follow_origin"
             	"Target"            "TARGET"
-				"ControlPointEntities"
-            	{
-            		"TARGET"	"attach_origin"
-            		"TARGET"	"attach_origin"
-            		"TARGET"	"attach_origin"
-            		"TARGET"	"attach_origin"
-            		"TARGET"	"attach_origin"
-					"CASTER"	"attach_hitloc"
-            	}
             }
 		}
 	}
@@ -8645,6 +8642,67 @@
 		{
 			"Target" "CASTER"
 			"ModifierName" "modifier_damage_effects"
+		}
+	}
+	
+	
+	
+	//BOSS ABILITIES
+	
+	
+//////////////////////////////
+//Kel'Thuzad Mana Combustion//
+//////////////////////////////
+
+
+	"teve_boss_kel_thuzad_mana_combustion"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"anitmage_mana_void"
+		"MaxLevel" 						"1"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+		"AbilityCooldown"				"10"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_drain"			"12000"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"projectile_speed"	"1250"
+			}
+		}
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_abaddon/abaddon_death_coil.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/kel_thuzad/kel_thuzad_mana_combustion.lua"
+				"Function"		"ManaCombustion"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_Antimage.ManaVoid"
+				"Target" 		"TARGET"
+			}
 		}
 	}
 }
