@@ -1,7 +1,8 @@
 // Dota Units File
+
+//The Units can't have more than 8191 mana!!!!!
 "DOTAUnits"
 {
-       //I don't think that the modelscale from wc3 is the same like in dota2.
     "Version"	"1"	
 	"teve_satyr"
 	{										
@@ -12,7 +13,7 @@
 		"ModelScale" 				".90"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_novice_frenzy"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -105,7 +106,7 @@
 	
     "teve_watery_murloc"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"5"
@@ -133,8 +134,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"23"		
+		"BountyGoldMax"				"23"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -155,7 +156,7 @@
 	
     "teve_murloc_nightcrawler"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"7"
@@ -183,8 +184,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"30"		
+		"BountyGoldMax"				"30"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -205,7 +206,7 @@
 	
     "teve_spider"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"8"
@@ -233,8 +234,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"34"		
+		"BountyGoldMax"				"34"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -255,7 +256,7 @@
 	
     "teve_ice_troll"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"9"
@@ -275,16 +276,16 @@
 		"AttackRate"				"1.7"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"500"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"41"		
+		"BountyGoldMax"				"41"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -305,7 +306,7 @@
 	
     "teve_water_elemental"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"10"
@@ -327,14 +328,14 @@
 		"AttackAcquisitionRange"	"500"		
 		"AttackRange"				"100"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"46"		
+		"BountyGoldMax"				"46"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -355,7 +356,7 @@
 	
     "teve_polar_furbolg"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"12"
@@ -383,8 +384,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"55"		
+		"BountyGoldMax"				"55"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -405,7 +406,7 @@
 	
 	"teve_frost_wolf"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"15"
@@ -433,8 +434,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"64"		
+		"BountyGoldMax"				"64"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -455,14 +456,14 @@
 	
 	"teve_icy_tarantula"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"18"
 		"ModelScale" 				"1.7"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_frenzy_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -483,11 +484,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"200"		
+		"BountyGoldMax"				"200"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"3000"		
 		"StatusHealthRegen"			"5"			
@@ -505,7 +506,7 @@
 	
 	"teve_ghoul"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"19"
@@ -533,8 +534,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80"		
+		"BountyGoldMax"				"80"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -555,7 +556,7 @@
 	
 	"teve_big_bad_troll"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"20"
@@ -577,17 +578,17 @@
 		"AttackAcquisitionRange"	"500"		
 		"AttackRange"				"100"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"310"		
+		"BountyGoldMax"				"310"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"3500"		
 		"StatusHealthRegen"			"5"			
@@ -605,7 +606,7 @@
 	
 	"teve_crypt_fiend"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"21"
@@ -625,16 +626,16 @@
 		"AttackRate"				"1.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"500"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"89"		
+		"BountyGoldMax"				"89"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -655,14 +656,14 @@
 	
 	"teve_frostsabre"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"23"
 		"ModelScale" 				"1.7"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"		
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -683,11 +684,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"450"		
+		"BountyGoldMax"				"450"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"5000"		
 		"StatusHealthRegen"			"5"			
@@ -705,7 +706,7 @@
 	
 	"teve_banshee"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"24"
@@ -725,16 +726,16 @@
 		"AttackRate"				"1.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"500"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"99"		
+		"BountyGoldMax"				"99"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -755,7 +756,7 @@
 	
 	"teve_corrupted_treant"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"25"
@@ -783,8 +784,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"102"		
+		"BountyGoldMax"				"102"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -805,7 +806,7 @@
 	
 	"teve_black_ooze"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"28"
@@ -833,8 +834,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"118"		
+		"BountyGoldMax"				"118"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -855,7 +856,7 @@
 	
 	"teve_bandit"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"30"
@@ -883,8 +884,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"125"		
+		"BountyGoldMax"				"125"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -905,7 +906,7 @@
 	
 	"teve_skeleton_fighter"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"33"
@@ -933,8 +934,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"145"		
+		"BountyGoldMax"				"145"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -955,7 +956,7 @@
 	
 	"teve_snap_dragon"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"33"
@@ -975,16 +976,16 @@
 		"AttackRate"				"1.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"140"		
+		"BountyGoldMax"				"140"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1005,7 +1006,7 @@
 	
 	"teve_enraged_owlkin"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"34"
@@ -1033,8 +1034,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"145"		
+		"BountyGoldMax"				"145"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1055,7 +1056,7 @@
 	
 	"teve_skeleton_mage"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"34"
@@ -1075,16 +1076,16 @@
 		"AttackRate"				"1.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"500"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"149"		
+		"BountyGoldMax"				"149"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1105,7 +1106,7 @@
 	
 	"teve_kobold_miner"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"35"
@@ -1133,8 +1134,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"153"		
+		"BountyGoldMax"				"153"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1155,7 +1156,7 @@
 	
 	"teve_kobold_overseer"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"36"
@@ -1175,16 +1176,16 @@
 		"AttackRate"				"1.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"157"		
+		"BountyGoldMax"				"157"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1205,7 +1206,7 @@
 	
 	"teve_lizardman"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"37"
@@ -1233,8 +1234,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"161"		
+		"BountyGoldMax"				"161"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1255,7 +1256,7 @@
 	
 	"teve_gnoll_leader"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"38"
@@ -1275,16 +1276,16 @@
 		"AttackRate"				"1.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"165"		
+		"BountyGoldMax"				"165"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1305,14 +1306,14 @@
 	
 	"teve_count_dracula"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"38"
 		"ModelScale" 				"1.8"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_cripple_neutral"		
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -1333,11 +1334,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"500"		
+		"BountyGoldMax"				"500"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"8000"		
 		"StatusHealthRegen"			"5"			
@@ -1355,7 +1356,7 @@
 	
 	"teve_lizardman_sorcerer"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"39"
@@ -1375,16 +1376,16 @@
 		"AttackRate"				"1.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"169"		
+		"BountyGoldMax"				"169"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1405,7 +1406,7 @@
 	
 	"teve_mountain_centaur"
 	{ 
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"40"
@@ -1433,8 +1434,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"165"		
+		"BountyGoldMax"				"165"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1455,7 +1456,7 @@
 	
 	"teve_centaur_archer"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"41"
@@ -1475,16 +1476,16 @@
 		"AttackRate"				"1.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"168"		
+		"BountyGoldMax"				"168"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1505,7 +1506,7 @@
 	
 	"teve_centaur_warrior"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"43"
@@ -1533,8 +1534,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"176"		
+		"BountyGoldMax"				"176"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1555,14 +1556,14 @@
 	
 	"teve_darkmoon_minion"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"43"
 		"ModelScale" 				"1"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -1583,8 +1584,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"183"		
+		"BountyGoldMax"				"183"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1605,7 +1606,7 @@
 	
 	"teve_the_big_bad_goblins"
 	{ 
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"45"
@@ -1625,19 +1626,19 @@
 		"AttackRate"				"1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"1000"		
+		"BountyGoldMax"				"1000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"12000"		
 		"StatusHealthRegen"			"10"			
@@ -1655,7 +1656,7 @@
 	
 	"teve_zombie"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"46"
@@ -1683,8 +1684,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"187"		
+		"BountyGoldMax"				"187"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1705,7 +1706,7 @@
 	
 	"teve_felhound"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"47"
@@ -1725,16 +1726,16 @@
 		"AttackRate"				"1.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"191"		
+		"BountyGoldMax"				"191"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1755,7 +1756,7 @@
 	
 	"teve_death_revenant"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"48"
@@ -1775,16 +1776,16 @@
 		"AttackRate"				"1.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"195"		
+		"BountyGoldMax"				"195"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1805,7 +1806,7 @@
 	
 	"teve_spectre"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"49"
@@ -1825,16 +1826,16 @@
 		"AttackRate"				"1.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"200"		
+		"BountyGoldMax"				"200"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1855,7 +1856,7 @@
 	
 	"teve_bloodmage_minion"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"50"
@@ -1875,16 +1876,16 @@
 		"AttackRate"				"1.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"205"		
+		"BountyGoldMax"				"205"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1905,7 +1906,7 @@
 	
 	"teve_drowned_dead"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"51"
@@ -1933,8 +1934,8 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"209"		
+		"BountyGoldMax"				"209"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -1955,7 +1956,7 @@
 	
 	"teve_wraith"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"53"
@@ -1975,16 +1976,16 @@
 		"AttackRate"				"1.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"217"		
+		"BountyGoldMax"				"217"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
@@ -2005,7 +2006,7 @@
 	
 	"teve_snoworc_patrol"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"54"
@@ -2025,7 +2026,7 @@
 		"AttackRate"				"1.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"140"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2033,11 +2034,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"221"		
+		"BountyGoldMax"				"221"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"280"		
 
 		"StatusHealth"				"3780"		
 		"StatusHealthRegen"			"1"			
@@ -2055,7 +2056,7 @@
 	
 	"teve_demonic_hellminion"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"55"
@@ -2083,11 +2084,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"113"		
+		"BountyGoldMax"				"113"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"3500"		
 		"StatusHealthRegen"			"1"			
@@ -2105,14 +2106,14 @@
 	
 	"teve_demonic_hellspawn"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"55"
 		"ModelScale" 				".90"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_true_sight"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2133,11 +2134,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"113"		
+		"BountyGoldMax"				"113"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"3300"		
 		"StatusHealthRegen"			"1"			
@@ -2155,7 +2156,7 @@
 	
 	"teve_snoworc_grunt"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"55"
@@ -2183,11 +2184,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"225"		
+		"BountyGoldMax"				"225"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"280"		
 
 		"StatusHealth"				"3850"		
 		"StatusHealthRegen"			"1"			
@@ -2205,7 +2206,7 @@
 	
 	"teve_bloodthirsty_maniac"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"57"
@@ -2233,11 +2234,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"232"		
+		"BountyGoldMax"				"232"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"280"		
 
 		"StatusHealth"				"3990"		
 		"StatusHealthRegen"			"1"			
@@ -2255,7 +2256,7 @@
 	
 	"teve_bloody_undertaker"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"58"
@@ -2283,11 +2284,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"237"		
+		"BountyGoldMax"				"237"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"280"		
 
 		"StatusHealth"				"4060"		
 		"StatusHealthRegen"			"1"			
@@ -2305,7 +2306,7 @@
 	
 	"teve_snoworc_warlock"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"60"
@@ -2325,19 +2326,19 @@
 		"AttackRate"				"1.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"550"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"244"		
+		"BountyGoldMax"				"244"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"280"		
 
 		"StatusHealth"				"4200"		
 		"StatusHealthRegen"			"1"			
@@ -2355,14 +2356,14 @@
 	
 	"teve_ogre_warrior"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"61"
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2383,11 +2384,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"249"		
+		"BountyGoldMax"				"249"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"4270"		
 		"StatusHealthRegen"			"1"			
@@ -2405,7 +2406,7 @@
 	
 	"teve_ogre_mage"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"63"
@@ -2433,11 +2434,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"257"		
+		"BountyGoldMax"				"257"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"4410"		
 		"StatusHealthRegen"			"1"			
@@ -2455,14 +2456,14 @@
 	
 	"teve_dark_elf_scout"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"64"
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_ensnare_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2475,19 +2476,19 @@
 		"AttackRate"				"1.3"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"500"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1000"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"261"		
+		"BountyGoldMax"				"261"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"4480"		
 		"StatusHealthRegen"			"1"			
@@ -2505,7 +2506,7 @@
 	
 	"teve_dark_elven_archer"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"67"
@@ -2525,19 +2526,19 @@
 		"AttackRate"				"1.3"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1000"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"272"		
+		"BountyGoldMax"				"272"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"4690"		
 		"StatusHealthRegen"			"1"			
@@ -2555,7 +2556,7 @@
 	
 	"teve_enraged_spirit"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"70"
@@ -2575,7 +2576,7 @@
 		"AttackRate"				"1.3"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2583,11 +2584,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"282"		
+		"BountyGoldMax"				"282"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"4900"		
 		"StatusHealthRegen"			"1"			
@@ -2605,14 +2606,14 @@
 	
 	"teve_naga_siren"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"73"
 		"ModelScale" 				"1.1"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_ensnare_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2625,7 +2626,7 @@
 		"AttackRate"				"1.2"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2633,11 +2634,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"291"		
+		"BountyGoldMax"				"291"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"330"		
 
 		"StatusHealth"				"5110"		
 		"StatusHealthRegen"			"1"			
@@ -2655,14 +2656,14 @@
 	
 	"teve_naga_elite_guard"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"75"
 		"ModelScale" 				"1.1"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_slow_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2675,7 +2676,7 @@
 		"AttackRate"				"1.2"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2683,11 +2684,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"297"		
+		"BountyGoldMax"				"297"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"330"		
 
 		"StatusHealth"				"5250"		
 		"StatusHealthRegen"			"1"			
@@ -2705,14 +2706,14 @@
 	
 	"teve_lord_of_the_depths"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"75"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2733,11 +2734,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"2500"		
+		"BountyGoldMax"				"2500"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"25000"		
 		"StatusHealthRegen"			"20"			
@@ -2755,15 +2756,15 @@
 	
 	"teve_tyrant"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"80"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_roar_25pct_no_cd"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -2775,7 +2776,7 @@
 		"AttackRate"				"1.3"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2783,11 +2784,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"309"		
+		"BountyGoldMax"				"309"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"350"		
 
 		"StatusHealth"				"6500"		
 		"StatusHealthRegen"			"2"			
@@ -2805,14 +2806,14 @@
 	
 	"teve_mistress_of_the_tides"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"80"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2825,19 +2826,19 @@
 		"AttackRate"				"0.8"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1200"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"3000"		
+		"BountyGoldMax"				"3000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"30000"		
 		"StatusHealthRegen"			"25"			
@@ -2855,7 +2856,7 @@
 	
 	"teve_bandit_chief"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"90"
@@ -2883,11 +2884,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"501"		
+		"BountyGoldMax"				"501"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"375"		
 
 		"StatusHealth"				"50000"		
 		"StatusHealthRegen"			"1.5"			
@@ -2905,7 +2906,7 @@
 	
 	"teve_sewer_bug"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"90"
@@ -2925,7 +2926,7 @@
 		"AttackRate"				"1.1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2933,11 +2934,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"351"		
+		"BountyGoldMax"				"351"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"330"		
 
 		"StatusHealth"				"8100"		
 		"StatusHealthRegen"			"1"			
@@ -2955,7 +2956,7 @@
 	
 	"teve_sewer_fiend"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"97"
@@ -2975,7 +2976,7 @@
 		"AttackRate"				"1.1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -2983,11 +2984,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"377"		
+		"BountyGoldMax"				"377"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"330"		
 
 		"StatusHealth"				"9300"		
 		"StatusHealthRegen"			"1"			
@@ -3005,7 +3006,7 @@
 	
 	"teve_salamander"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"105"
@@ -3025,19 +3026,19 @@
 		"AttackRate"				"1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"409"		
+		"BountyGoldMax"				"409"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"15750"		
 		"StatusHealthRegen"			"1"			
@@ -3055,7 +3056,7 @@
 	
 	"teve_sewer_monster"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"105"
@@ -3075,7 +3076,7 @@
 		"AttackRate"				"1.1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"90"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -3083,11 +3084,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"399"		
+		"BountyGoldMax"				"399"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"330"		
 
 		"StatusHealth"				"10340"		
 		"StatusHealthRegen"			"1"			
@@ -3105,7 +3106,7 @@
 	
 	"teve_hell_marksman"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"110"
@@ -3125,19 +3126,19 @@
 		"AttackRate"				"1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"700"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1200"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"428"		
+		"BountyGoldMax"				"428"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"16500"		
 		"StatusHealthRegen"			"1"			
@@ -3155,14 +3156,14 @@
 	
 	"teve_the_queen"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"110"
 		"ModelScale" 				"3.5"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -3175,19 +3176,19 @@
 		"AttackRate"				"0.7"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"6000"		
+		"BountyGoldMax"				"6000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"100000"		
 		"StatusHealthRegen"			"50"			
@@ -3205,7 +3206,7 @@
 	
 	"teve_pit_lord"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"120"
@@ -3225,19 +3226,19 @@
 		"AttackRate"				"1"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"467"		
+		"BountyGoldMax"				"467"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"18000"		
 		"StatusHealthRegen"			"1"			
@@ -3255,14 +3256,14 @@
 	
 	"teve_infernal_knight"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"124"
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_stomp_2000dmg"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -3283,11 +3284,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"483"		
+		"BountyGoldMax"				"483"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"18600"		
 		"StatusHealthRegen"			"1"			
@@ -3305,14 +3306,14 @@
 	
 	"teve_abyssal_knight"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"149"
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -3333,11 +3334,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"561"		
+		"BountyGoldMax"				"561"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"250"		
 
 		"StatusHealth"				"35520"		
 		"StatusHealthRegen"			"1"			
@@ -3355,15 +3356,15 @@
 	
 	"teve_lord_de_seis"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"150"
 		"ModelScale" 				"2.5"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_evasion_neutral"			
+		"Ability2"					"teve_critical_strike_80c_2x"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3375,7 +3376,7 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"120"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -3383,11 +3384,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"12000"		
+		"BountyGoldMax"				"12000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"380"		
 
 		"StatusHealth"				"250000"		
 		"StatusHealthRegen"			"35"			
@@ -3405,14 +3406,14 @@
 	
 	"teve_abyssal_golem"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"156"
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_stomp_5000dmg"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -3433,11 +3434,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"592"		
+		"BountyGoldMax"				"592"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"250"		
 
 		"StatusHealth"				"37440"		
 		"StatusHealthRegen"			"1"			
@@ -3455,15 +3456,15 @@
 	
 	"teve_ifrit"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"165"
 		"ModelScale" 				"1.45"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3475,19 +3476,19 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"615"		
+		"BountyGoldMax"				"615"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"82500"		
 		"StatusHealthRegen"			"20"			
@@ -3505,15 +3506,15 @@
 	
 	"teve_succubus"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"168"
 		"ModelScale" 				"1.15"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3525,19 +3526,19 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"624"		
+		"BountyGoldMax"				"624"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"84000"		
 		"StatusHealthRegen"			"20"			
@@ -3555,15 +3556,15 @@
 	
 	"teve_skeleton_champion"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"170"
 		"ModelScale" 				"1.25"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"		
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3583,11 +3584,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"630"		
+		"BountyGoldMax"				"630"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"85000"		
 		"StatusHealthRegen"			"20"			
@@ -3612,8 +3613,8 @@
 		"ModelScale" 				"1.3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3633,11 +3634,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"666"		
+		"BountyGoldMax"				"666"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"106800"		
 		"StatusHealthRegen"			"30"			
@@ -3655,15 +3656,15 @@
 	
 	"teve_overlord"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"185"
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3683,11 +3684,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"691"		
+		"BountyGoldMax"				"691"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"111000"		
 		"StatusHealthRegen"			"30"			
@@ -3705,15 +3706,15 @@
 	
 	"teve_golem_champion"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"192"
 		"ModelScale" 				"1.15"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3733,11 +3734,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"718"		
+		"BountyGoldMax"				"718"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"115900"		
 		"StatusHealthRegen"			"30"			
@@ -3755,7 +3756,7 @@
 	
 	"teve_flying_wish_fish"
 	{
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"200"
@@ -3783,11 +3784,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"5000"		
+		"BountyGoldMax"				"5000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"450"		
 
 		"StatusHealth"				"600000"		
 		"StatusHealthRegen"			"1000"			
@@ -3805,15 +3806,15 @@
 	
     "teve_giant_turtle"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"200"
 		"ModelScale" 				"1"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3825,19 +3826,19 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"748"		
+		"BountyGoldMax"				"748"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"120000"		
 		"StatusHealthRegen"			"30"			
@@ -3855,15 +3856,15 @@
 	
     "teve_black_mage"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"211"
 		"ModelScale" 				"1.6"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3875,19 +3876,19 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"789"		
+		"BountyGoldMax"				"789"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"126600"		
 		"StatusHealthRegen"			"30"			
@@ -3905,15 +3906,15 @@
 	
     "teve_dark_archer"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"218"
 		"ModelScale" 				"1.45"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -3925,19 +3926,19 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"815"		
+		"BountyGoldMax"				"815"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"360"		
 
 		"StatusHealth"				"130800"		
 		"StatusHealthRegen"			"35"			
@@ -3955,16 +3956,16 @@
 	
     "teve_griswold"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"240"
 		"ModelScale" 				"6"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_30c_3x_20e_neutral"			
+		"Ability3"					"teve_stomp_5000dmg"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"100"			
@@ -3983,11 +3984,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"50000"		
+		"BountyGoldMax"				"50000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"1000000"		
 		"StatusHealthRegen"			"50"			
@@ -4005,16 +4006,16 @@
 	
     "teve_furbolg_leader_1st_stage_boss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"2.5"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_1st_stage_boss_spell"			
+		"Ability2"					"teve_true_sight"			
+		"Ability3"					"teve_critical_strike_40c_3x_20e_neutral"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"100"			
@@ -4033,11 +4034,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"55000"		
+		"BountyGoldMax"				"55000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1000000"		
 		"StatusHealthRegen"			"60"			
@@ -4055,16 +4056,16 @@
 	
     "teve_overlord_master_2nd_stage_boss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"2.25"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_20e_neutral"		
+		"Ability3"					"teve_2nd_stage_boss_spell"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"110"			
@@ -4083,11 +4084,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"60000"		
+		"BountyGoldMax"				"60000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1100000"		
 		"StatusHealthRegen"			"60"			
@@ -4105,16 +4106,16 @@
 	
     "teve_the_rock_3rd_stage_boss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"1.8"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_20e_neutral"			
+		"Ability3"					"teve_3rd_stage_boss_spell"		
 		"Ability4"					""			
 
 		"ArmorPhysical"				"120"			
@@ -4125,19 +4126,19 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"65000"		
+		"BountyGoldMax"				"65000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1200000"		
 		"StatusHealthRegen"			"60"			
@@ -4155,16 +4156,16 @@
 	
     "teve_turtle_boss_4th_stage_boss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"1.8"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_20e_neutral"			
+		"Ability3"					"teve_4th_stage_boss_spell"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"130"			
@@ -4175,19 +4176,19 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"70000"		
+		"BountyGoldMax"				"70000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1300000"		
 		"StatusHealthRegen"			"60"			
@@ -4205,16 +4206,16 @@
 	
     "teve_kelthuzad_5th_stage_boss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"3.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_20e_neutral"			
+		"Ability3"					"teve_5th_stage_boss_spell"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"140"			
@@ -4225,19 +4226,19 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"75000"		
+		"BountyGoldMax"				"75000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1400000"		
 		"StatusHealthRegen"			"60"			
@@ -4255,16 +4256,16 @@
 	
     "teve_sylvanas_final_stage_boss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"2.8"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_20c_6x"			
+		"Ability3"					"teve_50evasion_neutral"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"150"			
@@ -4275,19 +4276,19 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1200"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1500000"		
 		"StatusHealthRegen"			"60"			
@@ -4305,16 +4306,16 @@
 	
     "teve_frostfang"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"25"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_neutral"			
+		"Ability3"					"teve_roar_25pct_cd45"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"10"			
@@ -4333,11 +4334,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"1000"		
+		"BountyGoldMax"				"1000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"320"		
 
 		"StatusHealth"				"6200"		
 		"StatusHealthRegen"			"10"			
@@ -4355,15 +4356,15 @@
 	
     "teve_stitches"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"45"
 		"ModelScale" 				"3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4383,11 +4384,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"1500"		
+		"BountyGoldMax"				"1500"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"320"		
 
 		"StatusHealth"				"10000"		
 		"StatusHealthRegen"			"15"			
@@ -4405,14 +4406,14 @@
 	
     "teve_engineer_vancliffe"
     { 
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"52"
 		"ModelScale" 				"1.6"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_true_sight"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -4433,11 +4434,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"2000"		
+		"BountyGoldMax"				"2000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"320"		
 
 		"StatusHealth"				"15000"		
 		"StatusHealthRegen"			"20"			
@@ -4455,15 +4456,15 @@
 	
     "teve_the_warchief"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"60"
 		"ModelScale" 				"1.8"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_25cleave"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4483,11 +4484,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"2500"		
+		"BountyGoldMax"				"2500"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"320"		
 
 		"StatusHealth"				"20000"		
 		"StatusHealthRegen"			"25"			
@@ -4505,15 +4506,15 @@
 	
     "teve_lord_of_puzzles"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"65"
 		"ModelScale" 				"1.8"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_frost_neutral"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4525,19 +4526,19 @@
 		"AttackRate"				"0.8"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"3000"		
+		"BountyGoldMax"				"3000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"320"		
 
 		"StatusHealth"				"26000"		
 		"StatusHealthRegen"			"30"			
@@ -4555,15 +4556,15 @@
 	
     "teve_leviathan"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"90"
 		"ModelScale" 				"3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4575,19 +4576,19 @@
 		"AttackRate"				"0.7"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"3500"		
+		"BountyGoldMax"				"3500"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"120000"		
 		"StatusHealthRegen"			"40"			
@@ -4605,15 +4606,15 @@
 	
     "teve_sewer_monstrosity"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"140"
 		"ModelScale" 				"3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_critical_strike_neutral"			
+		"Ability2"					"teve_true_sight"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4625,19 +4626,19 @@
 		"AttackRate"				"0.7"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"15000"		
+		"BountyGoldMax"				"15000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"340"		
 
 		"StatusHealth"				"250000"		
 		"StatusHealthRegen"			"45"			
@@ -4655,16 +4656,16 @@
 	
     "teve_lord_of_terror"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"180"
 		"ModelScale" 				"5"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_80c_2x"			
+		"Ability3"					"teve_50cleave"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"300"			
@@ -4675,7 +4676,7 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"120"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -4683,11 +4684,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"20000"		
+		"BountyGoldMax"				"20000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"500000"		
 		"StatusHealthRegen"			"50"			
@@ -4705,16 +4706,16 @@
 	
     "teve_lord_of_the_abyss"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+   	    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"220"
 		"ModelScale" 				"4"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_60c_4x"			
+		"Ability3"					"teve_strike_of_the_abyss_neutral"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"800"			
@@ -4725,7 +4726,7 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"120"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -4733,11 +4734,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"50000"		
+		"BountyGoldMax"				"50000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"1000000"		
 		"StatusHealthRegen"			"60"			
@@ -4755,16 +4756,16 @@
 	
     "teve_harbringer_of_doom"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"250"
 		"ModelScale" 				"3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_30c_3x_20e_neutral"			
+		"Ability3"					"teve_tristram_rock_neutral"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"150"			
@@ -4783,11 +4784,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"450"		
 
 		"StatusHealth"				"1500000"		
 		"StatusHealthRegen"			"80"			
@@ -4805,16 +4806,16 @@
 	
     "teve_doppelganger"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"280"
 		"ModelScale" 				"3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_80c_8x_50e"			
+		"Ability3"					"teve_doppel_stun"		
 		"Ability4"					""			
 
 		"ArmorPhysical"				"200"			
@@ -4825,7 +4826,7 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"120"		
 		"ProjectileModel"			""			
 		"ProjectileSpeed"			"0"					   
 
@@ -4833,11 +4834,11 @@
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"100000"		
+		"BountyGoldMax"				"100000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"500"		
 
 		"StatusHealth"				"2200000"		
 		"StatusHealthRegen"			"100"			
@@ -4855,15 +4856,15 @@
 	
     "teve_trinity"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_60c_10x_60e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4875,19 +4876,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"100"		
 
 		"StatusHealth"				"1000000"		
 		"StatusHealthRegen"			"20"			
@@ -4905,15 +4906,15 @@
 	
     "teve_liberty"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"		
+		"Ability2"					"teve_critical_strike_60c_10x_60e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -4925,19 +4926,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"100"		
 
 		"StatusHealth"				"2000000"		
 		"StatusHealthRegen"			"20"			
@@ -4955,16 +4956,16 @@
 	
     "teve_mirage"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"		
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
+		"Ability3"					"teve_command_aura_30pct"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"150"			
@@ -4975,19 +4976,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"10000000"		
 		"StatusHealthRegen"			"20"			
@@ -5005,16 +5006,16 @@
 	
     "teve_aurora"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"		
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
+		"Ability3"					"teve_command_aura_50pct"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"200"			
@@ -5025,19 +5026,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"400"		
 
 		"StatusHealth"				"2000000"		
 		"StatusHealthRegen"			"20"			
@@ -5055,15 +5056,15 @@
 	
     "teve_storm"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -5075,19 +5076,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"450"		
 
 		"StatusHealth"				"2000000"		
 		"StatusHealthRegen"			"20"			
@@ -5105,16 +5106,16 @@
 	
     "teve_blaze"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
+		"Ability3"					"teve_dragon_fire_60k_dmg"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"150"			
@@ -5125,19 +5126,19 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"450"		
 
 		"StatusHealth"				"1500000"		
 		"StatusHealthRegen"			"20"			
@@ -5155,15 +5156,15 @@
 	
     "teve_winter"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"		
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -5175,19 +5176,19 @@
 		"AttackRate"				"0.5"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"450"		
 
 		"StatusHealth"				"1500000"		
 		"StatusHealthRegen"			"20"			
@@ -5205,15 +5206,15 @@
 	
     "teve_midnight"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -5225,19 +5226,19 @@
 		"AttackRate"				"0.6"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"450"		
 
 		"StatusHealth"				"1800000"		
 		"StatusHealthRegen"			"1"			
@@ -5255,15 +5256,15 @@
 	
     "teve_icarus"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -5275,19 +5276,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"200"		
 
 		"StatusHealth"				"1000000"		
 		"StatusHealthRegen"			"20"			
@@ -5305,15 +5306,15 @@
 	
     "teve_infinity"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_40c_3x_30e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -5325,19 +5326,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"900"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"80000"		
+		"BountyGoldMax"				"80000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"300"		
 
 		"StatusHealth"				"2000000"		
 		"StatusHealthRegen"			"20"			
@@ -5355,15 +5356,15 @@
 	
     "teve_fusion_dragon"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"3"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_60c_10x_60e"			
 		"Ability3"					""			
 		"Ability4"					""			
 
@@ -5375,19 +5376,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1200"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"200000"		
+		"BountyGoldMax"				"200000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"522"		
 
 		"StatusHealth"				"5000000"		
 		"StatusHealthRegen"			"400"			
@@ -5405,14 +5406,14 @@
 	
     "teve_the_admiral"
     { 
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_true_sight"		
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -5425,19 +5426,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"600"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1200"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"200000"		
+		"BountyGoldMax"				"200000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"522"		
 
 		"StatusHealth"				"7000000"		
 		"StatusHealthRegen"			"400"			
@@ -5455,16 +5456,16 @@
 	
     "teve_the_commander"
     {
-    "Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+    	"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"300"
 		"ModelScale" 				"1.50"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
-		"Ability2"					""			
-		"Ability3"					""			
+		"Ability1"					"teve_true_sight"			
+		"Ability2"					"teve_critical_strike_60c_10x_60e"			
+		"Ability3"					"teve_50cleave"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"300"			
@@ -5475,19 +5476,19 @@
 		"AttackRate"				"0.4"		
 		"AttackAnimationPoint"		"0.3"		
 		"AttackAcquisitionRange"	"500"		
-		"AttackRange"				"100"		
+		"AttackRange"				"120"		
 		"ProjectileModel"			""			
-		"ProjectileSpeed"			"0"					   
+		"ProjectileSpeed"			"1200"					   
 
 		"RingRadius"				"60"
 		"HealthBarOffset"			"210"
 
 		"BountyXP"					"119"		
-		"BountyGoldMin"				"5"		
-		"BountyGoldMax"				"5"		
+		"BountyGoldMin"				"200000"		
+		"BountyGoldMax"				"200000"		
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		
+		"MovementSpeed"				"522"		
 
 		"StatusHealth"				"4000000"		
 		"StatusHealthRegen"			"400"			
