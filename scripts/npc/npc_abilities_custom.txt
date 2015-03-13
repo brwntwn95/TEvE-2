@@ -8645,6 +8645,1841 @@
 		}
 	}
 	
+	//Neutral Units Abilities
+	
+	"teve_frenzy_neutral"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"placeholder"
+		"MaxLevel" 						"5"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+		"precache"
+		{
+			"particle"  "particles/items2_fx/mask_of_madness.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movespeed"		"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attackspeed"		"40 60 80 100 120"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_frenzy_effects"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+		
+				"EffectName"		"particles/items2_fx/mask_of_madness.vpcf"
+				"EffectAttachType"	"follow_hitloc"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attackspeed"
+				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movespeed" 
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_frenzy_effects"
+				"Target" 		"CASTER"
+				"Duration"		"%duration"
+			}
+		}
+	}
+	
+	"teve_critical_strike_neutral"
+	{
+		"BaseClass"						"ability_datadriven"
+		//ID							
+		"AbilityTextureName"			"placeholder"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"20"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"200"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_critical_strike_neutral"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_critical_strike_neutral_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_critical_strike_neutral_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_critical_strike_neutral_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	"teve_cripple_neutral"
+        {   
+	    "BaseClass"             "ability_datadriven"
+	
+	    //"ID"                    "6001"
+	
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	    "AbilityTextureName"    "pugna_decrepify"
+	
+	    "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	
+	    "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	    "AbilityType"           "DOTA_ABILITY_TYPE_BASIC"      
+	
+	    "AbilityCastPoint"         "0.15 0.15 0.15 0.15"
+
+            "AbilityCastRange"         "600"
+
+            "AbilityCooldown"          "10"
+
+            "AbilityDuration"          "10"
+
+            "AbilityManaCost"          "175"
+
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                        "var_type" "FIELD_INTEGER"
+                        "damage" "-50"
+                }
+                "02"
+                {
+                        "var_type" "FIELD_INTEGER"
+                        "duration"   "10"
+                }
+                "03"
+                {
+                        "var_type" "FIELD_INTEGER"
+                       "attack_speed"        "-50"
+                }
+                "04"
+                {
+                       "var_type" "FIELD_INTEGER"
+                        "movement_speed"          "-75"
+                }
+		   	
+	    }		
+	    "Modifiers"
+            {
+	        "modifier_acolyte_cripple"
+    	        {
+			    "Duration"                "%duration"
+	                    "Properties"
+			    {                               
+				                "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"   "%damage"
+				                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_speed"
+						"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"   "%attack_speed"
+			    }								
+		}									
+	    }
+            "OnSpellStart"
+            {
+                "ApplyModifier"
+                {
+                    "Target"    "TARGET"
+                    "ModifierName"  "modifier_acolyte_cripple"
+                }
+            }
+        }
+	
+	"teve_ensnare_neutral"
+	{
+		"BaseClass"					"naga_siren_ensnare"
+		//"ID"						"9054"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCooldown"			"20"
+		"AbilityManaCost"			"0 0 0 0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"1"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"net_speed"			"1500 1500 1500 1500"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"fake_ensure_distance"		"500"
+			}
+		}
+	}
+	
+	"teve_slow_neutral"
+        {   
+	    "BaseClass"             "ability_datadriven"
+	
+	    //"ID"                    "6001"
+	
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	    "AbilityTextureName"    "pugna_decrepify"
+	
+	    "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	
+	    "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+	    "AbilityType"           "DOTA_ABILITY_TYPE_BASIC"      
+	
+	    "AbilityCastPoint"         "0.15 0.15 0.15 0.15"
+
+            "AbilityCastRange"         "600"
+
+            "AbilityCooldown"          "8"
+
+            "AbilityDuration"          "10"
+
+            "AbilityManaCost"          "50"
+
+            "AbilitySpecial"
+            {           
+                
+                "01"
+                {
+                        "var_type" "FIELD_INTEGER"
+                        "duration"   "10"
+                }
+                "02"
+                {
+                        "var_type" "FIELD_INTEGER"
+                       "attack_speed"        "-25"
+                }
+                "03"
+                {
+                       "var_type" "FIELD_INTEGER"
+                        "movement_speed"          "-60"
+                }
+	    }				   			
+	        "Modifiers"
+                {
+	            "modifier_slow_neutral"
+    	            {
+			    "Duration"                "%duration"
+	                    "Properties"
+			    {                               		                
+				                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_speed"
+						"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"   "%attack_speed"
+			    }								
+		    }									
+	        }
+                "OnSpellStart"
+                {
+                    "ApplyModifier"
+                    {
+                        "Target"    "TARGET"
+                        "ModifierName"  "modifier_slow_neutral"
+                    }
+                }
+        }
+	
+	"teve_roar_25pct_no_cd"
+        {
+                "BaseClass"                             "ability_datadriven"
+                "AbilityTextureName"                    "axe_battle_hunger"
+                "MaxLevel"                                              "1"
+ 
+                "AbilityBehavior"                               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+                "AbilityUnitTargetTeam"                 "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "AbilityUnitTargetType"                 "DOTA_UNIT_TARGET_BASIC"
+                "AbilityCooldown"                               "0"
+				"AbilityManaCost"          "100"
+                "AbilityCastRange"                              "500"
+                "AbilityCastPoint"                              "0.3"
+ 
+                "AbilitySpecial"
+                {
+                        "01"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "radius"                        "800"
+                        }
+                        "02"
+                        {
+                                "var_type"                      "FIELD_FLOAT"
+                                "duration"                      "45"
+                        }
+                        "03"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "bonus_damage_pct"      "25"
+                        }
+                        "04"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "bonus_armour"          "0"
+                        }
+                }
+ 
+                "precache"
+                {
+                        "particle"  "particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+                        "soundfile" "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+                }
+ 
+                "OnSpellStart"
+                {
+                        "ApplyModifier"
+                        {
+                                "ModifierName"  "modifier_boss_buff_effects"
+                                "Target"
+                                {
+                                        "Center"        "CASTER"
+                                        "Radius"        "%radius"
+                                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                                        "Types"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+                                }
+                                "Duration"              "%duration"
+                        }
+                        "FireSound"
+                        {
+                                "EffectName"    "Hero_Ursa.Enrage"
+                                "Target"                "CASTER"
+                        }
+                }
+ 
+                "Modifiers"
+                {
+                        "modifier_boss_buff_effects"
+                        {
+                                "Passive"                       "0"
+                                "IsHidden"                      "0"
+                                "IsDebuff"                      "0"
+               
+                                "EffectName"            "particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+                                "EffectAttachType"      "follow_origin"
+               
+                                "Properties"
+                                {
+                                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"                "%bonus_armour"
+                                    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"       "%bonus_damage_pct"
+                                }
+                        }
+                }
+        }
+		
+		"teve_roar_25pct_cd45"
+        {
+                "BaseClass"                             "ability_datadriven"
+                "AbilityTextureName"                    "axe_battle_hunger"
+                "MaxLevel"                                              "1"
+ 
+                "AbilityBehavior"                               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+                "AbilityUnitTargetTeam"                 "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "AbilityUnitTargetType"                 "DOTA_UNIT_TARGET_BASIC"
+                "AbilityCooldown"                               "45"
+                "AbilityManaCost"                               "100"
+                "AbilityCastRange"                              "500"
+                "AbilityCastPoint"                              "0.3"
+ 
+                "AbilitySpecial"
+                {
+                        "01"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "radius"                        "800"
+                        }
+                        "02"
+                        {
+                                "var_type"                      "FIELD_FLOAT"
+                                "duration"                      "45"
+                        }
+                        "03"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "bonus_damage_pct"      "25"
+                        }
+                        "04"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "bonus_armour"          "0"
+                        }
+                }
+ 
+                "precache"
+                {
+                        "particle"  "particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+                        "soundfile" "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+                }
+ 
+                "OnSpellStart"
+                {
+                        "ApplyModifier"
+                        {
+                                "ModifierName"  "modifier_boss_buff_effects"
+                                "Target"
+                                {
+                                        "Center"        "CASTER"
+                                        "Radius"        "%radius"
+                                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                                        "Types"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+                                }
+                                "Duration"              "%duration"
+                        }
+                        "FireSound"
+                        {
+                                "EffectName"    "Hero_Ursa.Enrage"
+                                "Target"                "CASTER"
+                        }
+                }
+ 
+                "Modifiers"
+                {
+                        "modifier_boss_buff_effects"
+                        {
+                                "Passive"                       "0"
+                                "IsHidden"                      "0"
+                                "IsDebuff"                      "0"
+               
+                                "EffectName"            "particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+                                "EffectAttachType"      "follow_origin"
+               
+                                "Properties"
+                                {
+                                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"                "%bonus_armour"
+                                    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"       "%bonus_damage_pct"
+                                }
+                        }
+                }
+        }
+	
+	"teve_evasion_neutral"
+	{
+	
+	        "BaseClass"             "phantom_assassin_blur"	
+		//"ID"					"6086"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_evasion"				"15"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"transparency_fade"			"0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"0 0 0 0"
+			}
+		}
+	}
+	
+	"teve_50evasion_neutral"
+	{
+	
+	        "BaseClass"             "phantom_assassin_blur"	
+		//"ID"					"6086"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_evasion"				"50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"transparency_fade"			"0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"0 0 0 0"
+			}
+		}
+	}
+	
+	"teve_1st_stage_boss_spell"
+	{
+		"BaseClass"                     "brewmaster_thunder_clap"
+		//"ID"							"6047"							
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		"AbilityCooldown"				"8"
+		
+		"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+
+		"AbilityManaCost"				"70 90 110 130"		
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"600"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"8000"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_slow"				"30"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed_slow"			"50"
+			}			
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"4"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration_creeps"			"4"
+			}			
+		}
+	}
+	
+	"teve_true_sight"
+	{
+		"BaseClass"             "bloodseeker_thirst"
+		//"ID"					"5017"													
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"visibility_threshold_pct"	"0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"invis_threshold_pct"	    "100"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"0 0 0 0"
+			}			
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"0 0 0 0"
+			}
+		}
+	}
+	
+	"teve_critical_strike_30c_3x_20e_neutral"
+	{
+		"BaseClass"						"ability_datadriven"
+		//"ID"							"9063"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"30"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"20"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"300"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_critical_strike_40c_3x_20e_neutral"
+	{
+		"BaseClass"						"ability_datadriven"
+		//"ID"							"9063"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"40"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"20"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"300"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_critical_strike_60c_10x_60e"
+	{
+		"BaseClass"						"ability_datadriven"
+		//"ID"							"9063"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"60"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"60"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"1000"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_critical_strike_40c_3x_30e"
+	{
+		"BaseClass"						"ability_datadriven"
+		//"ID"							"9063"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"40"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"30"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"300"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_critical_strike_80c_8x_50e"
+	{
+		"BaseClass"						"ability_datadriven"
+		//"ID"							"9063"
+		"AbilityTextureName"			"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"80"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"evasion_chance"	"50"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"800"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_rune_master_ferocity"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_rune_master_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion_chance"
+				}
+			}
+			
+			"modifier_rune_master_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_rune_master_crit"
+						"Target"		"CASTER"
+					}
+					"FireEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+						"EffectAttackType"	"follow_orgin"
+						"Target"			"TARGET"
+					}
+				}
+			}
+		}
+
+		"ApplyModifier"
+		{
+			"Target" 		"CASTER"
+			"ModifierName" 	"modifier_rune_master_ferocity"
+		}
+	}
+	
+	"teve_critical_strike_20c_6x"
+	{
+		"BaseClass"						"ability_datadriven"
+		//ID							
+		"AbilityTextureName"			"placeholder"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"20"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"600"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_critical_strike_neutral"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_critical_strike_neutral_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_critical_strike_neutral_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_critical_strike_neutral_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	"teve_critical_strike_80c_2x"
+	{
+		"BaseClass"						"ability_datadriven"
+		//ID							
+		"AbilityTextureName"			"placeholder"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"80"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"200"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_critical_strike_neutral"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_critical_strike_neutral_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_critical_strike_neutral_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_critical_strike_neutral_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	"teve_critical_strike_60c_4x"
+	{
+		"BaseClass"						"ability_datadriven"
+		//ID							
+		"AbilityTextureName"			"placeholder"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_chance"		"60"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_bonus"		"400"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_critical_strike_neutral"
+			{
+				"Passive" 	"1"
+				"IsHidden"	"1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+						"Chance"	"%crit_chance"
+						"OnSuccess"
+						{
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_critical_strike_neutral_crit"
+								"Target"		"CASTER"
+							}
+						}
+					}
+				}
+				
+			}
+			
+			"modifier_critical_strike_neutral_crit"
+			{
+				"Duration"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_critical_strike_neutral_crit"
+						"Target"		"CASTER"
+					}
+				}
+			}
+		}
+	}
+	
+	"teve_50cleave"
+	{
+		"BaseClass"					"sven_great_cleave"
+		//"ID"						"9067"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+				
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_radius"	"150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_damage"	"50"
+			}
+		}
+	}
+	
+	"teve_25cleave"
+	{
+		"BaseClass"					"sven_great_cleave"
+		//"ID"						"9067"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+				
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_radius"	"150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_damage"	"25"
+			}
+		}
+	}
+	
+	"teve_stomp_5000dmg"
+	{
+		"BaseClass"					"centaur_hoof_stomp"
+		
+		//"ID"						"9058"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+		
+		"AbilityCastPoint"			"0 0 0 0"
+		"AbilityCooldown"			"6 6 6 6"
+		"AbilityManaCost"			"0 0 0 0"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"250"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"stun_duration"					"2.0 2.0 2.0 2.0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"5000"
+			}
+		}
+	}
+	
+	"teve_stomp_2000dmg"
+	{
+		"BaseClass"					"centaur_hoof_stomp"
+		
+		//"ID"						"9058"
+		
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+		
+		"AbilityCastPoint"			"0 0 0 0"
+		"AbilityCooldown"			"6 6 6 6"
+		"AbilityManaCost"			"0 0 0 0"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"250"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"stun_duration"					"2.0 2.0 2.0 2.0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"2000"
+			}
+		}
+	}
+	
+	"teve_frost_neutral"
+	{
+		"BaseClass"				"ability_datadriven"
+		//"ID"					"9069"
+		"AbilityTextureName"	"placeholder"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	        "Modifiers"
+		{
+			"item_frostbrand_modifier"
+			{
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"  "1"
+				"IsHidden" "1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				}
+                        }
+			"item_frostbrand_effects"
+			{
+				"Duration"		"2"
+				"IsDebuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_slow"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_slow"
+				}
+				"Target"		"TARGET"
+			}
+			"item_frostbrand_orb"
+			{
+				"Passive"		"1"
+				"IsHidden"		"1"
+				"Orb"
+				{
+					"Priority"		"DOTA_ORB_PRIORITY_ABILITY"
+					"ProjectileName"	"particles\items2_fx\skadi_projectile.vpcf"
+				}
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"item_frostbrand_effects"
+						"Target"		"TARGET"
+						"Duration"		"2"
+					}
+				}
+			}
+		}
+
+	    "AbilitySpecial"
+            {
+                "01"
+                {
+                    "var_type"  "FIELD_INTEGER"
+                    "bonus_dmg"    "300"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"move_slow"		"-35"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"attack_slow"	"-45"
+		}
+            }
+        }
+	
+	"teve_3rd_stage_boss_spell"
+	{
+		"BaseClass"                     "brewmaster_earth_hurl_boulder"
+		//"ID"							"5404"							
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastRange"				"800 800 800 800"
+		"AbilityCooldown"				"4.0"
+		"AbilityCastPoint"				"0.4"
+		"AbilityManaCost"				"100000"		
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"12000"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed"						"1000"
+			}
+		}
+	}
+	
+	"teve_4th_stage_boss_spell"
+	{
+		
+		"BaseClass"                     "magnataur_shockwave"
+		
+		//"ID"					"5518"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityCooldown"				"8.0"
+		"AbilityDuration"				"0.6875 0.6875 0.6875 0.6875"
+		"AbilityManaCost"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shock_speed"				"1050"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shock_width"				"600"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shock_distance"			"800"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shock_damage"				"30000"
+			}
+		}
+	}
+	
+	"teve_2nd_stage_boss_spell"
+        {
+                "BaseClass"                             "ability_datadriven"
+                "AbilityTextureName"                    "axe_battle_hunger"
+                "MaxLevel"                                              "1"
+ 
+                "AbilityBehavior"                               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+                "AbilityUnitTargetTeam"                 "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "AbilityUnitTargetType"                 "DOTA_UNIT_TARGET_BASIC"
+ 
+                "AbilityCooldown"                               "25"
+ 
+                "AbilityCastRange"                              "800"
+                "AbilityCastPoint"                              "0.3"
+ 
+                "AbilitySpecial"
+                {
+                        "01"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "radius"                        "800"
+                        }
+                        "02"
+                        {
+                                "var_type"                      "FIELD_FLOAT"
+                                "duration"                      "20"
+                        }
+                        "03"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "bonus_damage_pct"      "3"
+                        }
+                        "04"
+                        {
+                                "var_type"                      "FIELD_INTEGER"
+                                "bonus_armour"          "1200"
+                        }
+                }
+ 
+                "precache"
+                {
+                        "particle"  "particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+                        "soundfile" "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+                }
+ 
+                "OnSpellStart"
+                {
+                        "ApplyModifier"
+                        {
+                                "ModifierName"  "modifier_boss_buff_effects"
+                                "Target"
+                                {
+                                        "Center"        "CASTER"
+                                        "Radius"        "%radius"
+                                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                                        "Types"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+                                }
+                                "Duration"              "%duration"
+                        }
+                        "FireSound"
+                        {
+                                "EffectName"    "Hero_Ursa.Enrage"
+                                "Target"                "CASTER"
+                        }
+                }
+ 
+                "Modifiers"
+                {
+                        "modifier_boss_buff_effects"
+                        {
+                                "Passive"                       "0"
+                                "IsHidden"                      "0"
+                                "IsDebuff"                      "0"
+               
+                                "EffectName"            "particles/units/heroes/hero_ursa/ursa_enrage_buff.vpcf"
+                                "EffectAttachType"      "follow_origin"
+               
+                                "Properties"
+                                {
+                                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"                "%bonus_armour"
+                                    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"       "%bonus_damage_pct"
+                                }
+                        }
+                }
+        }
+		
+	"teve_command_aura_30pct"
+	{
+	        "BaseClass"             "ability_datadriven"
+	
+	        //"ID"                    "6090"
+
+                "AbilityTextureName"    "crystal_maiden_brilliance_aura"
+	
+	        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+		{
+			    "var_type"  "FIELD_FLOAT"
+                            "dmg_pct" "30"		
+                }
+                "02"
+                {
+                            "var_type"	"FIELD_INTEGER"
+                            "radius"	"900"
+                }
+            }
+        
+            "Modifiers"
+            {
+                "modifier_dmg_auratest"
+                {
+                        "IsBuff"         "1"
+                        "IsPurgable"     "0"
+                        "IsHidden"       "1"
+                        "Passive"        "1"
+                        "Aura"      "dmg_aura_test"
+                        "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Aura_Radius"   "%radius"
+                        "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                }
+                "dmg_aura_test"
+                {
+                    "IsHidden"    "0"
+                    "IsBuff"      "1"
+                    "IsPurgable"  "0"
+                    "Properties"  
+                    {
+                        "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" 	"%dmg_pct"
+                    }
+                }			
+            }
+	}	
+			
+	"teve_command_aura_50pct"
+	{
+	        "BaseClass"             "ability_datadriven"
+	
+	        //"ID"                    "6090"
+
+               "AbilityTextureName"    "crystal_maiden_brilliance_aura"
+	
+	        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+		{
+			    "var_type"  "FIELD_FLOAT"
+                            "dmg_pct" "50"		
+                }
+                "02"
+                {
+                            "var_type"	"FIELD_INTEGER"
+                            "radius"	"900"
+                }
+            }
+        
+            "Modifiers"
+            {
+                "modifier_dmg_auratest"
+                {
+                        "IsBuff"         "1"
+                        "IsPurgable"     "0"
+                        "IsHidden"       "1"
+                        "Passive"        "1"
+                        "Aura"      "dmg_aura_test"
+                        "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                        "Aura_Radius"   "%radius"
+                        "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                }
+                "dmg_aura_test"
+                {
+                    "IsHidden"    "0"
+                    "IsBuff"      "1"
+                    "IsPurgable"  "0"
+                    "Properties"  
+                    {
+                        "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" 	"%dmg_pct"
+                    }
+                }			
+            }
+	}
+		
+	"teve_strike_of_the_abyss_neutral"
+	{
+		"BaseClass"			"dragon_knight_dragon_tail"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+
+		//"ID"				"9059"
+
+		"AbilityCastPoint"		"0.5 0.5 0.5 0.5"
+
+		"AbilityCooldown"		"6"
+
+		"AbilityManaCost"		"5000"
+
+		"AbilityCastRange"		"100"
+
+		"AbilityDamage"			"40000"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"stun_duration"	"2"
+			}
+		}
+	}
+	
+	"teve_doppel_stun"
+	{
+		"BaseClass"                     "brewmaster_earth_hurl_boulder"
+		//"ID"							"5404"							
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastRange"				"1000"
+		"AbilityCooldown"				"6.0"
+		"AbilityCastPoint"				"0.4"
+		"AbilityManaCost"				"5000"		
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"35000"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"4.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed"						"1000"
+			}
+		}
+	}
+	
+	"teve_tristram_rock_neutral"
+	{
+		"BaseClass"                     "brewmaster_earth_hurl_boulder"
+		//"ID"							"5404"							
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastRange"				"1000"
+		"AbilityCooldown"				"3.0"
+		"AbilityCastPoint"				"0.4"
+		"AbilityManaCost"				"0"		
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"35000"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"2.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed"						"1000"
+			}
+		}
+	}
+	
+	"teve_dragon_fire_60k_dmg"
+	{
+		"BaseClass"                     "jakiro_macropyre"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					        "5300"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.65 0.65 0.65 0.65"
+		"AbilityCooldown"				"14"
+		"AbilityManaCost"				"5000"		
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_duration"			"5 5 5"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"12000"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_range"				"900"					
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"		           	"5"
+			}			
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"path_radius"				"800"
+			}			
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"burn_interval"				"1"
+			}			
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration_scepter"			"0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_scepter"			"0"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_range_scepter"		"0"
+			}
+		}	
+	}
+	
 	
 	
 	//BOSS ABILITIES
