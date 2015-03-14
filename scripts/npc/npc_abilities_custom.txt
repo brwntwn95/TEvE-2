@@ -10480,6 +10480,267 @@
 		}	
 	}
 	
+	"teve_hellfire_neutral"    
+	{
+	    "BaseClass"                     "abyssal_underlord_firestorm"
+		//"ID"							"6104"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.15"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"5"
+		"AbilityManaCost"				"5000"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"600"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_duration"					"3.0"
+			}		
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_count"					"2"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_damage"					"30000"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"wave_interval"					"1.0"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"burn_damage"					"0 0 0 0"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_interval"					"0.0"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_duration"					"0.0"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"first_wave_delay"				"0.9"
+			}
+		}
+	}
+	
+	"teve_dragon_ice_15c_2sec_stun"
+	{
+		"BaseClass"                     "faceless_void_time_lock"
+		//"ID"					        "5184"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityModifierSupportBonus"		"25"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_creep"		"2.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_pct"			"15"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"20000"
+			}
+		}
+	}
+	
+	"teve_dragon_death_35k_4sec_stun"
+	{
+		"BaseClass"                     "chaos_knight_chaos_bolt"
+		//"ID"					"5426"														
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+		"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+		"AbilityManaCost"				"5000"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chaos_bolt_speed"		"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stun_min"				"4"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stun_max"				"4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_min"			"35000"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_max"			"35000"
+			}
+		}
+	}
+	
+   "teve_armor_reduction"
+   {
+	    "BaseClass"             "ability_datadriven"
+	
+	    //"ID"                    "6090"
+
+            "AbilityTextureName"    "crystal_maiden_brilliance_aura"
+	
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	            "var_type"  "FIELD_FLOAT"
+                "armor_bonus" "-100"		
+            }
+            "02"
+            {
+                "var_type"	"FIELD_INTEGER"
+                "radius"	"900"
+            }
+        }
+        
+        "Modifiers"
+        {
+            "modifier_dmg_auratest"
+            {
+                "IsBuff"        "1"
+                "IsPurgable"    "0"
+                "IsHidden"      "1"
+                "Passive"       "1"
+                "Aura"          "dmg_aura_test"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Aura_Radius"   "%radius"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+            "dmg_aura_test"
+            {
+                "IsHidden"    "0"
+                "IsBuff"      "1"
+                "IsPurgable"  "0"
+                "Properties"  
+                {
+                        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" 	"%armor_bonus"
+                }
+            }			
+        }
+   }
+	
+	"teve_burning_fire_neutral"
+	{
+		"BaseClass"		"ability_datadriven"
+
+		//"ID"			"9036"
+
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+
+		"AbilityCastPoint"	"0.7"
+		"AbilityCastRange"  "700"
+
+		"AbilityCooldown"	"15"
+    	        "AbilityManaCost"	"100"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"50"		//100 dps
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"3.0"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"300"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_flame_strike_damage"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"0"
+				"Duration"			"%duration"
+		
+				"ThinkInterval"  "0.5"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"
+						{
+							"Center"  	"TARGET"
+							"Radius" 	"%radius"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						}
+						"Type"			"DAMAGE_TYPE_MAGICAL"
+						"Damage"		"%damage"
+					}
+				}
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"CreateThinker"
+			{
+				"ModifierName"	"modifier_flame_strike_damage"
+				"Target" 		"POINT"
+			}
+		}
+	}
+	
 	
 	
 	//BOSS ABILITIES
