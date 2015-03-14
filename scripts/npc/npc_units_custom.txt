@@ -6,14 +6,14 @@
     "Version"	"1"	
 	"teve_satyr"
 	{										
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"	
+		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.mdl"	
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"2"
 		"ModelScale" 				".90"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					"teve_novice_frenzy"			
+		"Ability1"					""			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -40,7 +40,7 @@
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"				"270"		
 
-		"StatusHealth"				"5000"		
+		"StatusHealth"				"170"		
 		"StatusHealthRegen"			"5"			
 		"StatusMana"				"50"		
 		"StatusManaRegen"			"1"					 
@@ -54,9 +54,9 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 	
-	"npc_dota_teve_aggressive_satyr"
+	"teve_aggressive_satyr"
    	{										
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.mdl"
+		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.mdl"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"4"

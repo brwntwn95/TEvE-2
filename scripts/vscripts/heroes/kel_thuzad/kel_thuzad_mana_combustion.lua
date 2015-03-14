@@ -24,7 +24,9 @@ function ManaCombustion(keys)
 
 	ApplyDamage(damageTable)
 
-
+	local projectile_speed = ability:GetSpecialValueFor("projectile_speed")
+	local particle_name = "particles/units/heroes/hero_abaddon/abaddon_death_coil.vpcf"
+	
 	local projectile = {
 		Target = target,
 		Source = caster,
@@ -38,8 +40,7 @@ function ManaCombustion(keys)
 		iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
 	}
 
-	local projectile_speed = ability:GetSpecialValueFor("projectile_speed")
-	local particle_name = "particles/units/heroes/hero_abaddon/abaddon_death_coil.vpcf"
+
 	ProjectileManager:CreateTrackingProjectile(projectile)
 
 end
