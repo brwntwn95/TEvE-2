@@ -1863,7 +1863,7 @@
 		"ModelScale" 				"1.1"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"				        "teve_burning_fire_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -2413,7 +2413,7 @@
 		"ModelScale" 				"1.2"
 		"IsNeutralUnitType"			"1"
 
-		"Ability1"					""			
+		"Ability1"					"teve_burning_fire_neutral"			
 		"Ability2"					""			
 		"Ability3"					""			
 		"Ability4"					""			
@@ -5165,7 +5165,7 @@
 
 		"Ability1"					"teve_true_sight"		
 		"Ability2"					"teve_critical_strike_40c_3x_30e"			
-		"Ability3"					""			
+		"Ability3"					"teve_dragon_ice_15c_2sec_stun"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"150"			
@@ -5215,7 +5215,7 @@
 
 		"Ability1"					"teve_true_sight"			
 		"Ability2"					"teve_critical_strike_40c_3x_30e"			
-		"Ability3"					""			
+		"Ability3"				        "teve_dragon_death_35k_4sec_stun"			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"150"			
@@ -5365,7 +5365,7 @@
 
 		"Ability1"					"teve_true_sight"			
 		"Ability2"					"teve_critical_strike_60c_10x_60e"			
-		"Ability3"					""			
+		"Ability3"					"teve_hellfire_neutral"   			
 		"Ability4"					""			
 
 		"ArmorPhysical"				"250"			
@@ -5466,7 +5466,8 @@
 		"Ability1"					"teve_true_sight"			
 		"Ability2"					"teve_critical_strike_60c_10x_60e"			
 		"Ability3"					"teve_50cleave"			
-		"Ability4"					""			
+		"Ability4"					"teve_armor_reduction"
+		"Ability5"                                      "teve_doppel_stun"
 
 		"ArmorPhysical"				"300"			
 
