@@ -1,16 +1,0 @@
-Basically, the Limit Break System is a "Skill Point-based System", meaning that you can choose to put in a skill point into a particular Limit Break skill, which branches off to other lines as well like how it is with Job Changing, creating massive versatility and variation with your character.
-As you take massive damage from monsters, your Limit Break gauge meter will start to fill slowly.
-After it is completely full, you will gain the ability to use Limit Break.
-As to which ability you will use, it will automatically unleash the latest Limit Break skill you have learnt.
-The Limit Break System is branched off into Tiers, with Tier 1 Limit Break skills being the weakest.
-|cffffcc00Check "www.twilightseve.tk" for a more complete list of Limit Break Skill trees for all classes.|r
-|cffff8c00Unlocking the Limit Break System:|r
-First, you have to be a level 250 4th Job Class.
-After meeting the criteria, you will have to speak to "The Angel of Clouds", near the city gate to obtain the Limit Break quest.
-It involves having to kill Doppleganger in the Unknown Regions.
-After the deed is done, head back to the NPC and turn in your quest.
-In addition to some experience, you will unlock the power to unleash Limit Break.
-Once you have successfully unlocked the power to unleash Limit Break, when you save your character, you will save your Limit Break skill and your Limit Break Meter Gauge.
-This is saved in the Hero Code, not the Item Code. Check the Saving/Loading Quest in F9 for more information
-
-"ReplaceableTextures\\CommandButtons\\BTNArcane.blp"

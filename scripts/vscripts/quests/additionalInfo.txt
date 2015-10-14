@@ -1,8 +1,0 @@
-Twilight's Eve ORPG uses a saved rez point system that saves the point where you will revive at, should your hero die.
-All you have to do is go within 500 range of an Inn in any town or city, and it will auto save your rez point for you, so if you die, you will be revived at that specific city/town you saved in.
-Power Shards are used to forge items of immense power, comparable to that of |cffff0000Legendary|r items.
-However, they can only be obtained by completing |cffff0000Hell|r or 
-|cffB22222Impossible|r Difficulty Dungeons. Choosing to buy them is also possible, but at a price of 50,000 gold.
-Selling them is also possible, but for only 20,000 gold
-
-"ReplaceableTextures\\CommandButtons\\BTNSpy.blp"

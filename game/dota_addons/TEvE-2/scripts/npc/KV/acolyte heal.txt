@@ -1,0 +1,58 @@
+    "teve_acolyte_1_heal"
+    {
+        "BaseClass"         "ability_datadriven"
+
+        //"ID"                "6000"
+
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+
+        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+        "AbilityUnitTargetFlags"   "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+
+        "AbilityCastPoint"  "0.3 0.3 0.3 0.3"
+
+        "AbilityCastRange"  "700"
+        "AbilityCooldown"   "5.0"
+
+        "AbilityManaCost"   "90 100 110 120"
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+            "soundfile" "sounds/weapons/hero/omniknight/purification.vsnd"
+        }
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type" "FIELD_INTEGER"
+                "heal"     "200 250 300 350"
+            }
+        }   
+        
+        "OnSpellStart"
+        {
+            "Heal"
+            {
+                "HealAmount"    "%heal"
+                    "Target"     "TARGET"
+            }
+            "FireEffect"
+            {
+               "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+               "EffectAttachType"  "follow_origin"
+               "Target"            "TARGET"
+            }
+            "FireSound"
+            {
+                "EffectName"    "Omniknight.Purification"
+                "Target"         "TARGET"
+            }
+        }
+    }

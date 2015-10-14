@@ -1,7 +1,0 @@
-To take the quests, simply go to target NPC and get the Quest at no cost.
-Information on how to do each quest will be given to you when you received it.
-
-To turn in the quest, go back to the NPC who gave you it, and simply right click on the NPC.
-You will get rewarded for the quests
-
-"ReplaceableTextures\\CommandButtons\\BTNSnazzyScrollPurple.blp"
