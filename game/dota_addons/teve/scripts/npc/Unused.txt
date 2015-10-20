@@ -2,146 +2,146 @@
 ///////////////////////////////////////////////////UNUSED OR BROKEN////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	"teve_arctic_freeze"
-	{
-		"BaseClass"		"ability_datadriven"
+    "teve_arctic_freeze"
+    {
+        "BaseClass"     "ability_datadriven"
 
-		"ID"			"9031"
+        "ID"            "9031"
 
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
 
-		"AbilityCastPoint"	"0.5 0.5 0.5 0.5"
+        "AbilityCastPoint"  "0.5 0.5 0.5 0.5"
 
-		"AbilityCooldown"	"4 4 4 4"
-		"AbilityManaCost"	"4500 4500 4500 4500"
+        "AbilityCooldown"   "4 4 4 4"
+        "AbilityManaCost"   "4500 4500 4500 4500"
 
-		"Modifiers"
-		{
-			"teve_arctic_freeze_slow"
-			{
-				"Duration"	"3"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"-20"
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"-10"
-				}
-			}
-		}
+        "Modifiers"
+        {
+            "teve_arctic_freeze_slow"
+            {
+                "Duration"  "3"
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "-20"
+                    "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "-10"
+                }
+            }
+        }
 
-		"OnSpellStart"
-		{
-			"ApplyModifier"
-			{
-				"Target"
-				{
-					"Center"	"CASTER"
-					"Radius"	"600"
-					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Types"		"DOTA_UNIT_TARGET_HERO"
-				}
-				"ModifierName" "teve_arctic_freeze_slow"
-			}
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"
+                {
+                    "Center"    "CASTER"
+                    "Radius"    "600"
+                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                    "Types"     "DOTA_UNIT_TARGET_HERO"
+                }
+                "ModifierName" "teve_arctic_freeze_slow"
+            }
 
-			"Damage"
-			{
-				"Target"
-				{
-					"Center"	"CASTER"
-					"Radius"	"600"
-					"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
-					"Types"		"DOTA_UNIT_TARGET_HERO"
-				}
-				"Type"		"DAMAGE_TYPE_MAGICAL"
-				"Damage"	"30000"
-			}
-		}
-	}
+            "Damage"
+            {
+                "Target"
+                {
+                    "Center"    "CASTER"
+                    "Radius"    "600"
+                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                    "Types"     "DOTA_UNIT_TARGET_HERO"
+                }
+                "Type"      "DAMAGE_TYPE_MAGICAL"
+                "Damage"    "30000"
+            }
+        }
+    }
 
-	"teve_prayer"
-	{
-		"BaseClass"			"ability_datadriven"
+    "teve_prayer"
+    {
+        "BaseClass"         "ability_datadriven"
 
-		"ID"				"9035"
+        "ID"                "9035"
 
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
 
-		"Modifiers"
-		{
-			"teve_prayer_heal"
-			{
-				"Passive"	"1"
-				"Aura"		"1"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-				"Aura_Raduis"	"600"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"9"
-				}
-			}
-		}
+        "Modifiers"
+        {
+            "teve_prayer_heal"
+            {
+                "Passive"   "1"
+                "Aura"      "1"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Raduis"   "600"
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "9"
+                }
+            }
+        }
 
-		"ApplyModifier"
-		{
-			"Target"
-			{
-					"Center"	"CASTER"
-					"Radius"	"600"
-					"Teams"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-					"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-			}
-			"ModifierName"	"teve_prayer_heal"
-		}
-	}
+        "ApplyModifier"
+        {
+            "Target"
+            {
+                    "Center"    "CASTER"
+                    "Radius"    "600"
+                    "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+            }
+            "ModifierName"  "teve_prayer_heal"
+        }
+    }
 
-	"teve_presence_of_mind"
-	{
-		"BaseClass"			"tinker_rearm"
+    "teve_presence_of_mind"
+    {
+        "BaseClass"         "tinker_rearm"
 
-		"ID"				"9042"
+        "ID"                "9042"
 
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityType"           "DOTA_ABILITY_TYPE_ULTIMATE"
 
-		"AbilityCastPoint"		"0.0 0.0 0.0"
-		"AbilityChannelTime"		"0.0 0.0 0.0"
-		
-		"AbilityCooldown"		"80.0 80.0 80.0"
+        "AbilityCastPoint"      "0.0 0.0 0.0"
+        "AbilityChannelTime"        "0.0 0.0 0.0"
+        
+        "AbilityCooldown"       "80.0 80.0 80.0"
 
-		"AbilityManaCost"		"0 0 0" 
+        "AbilityManaCost"       "0 0 0" 
 
 
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"channel_tooltip"			"0 0 0"
-			}
-		}
-	}
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "channel_tooltip"           "0 0 0"
+            }
+        }
+    }
 
-	"teve_presence_of_mind"
-	{
+    "teve_presence_of_mind"
+    {
 //Instant Rearm. CD 80
-		"BaseClass"			"ability_datadriven"
+        "BaseClass"         "ability_datadriven"
 
-		"ID"				"9042"
+        "ID"                "9042"
 
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
-		"AbilityCastPoint"		"0.0 0.0 0.0"
-		
-		"AbilityCooldown"		"80.0 80.0 80.0"
+        "AbilityCastPoint"      "0.0 0.0 0.0"
+        
+        "AbilityCooldown"       "80.0 80.0 80.0"
 
-		"AbilityManaCost"		"0 0 0" 
+        "AbilityManaCost"       "0 0 0" 
 
 
-		"OnSpellStart"
-		{
-			"ApplyModifier"
-			{
-				"Target"	"CASTER"
-				"ModifierName"	"modifier_tinker_rearm"
-			}
-		}
-	}
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"    "CASTER"
+                "ModifierName"  "modifier_tinker_rearm"
+            }
+        }
+    }
