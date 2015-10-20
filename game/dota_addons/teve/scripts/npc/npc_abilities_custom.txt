@@ -149,13 +149,18 @@
         }
     }
         
-    "teve_cripple"
+    "teve_acolyte_cripple"
     {   
 	"BaseClass"             "ability_datadriven"
 	
 	//"ID"                    "6001"
 	
 	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	
+	"precache"
+		{
+			"particle"  "particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
+		}
 	
 	"AbilityTextureName"    "pugna_decrepify"
 	
@@ -204,19 +209,22 @@
                         "movement_speed"          "-20"
                 }
 		   	
-	}		
-	"Modifiers"
-        {
-	        "modifier_acolyte_cripple"
-    	        {
-			"Duration"                "%duration"
-	                "Properties"
-			{                               "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"   "%damage"
-				                        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_speed"
-							"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"   "%attack_speed"
+	  }		
+	  "Modifiers"
+      {
+	      "modifier_acolyte_cripple"
+    	  {
+			"Duration"          "%duration"
+			"EffectName"		"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
+			"EffectAttachType"	"follow_hitloc"
+	        "Properties"
+			{                               
+			                   "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"   "%damage"
+			                   "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movement_speed"
+			                   "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"   "%attack_speed"
 			}								
-		}									
-	}
+		 }									
+	  }
         "OnSpellStart"
         {
             "ApplyModifier"
@@ -287,6 +295,11 @@
 	
 	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	
+	"precache"
+		{
+			"particle"  "particles/units/heroes/hero_legion_commander/legion_commander_press.vpcf"
+		}
+	
 	"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	
 	"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -318,6 +331,8 @@
             {
                 "modifier_acolyte_inner_fire"
                 {
+					  "EffectName"		"particles/units/heroes/hero_legion_commander/legion_commander_press.vpcf"
+			          "EffectAttachType"	"follow_hitloc"
                       "Duration" "30"
                       "Properties"
                     	{
@@ -334,7 +349,7 @@
                     "ModifierName"  "modifier_acolyte_inner_fire"
                 }
             }
-        }	
+        }		
     
 
 	// Archer
@@ -416,12 +431,8 @@
 						"Type" "DAMAGE_TYPE_MAGICAL"  
 						"Damage" "%damage" 
 					}
-
-										
-										      
- 
 				}		
-    }  
+    }    
     
 	"teve_archer_searing_arrows"
     {
@@ -504,26 +515,72 @@
     }
     
      "teve_archer_evasion"
-    {
+  {
  
-         
-	"BaseClass"			"phantom_assassin_blur"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"phantom_assassin_blur"
 
-	//"ID"				"6007"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
+	}
 
-	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
-	    {
+	{
 		"01"
-		    {
-			      "var_type"	"FIELD_INTEGER"
-			      "bonus_evasion"	"2 4 6 8"
-		    }
-		
-	    }
-    }
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_evasion"				"2 4 6 8"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"transparency_fade"			"0.25"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"0"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_blur_datadriven"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"ThinkInterval"	"0.5"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/hero_phantom_assassin/blur.lua"
+					"Function"		"Blur"
+				}
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%bonus_evasion"
+			}
+		}
+
+		"modifier_blur_enemy_datadriven"
+		{
+			"EffectName"	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
+			"EffectAttachType"	"follow_origin"
+		}
+	}
+  }
     
     // Templar
 	//===================================================================================
@@ -535,6 +592,10 @@
             //"ID"             "6008"
                
                "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+			   "precache"
+			   {
+			                 "particle"                   "particles/units/heroes/hero_vengeful/vengeful_base_attack.vpcf"
+			   }
                "AbilityTextureName"             "placeholder"
                "AbilityUnitTargetTeam"          "DOTA_UNIT_TARGET_TEAM_ENEMY"
                "AbilityUnitTargetType"          "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"             
@@ -564,25 +625,40 @@
                        }
                           
                }
-                "OnSpellStart"
-                {                            
+               "OnSpellStart"
+               {
+				   "TrackingProjectile"
+                   {
+                       "Target"                        "TARGET"
+                       "EffectName"            "particles/units/heroes/hero_vengeful/vengeful_base_attack.vpcf"
+                       "Dodgeable"                     "0"
+                       "ProvidesVision"        "1"
+                       "VisionRadius"          "0"
+                       "MoveSpeed"                     "1000"
+                       "SourceAttachment"      "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+                   }
+               }				 
+       		"OnProjectileHitUnit"
+			{
        			"Stun" 
-		       { 
-					"Target" "TARGET" 
-					"Duration" "%stun_duration" 
-			}
-								   																				    
-		}
-	
-        }
+				{ 
+					        "Target" "TARGET" 
+					        "Duration" "%stun_duration" 
+				}
+			}		
+   }
 
      "teve_templar_psionic_lightning"
-        {
+     {
         "BaseClass"     "ability_datadriven"
 
-        //"ID"            "6009"	
-
+        //"ID"            "6009"
         "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		
+		"precache"
+		{
+			"particle"       "particles/items_fx/diffusal_slow.vpcf"
+		}
         "AbilityTextureName"     "placeholder"
         "AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"  "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -600,29 +676,48 @@
  
         "AbilityCooldown"        "10 10 10 10"
 		
-	"AbilityManaCost"        "40 60 70 80"
+	    "AbilityManaCost"        "40 60 70 80"
 		
-	"AbilityCastRange"       "650"
+	    "AbilityCastRange"       "650"
 		
-	"AbilityDamage"		"100 200 300 400"
+	    "AbilityDamage"		"100 200 300 400"
 		
 	    "AbilitySpecial"
 	    {
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
+		    "01"
+		    { 
+			       "var_type" "FIELD_INTEGER"
 	                "damage"   "100 200 300 400"
-		}
-             }
-            "OnSpellStart"
-            {
-                        "Damage" 
-			{ 
+		     }
+			 "02"
+			 {
+				 "var_type" "FIELD_INTEGER"
+				 "duration"   "1"
+			 }
+        }
+		"Modifiers"
+       {
+	      "modifier_templar_psionic_lightning"
+    	  {
+			"Duration"          "%duration"
+			"EffectName"		"particles/items_fx/diffusal_slow.vpcf"
+			"EffectAttachType"	"follow_hitloc"
+		  }
+	   } 
+        "OnSpellStart"
+        {
+				"ApplyModifier"
+                {
+                    "Target"    "TARGET"
+                    "ModifierName"  "modifier_templar_psionic_lightning"
+                }
+                "Damage" 
+			    { 
 			       "Target" "TARGET" 
-				"Type" "DAMAGE_TYPE_MAGICAL"  
-				"Damage" "%damage" 
-			}
-             } 
+				    "Type" "DAMAGE_TYPE_MAGICAL"  
+				    "Damage" "%damage" 
+			    }
+        } 
 	}
 	
 	"teve_templar_blade_proficency_1"
@@ -713,51 +808,130 @@
 	
 	"teve_templar_wind_walk"
 	{
-	    "BaseClass"     "nyx_assassin_vendetta"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"2"
+	"AbilityTextureName"			"placeholder"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75 100 125 150"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
 		
-		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityTextureName"    "placeholder"
-		"AbilityType"           "DOTA_ABILITY_TYPE_ULTIMATE"
-                "AbilityUnitDamageType" "DAMAGE_TYPE_PHYSICAL"
-		"SpellImmunityType"     "SPELL_IMMUNITY_ENEMIES_YES"
-		"FightRecapLevel"       "2"
-		"AbilityDamage"         "80 160 240 320"
-		
-		//"ID"            "6011"
-		
-		"AbilityCooldown"       "10"
-		
-		"AbilityManaCost"       "75 100 125 150"
-		
-		"AbilitySpecial"
+		"01"
 		{
-		        "01"
-			{
-			        "var_type"  "FIELD_FLOAT"
-				"duration"  "5.0 5.0 5.0 5.0"
-			}
-                        "02"
-                        {
-                                "var_type"  "FIELD_FLOAT"
-                                "fade_time" "0.40"
-                        }
-                        "03"
-                        {
-			        "var_type"  "FIELD_INTEGER"
-				"movement_speed"  "0"
-			}
-                        "04"			
-			{
-                                "var_type"	"FIELD_INTEGER"
-                                "bonus_damage" "80 160 240 320"
-                        }
-                        "05"
-                        {
-                                "var_type"  "FIELD_FLOAT"
-                                "cooldown_scepter"  "70 60 50"
-                        }
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"5.0 5.0 5.0 5.0"
 		}
-       }
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"fade_time"				"0.40"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_speed"		"0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"80 160 240 320"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"cooldown_scepter"		"70 60 50"  //not sure what it 
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"						"particles/status_fx/status_effect_base.vpcf"
+		"particle"						"particles/units/heroes/hero_nyx_assassin/nyx_assassin_vendetta_start.vpcf"
+	}
+	
+	"OnSpellStart"
+	{
+		"DelayedAction"
+		{
+			"Delay"						"%fade_time"
+			"Action"
+			{
+				"FireSound"
+				{
+					"Target"				"CASTER"
+					"EffectName"			"Hero_NyxAssassin.Vendetta"
+				}
+			
+				"ApplyModifier"
+				{
+					"Target"				"CASTER"
+					"ModifierName"			"modifier_vendetta_buff_datadriven"
+				}
+				
+				"ApplyModifier"
+				{
+					"Target"				"CASTER"
+					"ModifierName"			"modifier_invisible"
+					"Duration"				"%duration"
+				}
+			}
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_vendetta_buff_datadriven"
+		{
+			"Duration"					"%duration"
+		
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"Target"			"TARGET"
+					"EffectName"		"particles/units/heroes/hero_nyx_assassin/nyx_assassin_vendetta_start.vpcf"
+					"EffectAttachType"	"start_at_origin"
+				}
+			}
+		
+			"OnAttack"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_nyx_assassin/vendetta.lua"
+					"Function"		"vendetta_attack"
+				}
+			}
+		
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movement_speed"
+			}
+		
+			"States"
+			{
+				"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}
 	
     
     // Initiate
@@ -769,6 +943,11 @@
 		//"ID"            "6012"
 		
 	    "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_chaos_knight/chaos_knight_chaos_bolt.vpcf"
+		}
 		"AbilityTextureName"         "placeholder"
 		"AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -793,33 +972,46 @@
 		"AbilityDamage"     "80 160 240 320"
 		
 		"AbilitySpecial"
+        {
+                        "01"
+                        {
+                            "var_type"  "FIELD_FLOAT"
+                            "stun_duration" "1.5"
+                        }
+                        "02"
+                        {
+                           "var_type"  "FIELD_INTEGER"
+                           "damage"    "100 175 250 325"
+                        }      
+        }
+        "OnSpellStart"
+        {
+            "TrackingProjectile"
+            {
+                       "Target"                        "TARGET"
+                       "EffectName"            "particles/units/heroes/hero_chaos_knight/chaos_knight_chaos_bolt.vpcf"
+                       "Dodgeable"                     "0"
+                       "ProvidesVision"        "0"
+                       "VisionRadius"          "0"
+                       "MoveSpeed"                     "1000"
+                       "SourceAttachment"      "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+            }
+        }				
+		"OnProjectileHitUnit"
 		{
-		    "01"
-			{
-			    "var_type"  "FIELD_FLOAT"
-			    "stun_duration"  "1 1.2 1.4 1.6"
-			}
-			"02"
-			{
-			    "var_type"  "FIELD_INTEGER"
-				"damage"         "80 160 240 320"
-			}
-                }
-		"OnSpellStart"    
-		{    
-		    "Stun" 
+       		"Stun" 
 			{ 
-					"Target" "TARGET" 
-					"Duration" "%stun_duration" 
-		        }
+					        "Target" "TARGET" 
+					        "Duration" "%stun_duration" 
+			}
 			"Damage" 
 			{ 
-			        "Target" "TARGET" 
-					"Type" "DAMAGE_TYPE_MAGICAL"  
-					"Damage" "%damage"
+						"Target" "TARGET" 
+						"Type" "DAMAGE_TYPE_MAGICAL"  
+						"Damage" "%damage" 
 			}
-                }			
-        }
+		}
+	}
 
 	"teve_initiate_chain_lightning"
         { 		
@@ -968,11 +1160,16 @@
 	
 	// Druid
 		
-	"teve_druid_disabling_roots"	
-       {
+	"teve_druid_disabling_roots"	//the particle is not working properly
+    {
                 "BaseClass"     "ability_datadriven"
 
                 "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+				
+		"precache"
+	         {
+		       "particle"			"particles/abilities/Druid/Disabling Roots/overgrowth_vines.vpcf"
+	         }
 		"AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
@@ -1001,30 +1198,32 @@
 			    "var_type"    "FIELD_INTEGER"
 				"duration"    "1 2 3 4"
 			}	
-                }
-                "Modifiers"
-                {
-  	                "modifier_druid_disabling_roots_dps"
+        }
+        "Modifiers"
+        {
+  	        "modifier_druid_disabling_roots_dps"
 			{
-			    "States" 
-				{
+				"EffectName"		"particles/abilities/Druid/Disabling Roots/overgrowth_vines.vpcf"
+			    "EffectAttachType"	"follow_hitloc"
+			        "States" 
+				    {
 					        "MODIFIER_STATE_ROOTED"    "MODIFIER_STATE_VALUE_ENABLED"
 			        }
                                 "Duration"  "%duration"				
-				"ThinkInterval"		"0.1"
-				"OnIntervalThink"
-				{
+				  "ThinkInterval"		"0.1"
+				  "OnIntervalThink"
+				  {
 			                "Damage"
-					{					    
+					  {					    
 						"Target"	"TARGET"					
 						"Type"		"DAMAGE_TYPE_MAGICAL"
 						"Damage"	"%damage"
-					}
-				}
-		       }
+					  }
+				  }
+		    }
 		}
 		"OnSpellStart"
-	        {
+	    {
 		    "ApplyModifier"
 		    {			   
 			    "Target" "TARGET"
@@ -1035,12 +1234,16 @@
 	
 	"teve_druid_rejuvenation"
 	{
-	    "BaseClass"                     "legion_commander_press_the_attack"
+	    "BaseClass"                     "ability_datadriven"
 		
 		//"ID"							"6016"									
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"precache"
+        {
+           "particle folder"   "particles/units/heroes/hero_treant"
+		} 
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
 
@@ -1054,24 +1257,58 @@
 		"AbilityModifierSupportValue"	"3.0"	// Value much higher than cost.
 
 		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"15.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"attack_speed"			"0 0 0 0"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"hp_regen"				"6.6  13.3 20 26.6"
-			}
-		}
-	}
+	    {
+		    "01"
+		    {
+			    "var_type"				"FIELD_INTEGER"
+			    "duration"			"15"
+		    }
+		    "02"
+		    {
+			    "var_type"				"FIELD_FLOAT"
+			    "health_per_second"		"6.6 13 20 26.6"
+		    }
+	    }
+	
+	    "OnSpellStart"
+	    {				
+		    "ApplyModifier"
+		    {
+		    	"Target"				"TARGET"
+		    	"ModifierName"			"modifier_druid_rejuvenation"
+		    }
+	    }
+	    "Modifiers"
+	    {
+	    	"modifier_druid_rejuvenation"
+		    {
+		    	"Duration"              	"%duration"
+		    	"Passive"					"0"
+		    	"IsHidden"					"0"
+		    	"IsBuff"					"1"
+			    "IsDebuff"					"0"
+			    "IsPurgable"				"1"
+			    "OnCreated"
+                {
+                   "AttachEffect"
+                   {
+					 "Target"             "TARGET"
+					 "ControlPointEntities"
+					 {
+						 "TARGET"   "follow_origin"
+						 "TARGET"    "follow_origin"
+					 }
+                     "EffectName"         "particles/units/heroes/hero_treant/treant_livingarmor.vpcf"
+                     "EffectAttachType"   "follow_origin"  
+			       }
+				}
+			    "Properties"
+			    {
+			    	"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%health_per_second"
+			    }
+		    }
+	    }
+    }
 	
 	"teve_druid_thorns_aura"
 	{
@@ -1527,59 +1764,150 @@
 		}
 	}
 
-    // Thief
+    // Thief  
 	
     "teve_thief_envenomed_strike"
+
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"queenofpain_shadow_strike"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
 	{
-	    "BaseClass"             "queenofpain_shadow_strike"
-		
-		//"ID"					"6022"										
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		
-		"AbilityCastRange"				"600 600 600 600"
-		
-		"AbilityCastPoint"				"1.0 1.0 1.0 1.0"
-		
-		"AbilityCooldown"				"8.0 8.0 8.0 8.0"
-		
-		"AbilityDuration"				"7.0 7.0 7.0 7.0"
+		"particle"			"particles/units/heroes/hero_queenofpain/queen_shadow_strike.vpcf"
+		"particle"			"particles/abilities/Thief/Envenomed Strike/ench_base.vpcf"
+		"particle"			"particles/abilities/Thief/Envenomed Strike/qop.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600 600 600 600"
+	"AbilityCastPoint"				"1.0 1.0 1.0 1.0"
 	
-		"AbilityManaCost"				"50 80 110 140"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0 8.0 8.0 8.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 80 110 140"
+
 	
-		"AbilitySpecial"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
 		{
-			"01"
+			"var_type"				"FIELD_INTEGER"
+			"strike_damage"			"60 120 180 240"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration_damage"		"20 20 20 20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_slow"			"-20 -20 -20 -20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"900"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range_tooltip"		"450 475 500 525"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_interval"		"3"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"7.0 7.0 7.0 7.0"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"           "TARGET"
+		    "EffectName"       "particles/abilities/Thief/Envenomed Strike/ench_base.vpcf"
+		    "Dodgeable"        "1"
+		    "ProvidesVision"   "0"
+		    "MoveSpeed"        "%projectile_speed"
+		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hero_queenofpain/shadow_strike.lua"
+			"Function"		"shadow_strike"
+			"modifier"		"modifier_shadow_strike_debuff_datadriven"
+		}
+
+		"Damage"
+		{
+			"Target"		"TARGET"
+			"Type"			"DAMAGE_TYPE_MAGICAL"
+			"Damage"		"%strike_damage"
+		}		
+	}
+
+	"Modifiers"
+	{
+		"modifier_shadow_strike_debuff_datadriven"
+		{
+			"IsDebuff"	"1"
+
+			"OnCreated"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"strike_damage"			"60 120 180 240"
+				"AttachEffect"
+				{
+					"EffectName"	"particles/abilities/Thief/Envenomed Strike/qop.vpcf"
+					"EffectAttachType"	"attach_hitloc"
+					"Target"            "TARGET"
+				}
 			}
-			"02"
+
+			"ThinkInterval"	"%damage_interval"
+			"OnIntervalThink"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"duration_damage"		"20 20 20 20"
+				"Damage"
+				{
+					"Target"		"TARGET"
+					"Type"			"DAMAGE_TYPE_MAGICAL"
+					"Damage"		"%duration_damage"
+				}
 			}
-			"03"
+
+			"Properties"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"movement_slow"			"-20 -20 -20 -20"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"900"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip"		"450 475 500 525"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"-1"
 			}
 		}
 	}
+}
     
     "teve_thief_dodge"
 	{
