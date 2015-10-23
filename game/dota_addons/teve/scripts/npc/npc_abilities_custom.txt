@@ -1355,67 +1355,159 @@
     
     "teve_druid_firestorm"
     {
-        "BaseClass"                     "abyssal_underlord_firestorm"
-    
-        //"ID"                          "6018"                                                      
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"           
-        "AbilityCastRange"              "650"
-        "AbilityCastPoint"              "0.5"
-        "FightRecapLevel"               "1"
-        
-        "AbilityCooldown"               "8.0"
-    
-        "AbilityManaCost"               "80 100 120 140"
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "radius"                        "300"
-            }
-            "02"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "wave_duration"                 "5.0"
-            }       
-            "03"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "wave_count"                    "3"
-            }
-            "04"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "wave_damage"                   "30 60 90 120"
-            }
-            "05"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "wave_interval"                 "1.0"
-            }
-            "06"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "burn_damage"                   "0 0 0 0"
-            }
-            "07"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "burn_interval"                 "0.0"
-            }
-            "08"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "burn_duration"                 "0.0"
-            }
-            "09"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "first_wave_delay"              "0.9"
-            }
+	    "BaseClass"             		"ability_datadriven"
+    	"AbilityTextureName"			"placeholder"
+    	"MaxLevel" 						"4"
+
+    	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
+    	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+    	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+	    "AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	    "AbilityCastAnimation"			"ACT_DOTA_VICTORY"
+
+	    "AbilityCastRange"				"650"
+	    "AbilityCastPoint"				"0.5"		
+    	"AbilityCooldown"				"8.0"
+    	"AbilityManaCost"				"80 100 120 140"
+
+    	"AOERadius"     				"%radius"
+    	"AbilityChannelTime"			"3"
+	
+    	"precache"
+    	{
+    		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
+	    	"particle"  "particles/abilities/druid/firestorm/firestormgood.vpcf"
+    	}
+	    "AbilitySpecial"
+	    {
+	    	"01"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+			    "radius"				"300"
+	    	}
+		    "02"
+		    {
+		    	"var_type"				"FIELD_FLOAT"
+	    		"wave_duration"			"3"
+	    	}		
+	    	"03"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"wave_count"			"3"
+	    	}
+	    	"04"
+	    	{
+	    		"var_type"				"FIELD_INTEGER"
+	    		"wave_damage"			"30 60 90 120"
+	    	}
+	    	"05"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"wave_interval"			"1.0"
+	    	}
+	    	"06"
+	    	{
+	    		"var_type"				"FIELD_FLOAT"
+	    		"first_wave_delay"		"0"
+	    	}
+	    }
+
+	    "OnSpellStart"
+	    {
+	    	"RunScript"
+	    	{
+	    		"ScriptFile"	"heroes/hero_druid/rain_of_fire.lua"
+	    		"Function"		"RainOfFireStart"
+	    		"Target"		"POINT"
+	    	}
+
+	    	"ApplyModifier"
+	    	{
+	    		"ModifierName"	"modifier_rain_of_fire_channelling"
+	    		"Target" 		"CASTER"
+	    	}
+		
+	    	"FireSound"
+	    	{
+	    		"EffectName"	"Hero_Jakiro.DualBreath"
+	    		"Target"		"CASTER"
+	    	}
         }
+
+        "OnChannelFinish"
+        {
+        	"RunScript"
+        	{
+        		"ScriptFile"	"heroes/hero_druid/rain_of_fire.lua"
+	    		"Function"		"RainOfFireEnd"
+        	} 
+
+        	"RemoveModifier"
+	    	{
+	    		"ModifierName"	"modifier_rain_of_fire_channelling"
+	    		"Target" 		"CASTER"
+	    	}
+   			
+        }
+    
+        "Modifiers"
+        {
+            "modifier_rain_of_fire_channelling"
+            {
+            	"IsHidden"			"1"
+                "ThinkInterval"		"%wave_interval"
+                "OnIntervalThink"
+             	{
+              	     "DelayedAction"
+                  	 {
+                   	   	"Delay"     "0.3"
+                   	    "Action"    
+                   	    {
+                    	     "RunScript"
+                   	         {
+                      	        "ScriptFile"	"heroes/hero_druid/rain_of_fire.lua"
+                      	        "Function"		"RainOfFireWave"
+                      	     }
+                        }
+                   	}
+         	        "ApplyModifier"
+         	        {
+         	        	"ModifierName"	"modifier_channeling"                                                           
+         	        	"Target" 		"CASTER"
+         	        	"Duration"		"0.9"
+         	        }
+		        }
+			
+		    	"OnCreated"
+             	{
+              	  	"DelayedAction"
+                    {
+                        "Delay"     "0.3"
+                        "Action"    
+                        {
+                        	"RunScript"
+                            {
+                                 "ScriptFile"	"heroes/hero_druid/rain_of_fire.lua"
+                                 "Function"		"RainOfFireWave"
+                            }
+                        }
+                    }
+         	    	"ApplyModifier"
+         	    	{
+         	    		"ModifierName"	"modifier_channeling"
+         	    		"Target" 		"CASTER"
+             			"Duration"		"0.9"
+             		}
+		    	}
+		    }
+
+		    "modifier_channeling"
+		    {
+		    	"IsHidden"				"1"
+		    	"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"
+		    }
+		
+	    }	
     }
     
     //Swordsman
@@ -2265,50 +2357,70 @@
     }
     
        "teve_cleric_kyrie_eleison"
-    {
-        "BaseClass"                     "lich_frost_armor"
-        
-        //"ID"                          "6027"
-        
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityTextureName"            "placeholder"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        
-        "AbilityCastRange"              "700"
-        "AbilityCastPoint"              "0.1 0.1 0.1 0.1"
-
-        "AbilityCooldown"               "24.0"
-        "AbilityDuration"               "0.5 1.0 1.5 2.0"
-
-        "AbilityManaCost"               "0 0 0 0"
-
+        {
+        "BaseClass"             "ability_datadriven"
+    
+        //"ID"                    "6003"
+    
+        "AbilityTextureName"    "lina_fiery_soul"
+    
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    
+        "precache"
+            {
+                "particle"  "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+            }
+    
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    
+        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+    
+        "AbilityCastPoint"      "0.1 0.1 0.1 0.1"
+    
+        "AbilityCastRange"      "700"
+    
+        "AbilityCooldown"       "24.0"
+    
+        "AbilityManaCost"       "40 60 80 100"
+    
         "AbilitySpecial"
         {
-            "01"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "armor_bonus"           "9999 9999 9999 9999"
-            }
-            "02"
-            {
-                "var_type"              "FIELD_FLOAT"
-                "slow_duration"         "0.0 0.0 0.0 0.0"
-            }
-            "03"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "slow_movement_speed"   "0 0 0 0"
-            }
-            "04"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "slow_attack_speed"     "0 0 0 0"
-            }
+                "01"
+                {
+                   "var_type" "FIELD_INTEGER"
+                   "bonus_armour" "9999"
+                }
+				"02"
+				{
+					"var_type"  "FIELD_FLOAT"
+					"duration"  "0.5 1 1.5 2"
+				}
         }
+        "Modifiers"
+        {
+               "modifier_cleric_kyrie_eleison"
+               {
+                          "EffectName"      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+                          "EffectAttachType"    "follow_hitloc"
+                          "Duration" "%duration"
+                          "Properties"
+                          {
+                                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armour"
+                          }
+               }
+       }               
+       "OnSpellStart"
+       {
+           "ApplyModifier"
+           {
+                  "Target"    "TARGET"
+                  "ModifierName"  "modifier_cleric_kyrie_eleison"
+           }
+       }
     }
-
-
+			
     "teve_cleric_brilliance_aura"
     {
         "BaseClass"             "ability_datadriven"
@@ -2359,47 +2471,68 @@
               }
     }
 
-    "teve_cleric_healing_wave"   
+    "teve_cleric_healing_wave"
     {
-        "BaseClass"         "dazzle_shadow_wave"
-
-        //"ID"              "6029"
-
-        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-        "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL"
-
-        "AbilityCastPoint"      "0.15 0.15 0.15 0.15"
-        "AbilityCastRange"      "700"
-        "AbilityCooldown"       "10 10 10 10"
-        "AbilityManaCost"       "80 100 120 140"
-        "AbilityDamage"         "50 50 50 50"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"      "FIELD_INTEGER"
-                "bounce_radius"     "500"
-            }
-            "02"
-            {   
-                "var_type"      "FIELD_INTEGER"
-                "damage_radius"     "0"
-            }
-            "03"
-            {   
-                "var_type"      "FIELD_INTEGER"
-                "max_targets"       "5"
-            }
-            "04"
-            {
-                "var_type"      "FIELD_INTEGER"
-                "damage"        "50 100 150 200"
-            }
-        }
-    }
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "placeholder"
+	    "MaxLevel"                      "4"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+	    "AbilityCastAnimation"          "ACT_DOTA_ATTACK"
+	
+	    "AbilityCastRange"              "700"
+	    "AbilityCastPoint"              "0.15"
+	    "AbilityCooldown"               "10.0 10.0 10.0 10.0"
+	
+	    "AbilityManaCost"               "80 100 120 140"
+	
+	    "precache"
+	    {
+	        "particle"  "particles/abilities/cleric/healingwave/healingwave.vpcf"
+	        "soundfile" "soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+	    }
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "healing_damage"      "50 100 150 200"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "healing_bounces"     "5"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bounce_range"          "500"
+	        }
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "healing_decay"       "20"
+	        }
+	        "05"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "time_between_bounces"  "0.5"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "heroes/hero_cleric/healing_wave.lua"
+	            "Function"      "HealingWave"
+	        }
+	    }
+	}
 
     // Mage
 
@@ -2594,47 +2727,145 @@
     
     "teve_hunter_ensnare"
     {
-        "BaseClass"                     "naga_siren_ensnare"
-        //"ID"                          "6034"                                                      
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
-        "FightRecapLevel"               "1"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"naga_siren_ensnare"
 
-        
-        "AbilityCastPoint"              "0.65"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.20"
 
-        
-        "AbilityCooldown"               "14.0 14.0 14.0 14.0"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14.0 14.0 14.0 14.0"
 
-        
-        "AbilityManaCost"               "90 100 110 120"
-        
-        
-        "AbilityCastRange"              "650 650 650 650"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 70 90 110"
+	
+	// Cast Range
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600 600 600 600"
 
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                  "FIELD_FLOAT"
-                "duration"                  "2.0 3.0 4.0 5.0"
-            }
-            "02"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "net_speed"                 "1500 1500 1500 1500"
-            }
-            "03"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "fake_ensnare_distance"     "900 900 900 900"   
-            }
-        }
-    }
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"0.3 0.6 0.9 1.2"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"net_speed"					"1500 1500 1500 1500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fake_ensnare_distance"		"900 900 900 900"	
+		}
+	}
+
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+		"particle"					"particles/units/heroes/hero_siren/siren_net.vpcf"
+		"particle"					"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hero_naga_siren/ensnare.lua"
+			"Function"				"Ensnare_PlayFakeAnimation"
+			"Target"				"TARGET"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"				"TARGET"
+			"EffectName"			"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+			"Dodgeable"				"1"
+			"ProvidesVision"		"1"
+			"VisionRadius"			"0"
+			"MoveSpeed"				"%net_speed"
+			"SourceAttachment"		"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+
+		"FireSound"
+		{
+			"EffectName"			"Hero_NagaSiren.Ensnare.Cast"
+			"Target"				"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hero_naga_siren/ensnare.lua"
+			"Function"				"Ensnare_CastFakeNets"
+			"Target"				"TARGET"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"1"
+
+		"FireSound"
+		{
+			"EffectName"			"Hero_NagaSiren.Ensnare.Target"
+			"Target"				"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"Target"				"TARGET"
+			"ModifierName"			"modifier_ensnare_datadriven"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_ensnare_datadriven"
+		{
+			"IsHidden"		"0"
+			"IsDebuff"		"1"
+			"IsPurgable"	"0"
+
+			"Duration"		"%duration"
+
+			"States"
+			{
+				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_DISABLED"
+			}
+
+			"EffectName"			"particles/units/heroes/hero_siren/siren_net.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+
+		"modifier_ensnare_fake_datadriven"
+		{
+			"IsHidden"			"1"
+		//	"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+			"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		}
+	}
+}	
 
     "teve_hunter_searing_arrows"             
         {
@@ -3684,39 +3915,150 @@
     
     
     //
-    // Tracker
+    // Tracker 
     //-----------------------------------------------------------------------------------
     
-    "teve_tracker_ensnare"
+    "teve_tracker_ensnare"  //duration on bosses should be halved
     {
-        "BaseClass"                 "naga_siren_ensnare"
-        //"ID"                      "9078"
-        
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "AbilityCooldown"           "14.0 14.0 14.0 14.0"
-        "AbilityManaCost"           "0 0 0 0"
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "duration"          "0.2 0.4 0.6 0.8"
-            }
-            "02"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "net_speed"         "1500 1500 1500 1500"
-            }
-            "03"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "fake_ensure_distance"      "900 900 900 900"
-            }
-        }
-    }
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"naga_siren_ensnare"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.20"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0 10.0 10.0 10.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 100 110 120"
+	
+	// Cast Range
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"650 650 650 650"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"0.2 0.4 0.6 0.8"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"net_speed"					"1500 1500 1500 1500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fake_ensnare_distance"		"900 900 900 900"	
+		}
+	}
+
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+		"particle"					"particles/units/heroes/hero_siren/siren_net.vpcf"
+		"particle"					"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hero_naga_siren/ensnare.lua"
+			"Function"				"Ensnare_PlayFakeAnimation"
+			"Target"				"TARGET"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"				"TARGET"
+			"EffectName"			"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+			"Dodgeable"				"1"
+			"ProvidesVision"		"1"
+			"VisionRadius"			"0"
+			"MoveSpeed"				"%net_speed"
+			"SourceAttachment"		"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+
+		"FireSound"
+		{
+			"EffectName"			"Hero_NagaSiren.Ensnare.Cast"
+			"Target"				"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hero_naga_siren/ensnare.lua"
+			"Function"				"Ensnare_CastFakeNets"
+			"Target"				"TARGET"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"1"
+
+		"FireSound"
+		{
+			"EffectName"			"Hero_NagaSiren.Ensnare.Target"
+			"Target"				"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"Target"				"TARGET"
+			"ModifierName"			"modifier_ensnare_datadriven"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_ensnare_datadriven"
+		{
+			"IsHidden"		"0"
+			"IsDebuff"		"1"
+			"IsPurgable"	"0"
+
+			"Duration"		"%duration"
+
+			"States"
+			{
+				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_DISABLED"
+			}
+
+			"EffectName"			"particles/units/heroes/hero_siren/siren_net.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+
+		"modifier_ensnare_fake_datadriven"
+		{
+			"IsHidden"			"1"
+		//	"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+			"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		}
+	}
+}	
     
     "teve_tracker_blade_shield"
     {
@@ -5430,166 +5772,205 @@
     {
             "BaseClass"         "ability_datadriven"
 
-            //"ID"                "6091"
+        //"ID"                "6000"
 
-             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-    
-            "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 
-            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
- 
-            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    
-            "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
 
-            "AbilityCastPoint"  "0.15 0.15 0.15 0..15"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 
-            "AbilityCastRange"  "800"
-   
-            "AbilityCooldown"   "5.0"
- 
-            "AbilityManaCost"   "60 80 100 120"
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 
-            "AbilitySpecial"
-            {
-                "01"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "heal"                          "150 300 450 600"
-                }
-                "02"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "damage"                        "150 300 450 600"
-                }
-                "03"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "radius"                        "0"
-                }
-                "04"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "max_targets"           "1"
-                }
-            }
- 
-            "OnSpellStart"
-            {
-                "Heal"
-                {
-                    "Target"
-                    {
-                        "Center"        "TARGET"
-                        "Radius"        "%radius"
-                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                        "MaxTargets" "%max_targets"
-                    }
-                    "HealAmount"    "%heal"
-                }
-                "Damage"
-                {
-                    "Target"
-                    {
-                        "Center"        "TARGET"
-                        "Radius"        "%radius"
-                        "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                        "MaxTargets" "%max_targets"
-                    }
-                    "Type"                  "DAMAGE_TYPE_MAGICAL"
-                    "Damage"                "%damage"
-                }
-       }
-       }            
-    
-    "teve_matriarch_kyrie_eleison"
-    {
-            "BaseClass"                     "lich_frost_armor"
-        
-        //"ID"                          "6092"
-        
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityTextureName"            "placeholder"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        
-        "AbilityCastRange"              "700"
-        "AbilityCastPoint"              "0.1 0.1 0.1 0.1"
+        "AbilityUnitTargetFlags"   "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 
-        "AbilityCooldown"               "30.0"
-        "AbilityDuration"               "0.7 1.4 2.1 2.8"
+        "AbilityCastPoint"  "0.15 0.15 0.15 0.15"
 
-        "AbilityManaCost"               "80 110 140 170"
+        "AbilityCastRange"  "800"
+        "AbilityCooldown"   "5.0"
+
+        "AbilityManaCost"   "60 80 100 120"
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+        }
 
         "AbilitySpecial"
         {
             "01"
             {
-                "var_type"              "FIELD_INTEGER"
-                "armor_bonus"           "9999 9999 9999 9999"
+                "var_type" "FIELD_INTEGER"
+                "heal"     "75 150 225 300"
             }
             "02"
             {
-                "var_type"              "FIELD_FLOAT"
-                "slow_duration"         "0.0 0.0 0.0 0.0"
+                "var_type"  "FIELD_INTEGER"
+                "p_radius"  "100 100 100 100"
             }
-            "03"
+        }   
+        
+        "OnSpellStart"
+        {
+            "Heal"
             {
-                "var_type"              "FIELD_INTEGER"
-                "slow_movement_speed"   "0 0 0 0"
+                "HealAmount"    "%heal"
+                    "Target"     "TARGET"
             }
-            "04"
+            "FireEffect"
             {
-                "var_type"              "FIELD_INTEGER"
-                "slow_attack_speed"     "0 0 0 0"
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "ControlPoints"
+                {
+                    "00"    "0 0 0"
+                    "01"    "%p_radius %p_radius %p_radius"
+                }
+            }
+            "FireEffect"
+            {
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+                "EffectAttachType"  "follow_origin"
+            }
+            "FireSound"
+            {
+                "EffectName"    "Hero_Omniknight.Purification"
+                "Target"         "TARGET"
             }
         }
+    }         
+    
+    "teve_matriarch_kyrie_eleison"
+    {
+         "BaseClass"             "ability_datadriven"
+    
+        //"ID"                    "6003"
+    
+        "AbilityTextureName"    "lina_fiery_soul"
+    
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    
+        "precache"
+            {
+                "particle"  "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+            }
+    
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    
+        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+    
+        "AbilityCastPoint"      "0.1 0.1 0.1 0.1"
+    
+        "AbilityCastRange"      "700"
+    
+        "AbilityCooldown"       "30.0"
+    
+        "AbilityManaCost"       "80 110 140 170"
+    
+        "AbilitySpecial"
+        {
+                "01"
+                {
+                   "var_type" "FIELD_INTEGER"
+                   "bonus_armour" "9999"
+                }
+				"02"
+				{
+					"var_type"  "FIELD_FLOAT"
+					"duration"  "0.7 1.4 2.1 2.8"
+				}
+        }
+        "Modifiers"
+        {
+               "modifier_matriarch_kyrie_eleison"
+               {
+                          "EffectName"      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+                          "EffectAttachType"    "follow_hitloc"
+                          "Duration" "%duration"
+                          "Properties"
+                          {
+                                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armour"
+                          }
+               }
+       }               
+       "OnSpellStart"
+       {
+           "ApplyModifier"
+           {
+                  "Target"    "TARGET"
+                  "ModifierName"  "modifier_matriarch_kyrie_eleison"
+           }
+       }
     }
     
     "teve_matriarch_healing_wave"
     {
-        "BaseClass"         "dazzle_shadow_wave"
-
-        //"ID"              "6093"
-
-        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-        "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL"
-
-        "AbilityCastPoint"      "0.3 0.3 0.3 0.3"
-        "AbilityCastRange"      "600"
-        "AbilityCooldown"       "6 6 6 6"
-        "AbilityManaCost"       "4200"
-        "AbilityDamage"         "12000 12000 12000 12000"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"      "FIELD_INTEGER"
-                "bounce_radius"     "600"
-            }
-            "02"
-            {   
-                "var_type"      "FIELD_INTEGER"
-                "damage_radius"     "0"
-            }
-            "03"
-            {   
-                "var_type"      "FIELD_INTEGER"
-                "max_targets"       "8 8 8 8"
-            }
-            "04"
-            {
-                "var_type"      "FIELD_INTEGER"
-                "damage"        "75 150 225 300"
-                "damage"        "75 150 225 300"
-            }
-        }
-    }
+	    "BaseClass"                     "ability_datadriven"
+	    "AbilityTextureName"            "placeholder"
+	    "MaxLevel"                      "4"
+	
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+	    "AbilityCastAnimation"          "ACT_DOTA_ATTACK"
+	
+	    "AbilityCastRange"              "700"
+	    "AbilityCastPoint"              "0.15"
+	    "AbilityCooldown"               "10.0 10.0 10.0 10.0"
+	
+	    "AbilityManaCost"               "75 100 125 150"
+	
+	    "precache"
+	    {
+	        "particle"  "particles/abilities/cleric/healingwave/healingwave.vpcf"
+	        "soundfile" "soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+	    }
+	    
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "healing_damage"      "75 150 225 300"
+	        }
+	        "02"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "healing_bounces"     "7"
+	        }
+	        "03"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "bounce_range"          "500"
+	        }
+	        "04"
+	        {
+	            "var_type"              "FIELD_INTEGER"
+	            "healing_decay"       "20"
+	        }
+	        "05"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "time_between_bounces"  "0.5"
+	        }
+	    }
+	
+	    "OnSpellStart"
+	    {
+	        "RunScript"
+	        {
+	            "ScriptFile"    "heroes/hero_cleric/healing_wave.lua"
+	            "Function"      "HealingWave"
+	        }
+	    }
+	}
     
     "teve_meliteles_blessing"
     {
@@ -7347,116 +7728,77 @@
     //-----------------------------------------------------------------------------------
     
     "teve_holy_light"
-    {
-        "BaseClass"         "ability_datadriven"
+	{
+    "BaseClass"         "ability_datadriven"
 
-        //"ID"                "6091"
+        //"ID"                "6000"
 
-         "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 
         "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
 
-        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 
         "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 
-        "AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+        "AbilityUnitTargetFlags"   "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 
-        "AbilityCastPoint"  "0.5 0.5 0.5 0.5"
+        "AbilityCastPoint"  "0.15 0.15 0.15 0.15"
 
         "AbilityCastRange"  "800"
-
         "AbilityCooldown"   "5.0"
 
         "AbilityManaCost"   "60 80 100 120"
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+        }
 
         "AbilitySpecial"
         {
             "01"
             {
-                "var_type"                      "FIELD_INTEGER"
-                "heal"                          "500 1000 1500 2000"
+                "var_type" "FIELD_INTEGER"
+                "heal"     "500 1000 1500 2000"
             }
             "02"
             {
-                "var_type"                      "FIELD_INTEGER"
-                "damage"                        "500 1000 1500 2000"
+                "var_type"  "FIELD_INTEGER"
+                "p_radius"  "100 100 100 100"
             }
-            "03"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "radius"                        "0"
-            }
-            "04"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "max_targets"           "1"
-            }
-        }
-
-        "precache"
-        {
-            "particle"  "particles/abilities/holy_light/teve_holy_light.vpcf"
-            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
-        }
- 
+        }   
+        
         "OnSpellStart"
         {
             "Heal"
             {
-                "Target"
-                {
-                    "Center"        "TARGET"
-                    "Radius"        "%radius"
-                    "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-                    "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                    "MaxTargets" "%max_targets"
-                }
                 "HealAmount"    "%heal"
-            }
-            "Damage"
-            {
-                "Target"
-                {
-                    "Center"        "TARGET"
-                    "Radius"        "%radius"
-                    "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                    "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                    "MaxTargets" "%max_targets"
-                }
-                "Type"                  "DAMAGE_TYPE_MAGICAL"
-                "Damage"                "%damage"
-            }
-            "FireSound"
-            {
-                "EffectName"    "Hero_Omniknight.Purification"
-                "Target"        "TARGET"
+                    "Target"     "TARGET"
             }
             "FireEffect"
             {
-                "Target"            "CASTER"
-                "EffectName"        "particles/abilities/holy_light/teve_holy_light_cast.vpcf"
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
                 "EffectAttachType"  "follow_origin"
-                
                 "ControlPoints"
                 {
                     "00"    "0 0 0"
-                    "06"    "0 0 0"
+                    "01"    "%p_radius %p_radius %p_radius"
                 }
             }
             "FireEffect"
             {
                 "Target"            "TARGET"
-                "EffectName"        "particles/abilities/holy_light/teve_holy_light_impact.vpcf"
+                "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
                 "EffectAttachType"  "follow_origin"
-                
-                "ControlPoints"
-                {
-                    "00"    "0 0 0"
-                    "01"    "0 0 0"
-                    "02"    "0 0 0"
-                    "05"    "0 0 0"
-                }
+            }
+            "FireSound"
+            {
+                "EffectName"    "Hero_Omniknight.Purification"
+                "Target"         "TARGET"
             }
         }
     }
@@ -8218,34 +8560,145 @@
     
     "teve_ensnare"
     {
-        "BaseClass"                 "naga_siren_ensnare"
-        //"ID"                      "9054"
-        
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "AbilityCooldown"           "14.0 14.0 14.0 14.0"
-        "AbilityManaCost"           "0 0 0 0"
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "duration"          "0.4 0.8 1.2 1.6"
-            }
-            "02"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "net_speed"         "1500 1500 1500 1500"
-            }
-            "03"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "fake_ensure_distance"      "900 900 900 900"
-            }
-        }
-    }
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"naga_siren_ensnare"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.20"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0 15.0 15.0 15.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 100 110 120"
+	
+	// Cast Range
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700 700 700 700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"0.4 0.8 1.2 1.6"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"net_speed"					"1500 1500 1500 1500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fake_ensnare_distance"		"900 900 900 900"	
+		}
+	}
+
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+		"particle"					"particles/units/heroes/hero_siren/siren_net.vpcf"
+		"particle"					"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hero_naga_siren/ensnare.lua"
+			"Function"				"Ensnare_PlayFakeAnimation"
+			"Target"				"TARGET"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"				"TARGET"
+			"EffectName"			"particles/units/heroes/hero_siren/siren_net_projectile.vpcf"
+			"Dodgeable"				"1"
+			"ProvidesVision"		"1"
+			"VisionRadius"			"0"
+			"MoveSpeed"				"%net_speed"
+			"SourceAttachment"		"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+
+		"FireSound"
+		{
+			"EffectName"			"Hero_NagaSiren.Ensnare.Cast"
+			"Target"				"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hero_naga_siren/ensnare.lua"
+			"Function"				"Ensnare_CastFakeNets"
+			"Target"				"TARGET"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"1"
+
+		"FireSound"
+		{
+			"EffectName"			"Hero_NagaSiren.Ensnare.Target"
+			"Target"				"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"Target"				"TARGET"
+			"ModifierName"			"modifier_ensnare_datadriven"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_ensnare_datadriven"
+		{
+			"IsHidden"		"0"
+			"IsDebuff"		"1"
+			"IsPurgable"	"0"
+
+			"Duration"		"%duration"
+
+			"States"
+			{
+				"MODIFIER_STATE_ROOTED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_DISABLED"
+			}
+
+			"EffectName"			"particles/units/heroes/hero_siren/siren_net.vpcf"
+			"EffectAttachType"		"follow_origin"
+		}
+
+		"modifier_ensnare_fake_datadriven"
+		{
+			"IsHidden"			"1"
+		//	"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+			"OverrideAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		}
+	}
+}	
     
     "teve_critical_strike"
     {
@@ -8911,122 +9364,144 @@
     //-----------------------------------------------------------------------------------
     
     "teve_holy_light_2"
-    {
-            "BaseClass"         "ability_datadriven"
+	{
+    "BaseClass"         "ability_datadriven"
 
-            //"ID"                "6091"
+        //"ID"                "6000"
 
-             "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-    
-            "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 
-            "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
- 
-            "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    
-            "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+        "AbilityTextureName"    "keeper_of_the_light_chakra_magic"
 
-            "AbilityCastPoint"  "0.15 0.15 0.15 0..15"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 
-            "AbilityCastRange"  "800"
-   
-            "AbilityCooldown"   "5.0"
- 
-            //"AbilityManaCost"   "60 80 100 120"
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 
-            "AbilitySpecial"
-            {
-                "01"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "heal"                          "500 1000 1500 2000"
-                }
-                "02"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "damage"                        "500 1000 1500 2000"
-                }
-                "03"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "radius"                        "0"
-                }
-                "04"
-                {
-                    "var_type"                      "FIELD_INTEGER"
-                    "max_targets"           "1"
-                }
-            }
- 
-            "OnSpellStart"
-            {
-                "Heal"
-                {
-                    "Target"
-                    {
-                        "Center"        "TARGET"
-                        "Radius"        "%radius"
-                        "Teams"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                        "MaxTargets" "%max_targets"
-                    }
-                    "HealAmount"    "%heal"
-                }
-                "Damage"
-                {
-                    "Target"
-                    {
-                        "Center"        "TARGET"
-                        "Radius"        "%radius"
-                        "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                        "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                        "MaxTargets" "%max_targets"
-                    }
-                    "Type"                  "DAMAGE_TYPE_MAGICAL"
-                    "Damage"                "%damage"
-                }
-       }
-       }
-    
-    "teve_kyrie_eleison"
-    {
-        "BaseClass"                     "lich_frost_armor"
-        //"ID"                          "9071"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        
-        "AbilityCastRange"              "800"
-        "AbilityCastPoint"              "0.4 0.4 0.4 0.4"
+        "AbilityUnitTargetFlags"   "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 
-        "AbilityCooldown"               "5.0 5.0 5.0 5.0"
-        "AbilityDuration"               "1.0 2.0 3.0 4.0"
+        "AbilityCastPoint"  "0.15 0.15 0.15 0.15"
 
-        "AbilityManaCost"               "0 0 0 0"
+        "AbilityCastRange"  "800"
+        "AbilityCooldown"   "5.0"
+
+        "AbilityManaCost"   "60 80 100 120"
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+            "particle"  "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+        }
 
         "AbilitySpecial"
         {
             "01"
             {
-                "var_type"              "FIELD_INTEGER"
-                "armor_bonus"           "9999 9999 9999 9999"
+                "var_type" "FIELD_INTEGER"
+                "heal"     "500 1000 1500 2000"
             }
             "02"
             {
-                "var_type"              "FIELD_FLOAT"
-                "slow_duration"         "2.0 2.0 2.0 2.0"
+                "var_type"  "FIELD_INTEGER"
+                "p_radius"  "100 100 100 100"
             }
-            "03"
+        }   
+        
+        "OnSpellStart"
+        {
+            "Heal"
             {
-                "var_type"              "FIELD_INTEGER"
-                "slow_movement_speed"   "0 0 0 0"
+                "HealAmount"    "%heal"
+                    "Target"     "TARGET"
             }
-            "04"
+            "FireEffect"
             {
-                "var_type"              "FIELD_INTEGER"
-                "slow_attack_speed"     "-30 -30 -30 -30"
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "ControlPoints"
+                {
+                    "00"    "0 0 0"
+                    "01"    "%p_radius %p_radius %p_radius"
+                }
+            }
+            "FireEffect"
+            {
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+                "EffectAttachType"  "follow_origin"
+            }
+            "FireSound"
+            {
+                "EffectName"    "Hero_Omniknight.Purification"
+                "Target"         "TARGET"
             }
         }
+    }
+    
+    "teve_kyrie_eleison"
+    {
+        "BaseClass"             "ability_datadriven"
+    
+        //"ID"                    "6003"
+    
+        "AbilityTextureName"    "lina_fiery_soul"
+    
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    
+        "precache"
+            {
+                "particle"  "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+            }
+    
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    
+        "AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    
+        "AbilityUnitTargetFlags""DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+    
+        "AbilityCastPoint"      "0.4 0.4 0.4 0.4"
+    
+        "AbilityCastRange"      "800"
+    
+        "AbilityCooldown"       "5.0 5.0 5.0 5.0"
+    
+        "AbilityManaCost"       "40 60 80 100"
+    
+        "AbilitySpecial"
+        {
+                "01"
+                {
+                   "var_type" "FIELD_INTEGER"
+                   "bonus_armour" "9999"
+                }
+				"02"
+				{
+					"var_type"  "FIELD_FLOAT"
+					"duration"  "1.0 2.0 3.0 4.0"
+				}
+        }
+        "Modifiers"
+        {
+               "modifier_kyrie_eleison"
+               {
+                          "EffectName"      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+                          "EffectAttachType"    "follow_hitloc"
+                          "Duration" "%duration"
+                          "Properties"
+                          {
+                                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armour"
+                          }
+               }
+       }               
+       "OnSpellStart"
+       {
+           "ApplyModifier"
+           {
+                  "Target"    "TARGET"
+                  "ModifierName"  "modifier_kyrie_eleison"
+           }
+       }
     }
     
     "teve_liturgy_of_the_word"
