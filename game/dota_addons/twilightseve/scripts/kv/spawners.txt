@@ -1,0 +1,6 @@
+"UnitsTable"
+{
+    "1" "teve_satyr"
+    "2" "teve_aggressive_satyr"
+    "3" "teve_watery_murloc"
+}

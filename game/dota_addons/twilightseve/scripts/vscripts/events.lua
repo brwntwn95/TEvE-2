@@ -241,8 +241,10 @@ function GameMode:OnEntityKilled( keys )
   end
 
   local damagebits = keys.damagebits -- This might always be 0 and therefore useless
-
   -- Put code here to handle when an entity gets killed
+  if killedUnit.neutralSpawner then
+    NeutralSpawners:RespawnTimer(killedUnit.neutralSpawner, killedUnit)
+  end
 end
 
 

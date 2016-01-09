@@ -3,7 +3,7 @@
 
 -- Set this to true if you want to see a complete debug output of all events/processes done by barebones
 -- You can also change the cvar 'barebones_spew' at any time to 1 or 0 for output/no output
-BAREBONES_DEBUG_SPEW = false 
+BAREBONES_DEBUG_SPEW = false
 
 if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )
@@ -32,6 +32,9 @@ require('internal/events')
 require('settings')
 -- events.lua is where you can specify the actions to be taken when any event occurs and is one of the core barebones files.
 require('events')
+
+
+require("NeutralSpawners")
 
 --[[
   This function should be used to set up Async precache calls at the beginning of the gameplay.
@@ -111,6 +114,7 @@ function GameMode:OnGameInProgress()
       DebugPrint("This function is called 30 seconds after the game begins, and every 30 seconds thereafter")
       return 30.0 -- Rerun this timer every 30 game-time seconds 
     end)
+  NeutralSpawners:Start()
 end
 
 
